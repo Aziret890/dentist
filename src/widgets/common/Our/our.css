@@ -1,0 +1,28 @@
+.our h5 {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+.doctor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 380px;
+    height: 120px;
+    background: #F2FAFB;
+    border-radius: 10px;
+    transition: .6s;
+}
+.doctor:hover {
+transform: scale(1.1);
+
+}
+.doctor h1 {
+    font-size: 40px;
+    color: #2CB2BB;
+}
+.doctor h2 {
+    font-weight: 700;
+    font-size: 15px;
+}

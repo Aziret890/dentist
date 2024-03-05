@@ -1,0 +1,146 @@
+.btn {
+  position: relative;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 100%;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.tt {
+  line-height: 20px;
+  font-size: 15px;
+}
+
+.no {
+  display: none;
+}
+
+@media (max-width: 985px) {
+  .no {
+    display: block;
+  }
+  .blo {
+    display: none;
+  }
+}
+
+@media (max-width: 623px) {
+  .gap-11 {
+    gap: 0rem;
+  }
+  .hh {
+    height: 700px;
+  }
+}
+@media (max-width: 580px) {
+  .px-\[60px\] {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+  }
+  .text-3xl {
+    font-size: 1.3rem;
+  }
+  .gap-2 {
+    gap: 0rem;
+  }
+}
+@media (max-width: 489px) {
+  .pt-5 {
+    padding-top: 1.25rem;
+    display: none;
+  }
+  .font-bold {
+    font-weight: 700;
+    text-align: center;
+  }
+  .justify-between {
+    justify-content: center;
+  }
+
+  .hh {
+    height: 680px;
+  }
+}
+@media (max-width: 466px) {
+  .hh {
+    height: 710px;
+  }
+}
+@media (max-width: 428px) {
+  .hh {
+    height: 750px;
+  }
+}
+
+@media (max-width: 386px) {
+  .hh {
+    height: 800px;
+  }
+}
+@media (max-width: 371px) {
+  .hh {
+    height: 830px;
+  }
+}
+@media (max-width: 356px) {
+    .hh {
+      height: 870px;
+    }
+  }
+  @media (max-width: 344px) {
+    .hh {
+      height: 890px;
+    }
+    .tt {
+        font-size: 14px;
+    }
+  }
+  @media(max-width :325px) {
+    .text-3xl {
+        font-size: 1.2rem;
+    }
+    .tt{
+        font-size: 13.5px;
+    }
+  }

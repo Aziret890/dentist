@@ -1,0 +1,22 @@
+#partners {
+  padding: 60px 0;
+}
+.partners {
+}
+.partners h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #253f41;
+}
+.partners p {
+  color: #253f41;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.pic-partners {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
