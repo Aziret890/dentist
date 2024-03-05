@@ -9,6 +9,7 @@ export default function Routers() {
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/about/clinic' element={<AboutClinic />} />
+				<Route path='/about/vakancies' element={<Index />} />
 				<Route path='/doctors' element={<Doctors />} />
 			</Routes>
 		</>

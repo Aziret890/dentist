@@ -1,9 +1,9 @@
-/* eslint-disable react/prop-types */
-import styles from "./index.module.css";
-import { Link } from "react-router-dom";
-import clsx from "clsx";
-import { motion } from "framer-motion";
-import { useDropDown } from "../../entity/hooks/useDropDown";
+import React from 'react'
+import { useDropDown } from '../../hooks/useDropDown'
+import styles from './index.module.css'
+import { Link } from 'react-router-dom'
+import clsx from 'clsx'
+import { motion } from 'framer-motion'
 
 const variants = {
   hidden: {
@@ -11,15 +11,14 @@ const variants = {
     translateY: 10,
   },
   visible: { opacity: 1, translateY: 0 },
-};
+}
 
 const DropDown = ({ initialSelectedItem, links, width }) => {
-  const { selectedItem, isOpen, toggleDropDown, onSelectItem, dropDownRef } =
-    useDropDown({
-      initialSelectedItem,
-      items: links,
-      isState: false,
-    });
+  const { selectedItem, isOpen, toggleDropDown, onSelectItem, dropDownRef } = useDropDown({
+    initialSelectedItem,
+    items: links,
+    isState: false,
+  })
 
   return (
     <div className={styles.dropdownContainer}>
@@ -27,7 +26,7 @@ const DropDown = ({ initialSelectedItem, links, width }) => {
         onMouseOver={() => toggleDropDown(true)}
         onMouseOut={() => toggleDropDown(false)}
         onClick={() => {
-          toggleDropDown(true);
+          toggleDropDown(true)
         }}
         className={styles.dropdownButton}
       >
@@ -44,7 +43,7 @@ const DropDown = ({ initialSelectedItem, links, width }) => {
           [styles.show]: isOpen,
         })}
       >
-        {links?.map(
+        {links.map(
           (link, idx) =>
             isOpen && (
               <motion.li
@@ -54,7 +53,7 @@ const DropDown = ({ initialSelectedItem, links, width }) => {
                 animate="visible"
                 transition={{
                   delay: idx * 0.2,
-                  ease: "easeInOut",
+                  ease: 'easeInOut',
                   duration: 0.25,
                 }}
                 viewport={{ amount: 0 }}
@@ -65,7 +64,7 @@ const DropDown = ({ initialSelectedItem, links, width }) => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default DropDown;
+export default DropDown
