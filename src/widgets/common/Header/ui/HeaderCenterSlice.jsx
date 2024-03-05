@@ -6,7 +6,7 @@ import HeaderWhiteLogo from '../../../../shared/assets/images/header-logo-white.
 import VK from '../../../../shared/assets/images/header-vk.svg'
 import Youtube from '../../../../shared/assets/images/header-you.svg'
 import styles from '../index.module.css'
-
+import { Link } from 'react-router-dom'
 //
 import { FiMenu } from 'react-icons/fi'
 import { IoClose } from 'react-icons/io5'
@@ -21,9 +21,9 @@ export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 	return (
 		<div className={styles['center-slice']}>
 			<div className={`container ${styles.container}`}>
-				<div className={styles.logo}>
+				<Link to={'/'} className={styles.logo}>
 					<img src={width < 850 ? HeaderWhiteLogo : HeaderLogo} alt='logo' />
-				</div>
+				</Link>
 				<div className={styles.end}>
 					<div className={styles['links']}>
 						<img src={Class} alt='' />
