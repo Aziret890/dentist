@@ -42,6 +42,9 @@ ul {
 
 body {
 	width: 100%;
+	&::-webkit-scrollbar {
+		width: 0;
+	}
 }
 
 .wrapper {
