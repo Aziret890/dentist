@@ -1,4 +1,3 @@
-import React from "react";
 import "./Reviews.css";
 import { FaArrowRight } from "react-icons/fa";
 import ChatSquare from "./message-square 2.png";

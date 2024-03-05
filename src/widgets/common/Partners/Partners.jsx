@@ -1,4 +1,3 @@
-import React from "react";
 import "./Partners.css";
 import Partner1 from "./image 28.png";
 import Partner2 from "./image 29.png";

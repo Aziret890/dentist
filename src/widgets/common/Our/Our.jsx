@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./our.css";
 import { TbUserSquare } from "react-icons/tb";
 import { LuShieldCheck } from "react-icons/lu";

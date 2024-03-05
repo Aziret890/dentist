@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from '../index.module.css'
 import HeaderLogo from '../../../images/header1-logo.png'
 import HeaderWhiteLogo from '../../../images/header-logo-white.svg'
@@ -16,6 +15,7 @@ import { FiMenu } from 'react-icons/fi'
 import { IoClose } from 'react-icons/io5'
 import { useWindowSize } from '../../../hooks/useWindowSize'
 
+// eslint-disable-next-line react/prop-types
 export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
   const { width } = useWindowSize()
   return (

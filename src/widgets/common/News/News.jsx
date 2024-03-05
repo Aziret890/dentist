@@ -1,4 +1,3 @@
-import React from "react";
 import newIcon from "../../images/newsicon.svg";
 import "./News.css";
 import NewsCard from "./NewsCard";

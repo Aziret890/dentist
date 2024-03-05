@@ -1,10 +1,4 @@
-import React, { useState } from "react";
 import "./Social.scss";
-// import header2Class from "../../images/header-class.svg";
-// import header2Insta from "../../images/header-insta.svg";
-// import header2Facebook from "../../images/header-fasebook.svg";
-// import header2Vk from "../../images/header-vk.svg";
-// import header2You from "../../images/header-you.svg";
 import user from "../../images/uset-social.svg";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { SlSocialVkontakte } from "react-icons/sl";
@@ -17,7 +11,6 @@ import post2 from "../../images/like-post1.png";
 import post3 from "../../images/like-post2.png";
 import post4 from "../../images/like-post3.png";
 import SoicalDetal from "./SoicalDetal";
-// import post2 from "../../images/like-post1.png";
 
 function Social() {
   const dataObj = [

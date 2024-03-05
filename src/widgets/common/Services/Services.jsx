@@ -1,4 +1,3 @@
-import React from "react";
 import "./Service.css";
 import teethPic from "./tooth-outline 1.png";
 

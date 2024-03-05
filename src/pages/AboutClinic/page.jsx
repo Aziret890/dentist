@@ -1,7 +1,5 @@
 import React from 'react'
 
-export default function AboutClinick() {
-	return (
-		<div>AboutClinick</div>
-	)
+export default function AboutClinic() {
+	return <div>AboutClinic</div>
 }
