@@ -1,15 +1,14 @@
-import Header from '../widgets/common/Header'
-import './App.css'
-import Routers from './routers'
+import Header from "../widgets/common/Header";
+import "./App.css";
+import Routers from "./routers";
 
 function App() {
-	return (
-		<>
-			<Header />
-			<Routers />
-			
-		</>
-	)
+  return (
+    <>
+      <Header />
+      <Routers />
+    </>
+  );
 }
 
-export default App
+export default App;
