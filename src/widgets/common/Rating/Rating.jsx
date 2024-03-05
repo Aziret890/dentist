@@ -1,13 +1,13 @@
 import { useState } from 'react'
 import './Rating.css'
-import rating1 from '../../images/rating1.svg'
-import rating2 from '../../images/rating2.svg'
-import rating3 from '../../images/rating3.svg'
-import rating4 from '../../images/rating4.svg'
-import rating5 from '../../images/rating5.svg'
-import rating6 from '../../images/rating6.svg'
-import rating7 from '../../images/rating7.svg'
-import rating8 from '../../images/rating8.svg'
+import rating1 from '../../../shared/assets/images/rating1.svg'
+import rating2 from '../../../shared/assets/images/rating2.svg'
+import rating3 from '../../../shared/assets/images/rating3.svg'
+import rating4 from '../../../shared/assets/images/rating4.svg'
+import rating5 from '../../../shared/assets/images/rating5.svg'
+import rating6 from '../../../shared/assets/images/rating6.svg'
+import rating7 from '../../../shared/assets/images/rating7.svg'
+import rating8 from '../../../shared/assets/images/rating8.svg'
 
 function Rating() {
 	const [countStar] = useState(0)

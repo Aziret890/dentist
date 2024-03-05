@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react'
-import styles from '../index.module.css'
 import clsx from 'clsx'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import styles from '../index.module.css'
 
-import Pencil from '../../../../shared/assets/images/pensil.svg'
-import Message from '../../../images/message.icons.svg'
-import { IoIosArrowForward } from 'react-icons/io'
-import { FaArrowLeftLong } from 'react-icons/fa6'
 import { motion } from 'framer-motion'
+import { FaArrowLeftLong } from 'react-icons/fa6'
+import { IoIosArrowForward } from 'react-icons/io'
+import Pencil from '../../../../shared/assets/images/pencil.svg'
+import Message from '../../../../shared/assets/images/message.icons.svg'
 
 const variants = {
 	hidden: {

@@ -5,8 +5,8 @@ import Routers from './routers'
 function App() {
 	return (
 		<>
-		{/* <Header /> */}
-		<Routers/>
+			<Header />
+			<Routers />
 		</>
 	)
 }

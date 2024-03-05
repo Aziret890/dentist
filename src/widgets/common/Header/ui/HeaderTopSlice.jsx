@@ -1,11 +1,11 @@
-import styles from '../index.module.css'
-import Cursor from '../../../images/header-logo-cursor.svg'
-import TelIcon from '../../../images/TelIcon.svg'
-import ClockIcon from '../../../images/header-clock.svg'
-import EmailIcon from '../../../images/header-email.svg'
-import Glass from '../../../images/Glass.svg'
-import DropDown from '../../../features/DropDown'
 import { IoIosArrowDown } from 'react-icons/io'
+import Glass from '../../../../shared/assets/images/Glass.svg'
+import TelIcon from '../../../../shared/assets/images/TelIcon.svg'
+import ClockIcon from '../../../../shared/assets/images/header-clock.svg'
+import EmailIcon from '../../../../shared/assets/images/header-email.svg'
+import Cursor from '../../../../shared/assets/images/header-logo-cursor.svg'
+import styles from '../index.module.css'
+import DropDown from '../../../../features/DropDown'
 
 export const HeaderTopSlice = () => {
 	const cityConfig = {

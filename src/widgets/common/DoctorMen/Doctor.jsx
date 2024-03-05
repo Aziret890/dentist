@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import { BiCheck } from 'react-icons/bi'
 import Slider from 'react-slick'
-import men from '../../images/men.png'
+import men from '../../../shared/assets/images/men.png'
 import './doctor.css'
 
 const Doctor = () => {

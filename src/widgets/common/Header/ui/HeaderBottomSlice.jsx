@@ -1,7 +1,7 @@
 import styles from '../index.module.css'
-import DropDown from '../../../features/DropDown'
 import { IoIosArrowDown } from 'react-icons/io'
 import { Link } from 'react-router-dom'
+import DropDown from '../../../../features/DropDown'
 
 const HeaderBottomSlice = () => {
   const patientsConfig = {
