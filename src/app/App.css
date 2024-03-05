@@ -42,7 +42,18 @@ ul {
 }
 
 body {
+<<<<<<< HEAD
+<<<<<<< HEAD
+	width: 100%;
+	&::-webkit-scrollbar {
+		width: 0;
+	}
+=======
   width: 100%;
+>>>>>>> fbd6db128cdb2a1234cd153e6c1dbe1c8697fcbf
+=======
+  width: 100%;
+>>>>>>> fbd6db128cdb2a1234cd153e6c1dbe1c8697fcbf
 }
 
 .wrapper {
