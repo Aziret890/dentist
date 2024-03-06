@@ -6,7 +6,6 @@ import Header from "../widgets/common/Header";
 import Form2Home from "../widgets/common/form2Home/Form2Home";
 import "./App.css";
 import Routers from "./routers";
-import Price from "../widgets/Price/Price";
 function App() {
   return (
     <>
