@@ -8,6 +8,7 @@ import Form2Home from '../widgets/common/form2Home/Form2Home'
 import Routers from './routers'
 import './App.css'
 import { useEffect } from 'react'
+
 function App() {
 	const location = useLocation()
 
