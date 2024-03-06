@@ -1,6 +1,6 @@
+import clsx from 'clsx'
 import { useState } from 'react'
 import styles from './index.module.scss'
-import clsx from 'clsx'
 import ServicesTabContent from './ui/ServicesTabContent'
 
 export default function AllServices() {
@@ -12,7 +12,11 @@ export default function AllServices() {
 			<div className={`container ${styles.container}`}>
 				<div className='flex items-center justify-between gap-5'>
 					<h1 data-aos='fade-up'>Все услуги</h1>
-					<ul data-aos='fade-up' data-aos-duration={1000}>
+					<ul
+						data-aos='fade-up'
+						data-aos-duration={1000}
+						className='flex items-center justify-end gap-3'
+					>
 						{allServicesArr.map((item, idx) => (
 							<li
 								className={clsx({

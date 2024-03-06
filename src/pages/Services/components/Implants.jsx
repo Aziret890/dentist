@@ -7,7 +7,7 @@ const Implants = () => {
 			<div className='flex items-center justify-start gap-5 flex-wrap'>
 				<div
 					data-aos='zoom-in'
-					data-aos-duration={1500}
+					data-aos-duration={1100}
 					className='bg-[#F2FAFB] w-[386px] h-[128px] flex items-center justify-center'
 				>
 					<div className='flex items-center gap-6'>
@@ -48,7 +48,7 @@ const Implants = () => {
 				</div>
 				<div
 					data-aos='zoom-in'
-					data-aos-duration={1800}
+					data-aos-duration={1300}
 					className='bg-[#F2FAFB] w-[386px] h-[128px] flex items-center justify-center'
 				>
 					<div className='flex items-center gap-6'>
@@ -87,7 +87,7 @@ const Implants = () => {
 				</div>
 				<div
 					data-aos='zoom-in'
-					data-aos-duration={2100}
+					data-aos-duration={1500}
 					className='bg-[#F2FAFB] w-[386px] h-[128px] flex items-center justify-center'
 				>
 					<div className='flex items-center gap-6'>
@@ -128,7 +128,7 @@ const Implants = () => {
 				</div>
 				<div
 					data-aos='zoom-in'
-					data-aos-duration={2500}
+					data-aos-duration={1700}
 					className='bg-[#F2FAFB] w-[386px] h-[128px] flex items-center justify-center'
 				>
 					<div className='flex items-center gap-6'>
@@ -165,7 +165,7 @@ const Implants = () => {
 				</div>
 				<div
 					data-aos='zoom-in'
-					data-aos-duration={2800}
+					data-aos-duration={1900}
 					className='bg-[#F2FAFB] w-[386px] h-[128px] flex items-center justify-center'
 				>
 					<div className='flex items-center gap-6'>

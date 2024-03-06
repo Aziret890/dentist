@@ -13,11 +13,11 @@ const variants = {
 	visible: { opacity: 1, translateY: 0 }
 }
 
-const DropDown = ({ initialSelectedItem, links, width,width2 }) => {
+const DropDown = ({ initialSelectedItem, items, links, width, width2 }) => {
 	const { selectedItem, isOpen, toggleDropDown, onSelectItem, dropDownRef } =
 		useDropDown({
 			initialSelectedItem,
-			items: links,
+			items: items || links,
 			isState: false
 		})
 
@@ -47,7 +47,7 @@ const DropDown = ({ initialSelectedItem, links, width,width2 }) => {
 					[styles.show]: isOpen
 				})}
 			>
-				{links?.map(
+				{items?.map(
 					(link, idx) =>
 						isOpen && (
 							<motion.li
@@ -62,7 +62,17 @@ const DropDown = ({ initialSelectedItem, links, width,width2 }) => {
 								}}
 								viewport={{ amount: 0 }}
 							>
-								<Link onClick={() => onSelectItem(link)}>{link}</Link>
+								<Link
+									to={
+										isOpen && links && Array.isArray(links) ? links[idx] : '#'
+									}
+									onClick={() => {
+										onSelectItem(links[idx])
+										toggleDropDown(false)
+									}}
+								>
+									{link}
+								</Link>
 							</motion.li>
 						)
 				)}

@@ -9,7 +9,7 @@ import DropDown from '../../../../features/DropDown'
 
 export const HeaderTopSlice = () => {
 	const cityConfig = {
-		links: ['Москва1', 'Иркутск', 'Санкт-Петербург'],
+		items: ['Москва1', 'Иркутск', 'Санкт-Петербург'],
 		initialSelectedItem: (
 			<>
 				Москва <IoIosArrowDown />

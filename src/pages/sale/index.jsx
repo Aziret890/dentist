@@ -1,8 +1,8 @@
-import React from "react";
-import SaleFiveButton from "./components/Sale1/SaleFiveButton";
+import React from 'react'
+import SaleFiveButton from './components/Sale1/SaleFiveButton'
 
 function Sale() {
-  return <SaleFiveButton />;
+	return <SaleFiveButton />
 }
 
-export default Sale;
+export default Sale

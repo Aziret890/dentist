@@ -1,12 +1,9 @@
-import React from "react";
-import Maps from "../../widgets/maps/Maps";
-import Form2Home from "../../widgets/common/form2Home/Form2Home";
+import Maps from '../../widgets/maps/Maps'
 
 export default function AboutClinic() {
-  return (
-    <>
-      <Maps />
-      <Form2Home />
-    </>
-  );
+	return (
+		<>
+			<Maps />
+		</>
+	)
 }

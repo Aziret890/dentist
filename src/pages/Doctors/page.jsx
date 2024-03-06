@@ -3,7 +3,12 @@ import DoctorResult from './components/DoctorResult'
 import DoctorSearch from './components/DoctorSearch'
 import DoctorTabs from './components/DoctorTabs'
 import styles from './page.module.scss'
+import { useEffect } from 'react'
 export default function Doctors() {
+	useEffect(() => {
+		document.title = 'Doctors'
+	}, [])
+
 	return (
 		<main className={styles.doctors}>
 			<div
