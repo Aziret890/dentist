@@ -85,8 +85,13 @@ const HeaderBottomSlice = () => {
 
 	return (
 		<div className={styles['bottom-slice']}>
+<<<<<<< HEAD
 			<div className={`${styles.container}`}>
 				<h1 className={styles.h1}>Услуги</h1>
+=======
+			<div className={`container ${styles.container}`}>
+				<Link to={'/services'} className={styles.h1}>Услуги</Link>
+>>>>>>> d55e6aa7ca944e0e7bbd7acb4331104598504258
 				<DropDown {...workExampleConfig} />
 				<Link className={styles.a} to={'/doctors'}>
 					Врач

@@ -41,7 +41,7 @@ function Social() {
 							знакомствам. Наш хэштэг <span>#названиеклиники</span>
 						</p>
 						<div className='social__block'>
-							<div className='social__block-child mt-14 flex justify-between gap-2'>
+							<div className='social__block-child flex-wrap mt-14 flex justify-between gap-2'>
 								<div
 									data-aos='fade-up'
 									data-aos-duration={1 * 300}

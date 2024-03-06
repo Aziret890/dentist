@@ -12,11 +12,9 @@ export default function AllServices() {
 			<div className={`container ${styles.container}`}>
 				<div className='flex items-center justify-between gap-5'>
 					<h1 data-aos='fade-up'>Все услуги</h1>
-					<ul className='flex items-center justify-end gap-3'>
+					<ul data-aos='fade-up' data-aos-duration={1000}>
 						{allServicesArr.map((item, idx) => (
 							<li
-								data-aos='flip-right'
-								data-aos-duration={(idx + 1) * 1000}
 								className={clsx({
 									[styles.active]:
 										servicesTab.toLowerCase() === item.toLowerCase()
