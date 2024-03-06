@@ -7,16 +7,18 @@ import Form2Home from "../widgets/common/form2Home/Form2Home";
 import "./App.css";
 import Routers from "./routers";
 import Price from "../widgets/Price/Price";
+import SaleWrapper from "../pages/sale/SaleWrapper";
 function App() {
   return (
     <>
-      <Header />
+      <SaleWrapper />
+      {/* <Header />
       <Routers />
       <Form2Home />
       <Footer />
       <Footer2 />
       <Footer3 />
-      <Footer4 />
+      <Footer4 /> */}
     </>
   );
 }

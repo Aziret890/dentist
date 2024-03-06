@@ -1,6 +1,6 @@
 import React from "react";
 import medal from "../../shared/assets/images/medal.svg";
-import ButtonRoutes from "../../app/routers/ButtonRoutes";
+import ButtonRoutes from "../../pages/sale/ButtonRoutes";
 import { Link, NavLink, Route, Routes } from "react-router-dom";
 import "./Price.scss";
 import PriceSortAll from "./PriceSortAll";

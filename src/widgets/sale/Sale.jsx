@@ -2,7 +2,7 @@ import React from "react";
 import medal from "../../shared/assets/images/medal.svg";
 import pngAziret from "../../shared/assets/images/png-aziret.png";
 import "./Sale.scss";
-import ButtonRoutes from "../../app/routers/ButtonRoutes";
+import ButtonRoutes from "../../pages/sale/ButtonRoutes";
 function Sale() {
   return (
     <section className="sale">
