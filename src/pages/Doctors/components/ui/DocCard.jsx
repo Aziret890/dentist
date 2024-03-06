@@ -88,7 +88,7 @@ export default function DocCard({ idx, item, styles }) {
 					</svg>
 					Отзывы
 				</button>
-				<Link to={`/doctors${item.id}`}>
+				<Link to={`/doctors/${item.id}`}>
 					<svg
 						width='13'
 						height='14'

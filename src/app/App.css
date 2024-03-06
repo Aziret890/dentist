@@ -58,3 +58,26 @@ html {
 	scroll-behavior: smooth;
 	height: 100%;
 }
+
+.backgrounds {
+	position: fixed;
+	z-index: 980;
+	width: 100%;
+	min-height: 100vh;
+	background-color: #00000080;
+	top: 0;
+	left: 0;
+
+	opacity: 0;
+	visibility: hidden;
+	z-index: -999;
+	pointer-events: none;
+
+	transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		z-index: 999;
+		pointer-events: all;
+	}
+}

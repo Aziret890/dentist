@@ -9,7 +9,7 @@ import DropDown from '../../../../features/DropDown'
 
 export const HeaderTopSlice = () => {
 	const cityConfig = {
-		links: ['Москва1', 'Москва2', 'Москва3'],
+		links: ['Москва1', 'Иркутск', 'Санкт-Петербург'],
 		initialSelectedItem: (
 			<>
 				Москва <IoIosArrowDown />
@@ -22,7 +22,7 @@ export const HeaderTopSlice = () => {
 			<div className={`container ${styles.container}`}>
 				<div className={styles.cursor}>
 					<img src={Cursor} alt='' />
-					<DropDown width={40} {...cityConfig} />
+					<DropDown width={160} {...cityConfig} />
 				</div>
 				<div className={`${styles.div} flex items-center gap-2`}>
 					<img src={TelIcon} alt='' />
