@@ -1,5 +1,5 @@
 import Vakancies from "../../widgets/vakansies/Vakancies";
-function Index() {
+function VakanciesPage() {
   return (
     <>
       <Vakancies />
@@ -7,4 +7,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default VakanciesPage;
