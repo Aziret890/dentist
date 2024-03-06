@@ -1,11 +1,11 @@
-import styles from '../index.module.css'
 import { IoIosArrowDown } from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import DropDown from '../../../../features/DropDown'
+import styles from '../index.module.css'
 
 const HeaderBottomSlice = () => {
 	const patientsConfig = {
-		links: [
+		items: [
 			'Рекомендация перед приемом',
 			'Рекомендация после лечение',
 			'Гарантии'
@@ -18,7 +18,7 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const workExampleConfig = {
-		links: [
+		items: [
 			'Рекомендация перед приемом',
 			'Рекомендация после лечение',
 			'Гарантии'
@@ -31,7 +31,7 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const feedbackConfig = {
-		links: [
+		items: [
 			'Рекомендация перед приемом',
 			'Рекомендация после лечение',
 			'Гарантии'
@@ -44,10 +44,15 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const priceConfig = {
+		width: 190,
+		items: ['Цена', 'Акции', 'Рассрочка и кредит', 'Бонусная программа', 'ДМС'],
 		links: [
-			'Рекомендация перед приемом',
-			'Рекомендация после лечение',
-			'Гарантии'
+			'/price',
+			'/price?tabId=1',
+			'/price?tabId=2',
+			'/price?tabId=3',
+			'/price?tabId=4',
+			'/price?tabId=6'
 		],
 		initialSelectedItem: (
 			<>
@@ -57,7 +62,7 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const commuterConfig = {
-		links: [
+		items: [
 			'Рекомендация перед приемом',
 			'Рекомендация после лечение',
 			'Гарантии'
@@ -70,12 +75,13 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const aboutClientConfig = {
+		width: 10,
+		items: ['О клинике', 'Сертификаты', 'Реквизиты', 'Вакансии'],
 		links: [
-			'О клинике',
-			'Сертификаты',
-			'Правовая информация',
-			'Реквизиты',
-			'Вакансии'
+			'/vacancy',
+			'/vacancy?tabId=2',
+			'/vacancy?tabId=3',
+			'/vacancy?tabId=4'
 		],
 		initialSelectedItem: (
 			<>
@@ -99,8 +105,8 @@ const HeaderBottomSlice = () => {
 				<DropDown {...feedbackConfig} />
 				<DropDown {...patientsConfig} />
 				<DropDown {...commuterConfig} />
-				<DropDown width={210} {...aboutClientConfig} />
-				<Link className={styles.a} to={'/about/clinic'}>
+				<DropDown {...aboutClientConfig} />
+				<Link className={styles.a} to={'/contact/information'}>
 					Контакты
 				</Link>
 			</div>

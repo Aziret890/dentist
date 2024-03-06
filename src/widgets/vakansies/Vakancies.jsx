@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import './Vakancies.scss'
-import '../requits/Requits.scss'
-import VakanciesChil from './VakanciesChil'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
 import clsx from 'clsx'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import '../requits/Requits.scss'
+import './Vakancies.scss'
+import VakanciesChil from './VakanciesChil'
 
 function Vakancies({ id }) {
 	const [dataVakanciesOne, setVakanciesOne] = useState('')
@@ -55,7 +55,7 @@ function Vakancies({ id }) {
 									actives: !id || id === 1
 								})}
 							>
-								<Link to={'/about/vakancies?tabId=1'}>
+								<Link to={'/vacancy'}>
 									<svg
 										width='24'
 										height='24'
@@ -149,7 +149,7 @@ function Vakancies({ id }) {
 									actives: id === 2
 								})}
 							>
-								<Link to={'/about/vakancies?tabId=2'}>
+								<Link to={'/vacancy?tabId=2'}>
 									<svg
 										width='24'
 										height='24'
@@ -173,7 +173,7 @@ function Vakancies({ id }) {
 									actives: id === 3
 								})}
 							>
-								<Link to={'/about/vakancies?tabId=3'}>
+								<Link to={'/vacancy?tabId=3'}>
 									<svg
 										width='24'
 										height='24'
@@ -232,7 +232,7 @@ function Vakancies({ id }) {
 									active: id === 4
 								})}
 							>
-								<Link to={'/about/vakancies?tabId=4'}>
+								<Link to={'/vacancy?tabId=4'}>
 									<svg
 										width='24'
 										height='24'
