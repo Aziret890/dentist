@@ -71,9 +71,11 @@ const HeaderBottomSlice = () => {
 	}
 	const aboutClientConfig = {
 		links: [
-			'Рекомендация перед приемом',
-			'Рекомендация после лечение',
-			'Гарантии'
+			'О клинике',
+			'Сертификаты',
+			'Правовая информация',
+			'Реквизиты',
+			'Вакансии'
 		],
 		initialSelectedItem: (
 			<>
@@ -85,13 +87,10 @@ const HeaderBottomSlice = () => {
 
 	return (
 		<div className={styles['bottom-slice']}>
-<<<<<<< HEAD
-			<div className={`${styles.container}`}>
-				<h1 className={styles.h1}>Услуги</h1>
-=======
 			<div className={`container ${styles.container}`}>
-				<Link to={'/services'} className={styles.h1}>Услуги</Link>
->>>>>>> d55e6aa7ca944e0e7bbd7acb4331104598504258
+				<Link to={'/services'} className={styles.h1}>
+					Услуги
+				</Link>
 				<DropDown {...workExampleConfig} />
 				<Link className={styles.a} to={'/doctors'}>
 					Врач
@@ -100,7 +99,7 @@ const HeaderBottomSlice = () => {
 				<DropDown {...feedbackConfig} />
 				<DropDown {...patientsConfig} />
 				<DropDown {...commuterConfig} />
-				<DropDown {...aboutClientConfig} />
+				<DropDown width={210} {...aboutClientConfig} />
 				<Link className={styles.a} to={'/about/clinic'}>
 					Контакты
 				</Link>
