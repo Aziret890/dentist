@@ -1,18 +1,17 @@
 import { useEffect } from 'react'
-import './Doctors.css'
-import { FaArrowRight } from 'react-icons/fa'
+import { FaArrowRight, FaPlayCircle } from 'react-icons/fa'
 import { PiChatCircleText } from 'react-icons/pi'
-import { FaPlayCircle } from 'react-icons/fa'
 import { useMyContext } from '../../context/MyContext'
+import './Doctors.css'
 
 const Doctors = () => {
 	const { doctors, getDoctors } = useMyContext()
 	useEffect(() => {
 		getDoctors()
 	}, [])
-	console.log(doctors)
 	return (
 		<div id='doctors'>
+			<hr className='bg' />
 			<div className='container'>
 				<div className='doctors-title'>
 					<h1>Наши доктора</h1>

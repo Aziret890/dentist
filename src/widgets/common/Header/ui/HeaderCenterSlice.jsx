@@ -14,15 +14,28 @@ import Medal from '../../../../shared/assets/images/medal.svg'
 import Message from '../../../../shared/assets/images/message.icons.svg'
 import Pencil from '../../../../shared/assets/images/pencil.svg'
 import { useWindowSize } from '../../../../entity/hooks/useWindowSize'
+import DropDown from '../../../../features/DropDown'
 
 // eslint-disable-next-line react/prop-types
 export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 	const { width } = useWindowSize()
+	const dropDownConfig = {
+		links: ['Оставить отзыв', 'Написать директору'],
+		initialSelectedItem: (
+			<>
+				<img src={Message} alt='' />
+				<span className='text-sm leading-4'>
+					Оставить отзыв или написать директору
+				</span>
+			</>
+		)
+	}
+
 	return (
 		<div className={styles['center-slice']}>
-			<div className={`container ${styles.container}`}>
+			<div className={`${styles.container}`}>
 				<Link to={'/'} className={styles.logo}>
-					<img src={width < 850 ? HeaderWhiteLogo : HeaderLogo} alt='logo' />
+					<img src={width < 841 ? HeaderWhiteLogo : HeaderLogo} alt='logo' />
 				</Link>
 				<div className={styles.end}>
 					<div className={styles['links']}>
@@ -37,10 +50,12 @@ export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 							<img src={Medal} alt='' />
 							Награды и сертификаты
 						</button>
-						<button>
-							<img src={Message} alt='' />
-							Оставить отзыв или написать директору
-						</button>
+						<DropDown
+							width={230}
+							width2={230}
+							className={styles.dropDown}
+							{...dropDownConfig}
+						/>
 						<button>
 							<img src={Pencil} alt='' />
 							Записаться на приём

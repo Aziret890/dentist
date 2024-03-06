@@ -20,8 +20,8 @@ export default function Licenses({ doc }) {
 			>
 				{licenses &&
 					licenses.map((item, idx) => (
-						<SwiperSlide data-aos='fade-up' data-aos-duration={idx * 500} key={idx}>
-							<li>
+						<SwiperSlide key={idx}>
+							<li data-aos='fade-up' data-aos-duration={idx * 500}>
 								<div className={styles['licenses-image']}>
 									<img src={item.photo} alt='' />
 								</div>

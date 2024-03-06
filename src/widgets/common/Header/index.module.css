@@ -3,6 +3,8 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 10px 0;
+	max-width: 1202px;
+	margin: 0 auto;
 }
 .bottom-slice {
 	background-color: #2cb2bb;

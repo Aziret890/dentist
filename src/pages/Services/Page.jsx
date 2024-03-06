@@ -5,6 +5,7 @@ import Our from '../../widgets/common/Our/Our'
 import Description from './components/Description'
 import Implants from './components/Implants'
 import Stage from './components/Stage'
+import Card from './components/Card'
 
 const Page = () => {
 	return (
@@ -23,6 +24,7 @@ const Page = () => {
 				<Description/>
 				<Implants/>
 				<Stage/>
+				<Card/>
 			</div>
 		</div>
 	)

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react'
+=======
+/* eslint-disable react/no-unknown-property */
+>>>>>>> 4790b198f5d4054f70b4fb203a8dcca92a4af390
 
 function ButtonRoutes() {
 	return (

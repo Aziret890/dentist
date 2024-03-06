@@ -6,7 +6,6 @@ export default function AboutClinic() {
   return (
     <>
       <Maps />
-      <Form2Home />
     </>
   );
 }

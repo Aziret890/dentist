@@ -5,6 +5,7 @@ import Doctors from '../../pages/Doctors/page'
 import Index from '../../pages/Vakancies/Index'
 import DetailDoctors from '../../pages/DetailDoctors/page'
 import Page from '../../pages/Services/Page'
+// import Page from '../../pages/Services/Page'
 
 export default function Routers() {
 	return (

@@ -1,90 +1,91 @@
 #clinic {
-  padding: 100px 0;
+	padding: 50px 0;
+	padding-bottom: 100px;
 }
 .clinic-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 .clinic-title h1 {
-  color: #253f41;
-  font-size: 32px;
-  font-weight: 700;
+	color: #253f41;
+	font-size: 32px;
+	font-weight: 700;
 }
 .clinic-title p {
-  color: #2cb2bb;
-  font-size: 16px;
-  font-weight: 600;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
+	color: #2cb2bb;
+	font-size: 16px;
+	font-weight: 600;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
 }
 
 .info-clinic {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  padding-top: 40px;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	padding-top: 40px;
 }
 .clinic-description p {
-  width: 550px;
-  height: 664px;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  color: #253f41;
+	width: 550px;
+	height: 664px;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+	color: #253f41;
 }
 .span-description-clinic {
-  color: black;
-  font-weight: 600;
+	color: black;
+	font-weight: 600;
 }
 
 .pic-clinic {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 588px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 588px;
 }
 .photos-clinic {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 592px;
-  width: 284px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	height: 592px;
+	width: 284px;
 }
 .photos-clinic img {
-  width: 284px;
-  height: 284px;
+	width: 284px;
+	height: 284px;
 }
 .guarant-clinic {
-  width: 284px;
-  height: 592px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #f2fafb;
-  border-radius: 8px;
+	width: 284px;
+	height: 592px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #f2fafb;
+	border-radius: 8px;
 }
 .guarant-clinic img {
-  width: 52px;
-  height: 52px;
+	width: 52px;
+	height: 52px;
 }
 .guarant-clinic h2 {
-  color: #253f41;
-  font-size: 18px;
-  font-weight: 800;
-  margin-top: 40px;
-  width: 244px;
-  line-height: 24px;
+	color: #253f41;
+	font-size: 18px;
+	font-weight: 800;
+	margin-top: 40px;
+	width: 244px;
+	line-height: 24px;
 }
 .guarant-clinic p {
-  color: #253f41;
-  font-size: 14px;
-  line-height: 20px;
-  margin: 15px 0;
-  width: 244px;
+	color: #253f41;
+	font-size: 14px;
+	line-height: 20px;
+	margin: 15px 0;
+	width: 244px;
 }

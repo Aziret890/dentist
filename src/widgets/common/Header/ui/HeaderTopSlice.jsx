@@ -19,7 +19,7 @@ export const HeaderTopSlice = () => {
 
 	return (
 		<div className={styles['top-slice']}>
-			<div className={`container ${styles.container}`}>
+			<div className={`${styles.container}`}>
 				<div className={styles.cursor}>
 					<img src={Cursor} alt='' />
 					<DropDown width={160} {...cityConfig} />

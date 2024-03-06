@@ -82,11 +82,15 @@ function Rating() {
 			<div className='container'>
 				<div className='rating__content'>
 					<div className='rating__block__left'>
-						<h2>Независимые рейтинги</h2>
+						<h2 data-aos='fade-up' data-aos-duration={500}>
+							Независимые рейтинги
+						</h2>
 						<div className='rating__block__left-blocks'>
 							<div className='rating__contnent__s'>
 								{data.map((el, ind) => (
 									<div
+										data-aos='fade-up'
+										data-aos-duration={ind * 300}
 										onClick={() => clickTo(el.rating)}
 										key={ind}
 										className='rating__block'

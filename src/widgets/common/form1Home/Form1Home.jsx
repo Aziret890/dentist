@@ -35,27 +35,42 @@ function Form1Home() {
 			<div className='container'>
 				<div className='from1__content'>
 					<div className='from1__images'>
-						<img src={form1photo} alt='' />
+						<img
+							data-aos='fade-up'
+							data-aos-duration={300}
+							src={form1photo}
+							alt=''
+						/>
 					</div>
 					<div className='from1__from'>
 						<div className='from__child'>
-							<h2>Остались вопросы? Мы ответим!</h2>
+							<h2 data-aos='fade-up' data-aos-duration={500}>
+								Остались вопросы? Мы ответим!
+							</h2>
 							<div className='from__input'>
 								<input
+									data-aos='fade-up'
+									data-aos-duration={1 * 500}
 									onChange={e => setObjDataName(e.target.value)}
 									type='text'
 									placeholder='Kubanychbekov Aziret'
 								/>
 								<input
+									data-aos='fade-up'
+									data-aos-duration={2 * 500}
 									onChange={e => setObjDataNum(e.target.value)}
 									type='text'
 									placeholder='+7 000 000-00-00'
 								/>
 							</div>
 							{time > 0 ? (
-								<p>Перезвоним через {time} секунд</p>
+								<p data-aos='fade-up' data-aos-duration={3 * 500}>
+									Перезвоним через {time} секунд
+								</p>
 							) : (
-								<p>Перезвонить еще раз</p>
+								<p data-aos='fade-up' data-aos-duration={3 * 500}>
+									Перезвонить еще раз
+								</p>
 							)}
 							<div
 								className={`from__btn from__btn-${
@@ -65,9 +80,13 @@ function Form1Home() {
 								} `}
 							>
 								{!objDataNum.length > 0 ? (
-									<button>Отправить</button>
+									<button data-aos='fade-up' data-aos-duration={2 * 500}>
+										Отправить
+									</button>
 								) : (
 									<button
+										data-aos='fade-up'
+										data-aos-duration={3 * 500}
 										onClick={() => sendMessageBot()}
 										className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500  group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white hover:scale-110 duration-200 my-7'
 									>
