@@ -1,5 +1,4 @@
-import React from "react";
-import medal from "../../shared/assets/images/medal.svg";
+/* eslint-disable react/no-unknown-property */
 
 function ButtonRoutes() {
   return (

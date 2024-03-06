@@ -10,17 +10,26 @@ const Reviews = () => {
 			<div className='container'>
 				<div className='reviews'>
 					<div className='reviews-title'>
-						<h1>Только честные отзывы</h1>
-						<p>
+						<h1 data-aos='fade-up' data-aos-duration={1 * 300}>
+							Только честные отзывы
+						</h1>
+						<p data-aos='fade-up' data-aos-duration={2 * 300}>
 							Все отзывы <FaArrowRight />
 						</p>
 					</div>
 					<div className='main-reviews'>
 						<div className='text-review'>
 							<div className='description-review'>
-								<img src={ChatSquare} alt='' />
-								<h3>Мы за честность!</h3>
-								<p>
+								<img
+									data-aos='fade-up'
+									data-aos-duration={1 * 300}
+									src={ChatSquare}
+									alt=''
+								/>
+								<h3 data-aos='fade-up' data-aos-duration={2 * 300}>
+									Мы за честность!
+								</h3>
+								<p data-aos='fade-up' data-aos-duration={3 * 300}>
 									Убедиться в наших отзывах легко — просто напишите пациентам,
 									оставившим <br />
 									<br /> отзывы, и поинтересуйтесь о качестве услуг и сервиса
@@ -29,17 +38,28 @@ const Reviews = () => {
 							</div>
 							<div className='cut-review'></div>
 							<div className='write-review'>
-								<img src={PenReview} alt='' />
-								<p>
+								<img
+									data-aos='fade-up'
+									data-aos-duration={1 * 300}
+									src={PenReview}
+									alt=''
+								/>
+								<p data-aos='fade-up' data-aos-duration={2 * 300}>
 									Оставьте свой отзыв. Это очень ценно для нас! <br />
 									<br /> Всего несколько слов о качестве, сервисе и результате.
 								</p>
-								<button>Написать отзыв</button>
+								<button data-aos='fade-up' data-aos-duration={3 * 300}>
+									Написать отзыв
+								</button>
 							</div>
 						</div>
 
 						<div className='review-list'>
-							<div className='review-card'>
+							<div
+								className='review-card'
+								data-aos='fade-up'
+								data-aos-duration={1 * 300}
+							>
 								<div className='user-info'>
 									<div className='user-pic-name'>
 										<img src={UserPic} alt=':/' />
@@ -74,7 +94,11 @@ const Reviews = () => {
 									всего наилучшего!
 								</h4>
 							</div>
-							<div className='review-card'>
+							<div
+								className='review-card'
+								data-aos='fade-up'
+								data-aos-duration={2 * 300}
+							>
 								<div className='user-info'>
 									<div className='user-pic-name'>
 										<img src={UserPic} alt=':/' />

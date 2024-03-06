@@ -73,17 +73,23 @@ const Doctor = () => {
 			<div className='relative my-11'>
 				{/* Слайдер */}
 				<Slider {...sliderSettings} ref={sliderRef}>
-					{slidesContent.map((content, index) => (
+					{slidesContent.map((content, idx) => (
 						<div
 							className='hh w-full h-[656px] bg-[#F2FAFB] flex items-center justify justify-between px-4'
-							key={index}
+							key={idx}
 						>
 							<div className='flex items-center justify-between px-[60px]'>
-								<div className='w-[510px]'>
+								<div
+									data-aos='fade-up'
+									data-aos-duration={idx * 300}
+									className='w-[510px]'
+								>
 									<h3 className='text-3xl flex gap-3 text-black font-[700] leading-6 pt-14'>
 										<div className=''>
 											<div className='no'>
 												<img
+													data-aos='fade-up'
+													data-aos-duration={idx * 300}
 													className=' w-[66px] h-[62px] rounded-full object-cover'
 													src={men}
 													alt='img'
@@ -95,6 +101,8 @@ const Doctor = () => {
 
 									<div className='flex items-center justify-between gap-11'>
 										<div
+											data-aos='fade-up'
+											data-aos-duration={idx * 300}
 											className='flex gap-2 '
 											style={{
 												textAlign: 'center',
@@ -103,6 +111,8 @@ const Doctor = () => {
 										>
 											{slidesContent.map((content, index) => (
 												<span
+													data-aos='fade-up'
+													data-aos-duration={index * 300}
 													className='hover:border-b-2 border-[#2CB2BB] text-[#2CB2BB]'
 													key={index}
 													onClick={() => handleTitleClick(index)}
@@ -119,7 +129,7 @@ const Doctor = () => {
 															fontWeight: '700',
 															color:
 																currentSlide === index ? 'white' : '#2CB2BB',
-															background:
+															backgroundColor:
 																currentSlide === index ? '#2CB2BB' : 'white'
 														}}
 														className='btn text-[#2CB2BB]'
@@ -132,6 +142,8 @@ const Doctor = () => {
 										</div>
 										<div className=''>
 											<button
+												data-aos='fade-up'
+												data-aos-duration={idx * 500}
 												onClick={handleNextSlide}
 												className='relative pt-5 inline-flex items-center text-lg justify-center w-[202px] from-cyan-500  group-hover:from-cyan-500 group-hover:to-[#2CB2BB] hover:text-[#2CB2BB] dark:text-[#2CB2BB] hover:scale-110 duration-200 my-7'
 											>
@@ -142,31 +154,53 @@ const Doctor = () => {
 										</div>
 									</div>
 
-									<h1 className='text-lg my-4 text-black font-bold'>
+									<h1
+										data-aos='fade-up'
+										data-aos-duration={idx * 300}
+										className='text-lg my-4 text-black font-bold'
+									>
 										{content.name}
 									</h1>
 									<div className='flex items-start gap-3'>
-										<span className='mt-3 text-[#2CB2BB]'>
+										<span
+											data-aos='fade-up'
+											data-aos-duration={idx * 300}
+											className='mt-3 text-[#2CB2BB]'
+										>
 											<BiCheck />
 										</span>
 
-										<h1 className='tt font-normal my-3 text-black'>
+										<h1
+											data-aos='fade-up'
+											data-aos-duration={idx * 300}
+											className='tt font-normal my-3 text-black'
+										>
 											{content.description}
 										</h1>
 									</div>
 
 									<div className='flex items-start gap-3'>
-										<span className='mt-3 text-[#2CB2BB]'>
+										<span
+											data-aos='fade-up'
+											data-aos-duration={idx * 300}
+											className='mt-3 text-[#2CB2BB]'
+										>
 											<BiCheck />
 										</span>
 
-										<h1 className='tt font-normal my-3 text-black'>
+										<h1
+											data-aos='fade-up'
+											data-aos-duration={idx * 300}
+											className='tt font-normal my-3 text-black'
+										>
 											{content.description2}
 										</h1>
 									</div>
 								</div>
 								<div className='blo'>
 									<img
+										data-aos='fade-up'
+										data-aos-duration={idx * 300}
 										className=' object-cover w-[386px] h-[612px] mb-[-100px]'
 										src='https://s3-alpha-sig.figma.com/img/c1a1/2765/8cca3b0bcec00a13f839629d8ce068fd?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZmPo6~aGj~-VngyQcvS39aCVlKXCfTW2oDwQBOfIw~bwsvtnzJCGrYepfpIuw3CRwPyLGcN7REedSXyem4usMZ~USGFv-Ytz61EIkSqPS8dTcugp2kPULjLU6vBKqlS6Ho3gsDWSMPjo4FnovdSs6dBibx9r2kk--8Zj3wM2utDAWhYG-qWnrYko-P5dw0zNKnAHBlodDXfoBA0V8AzIfACpIz0AjaPSBYKcuMS8mU4VSHcnh-6akku4m1wUUi9nRiHqlkeYrij3mFBBtkhY0vIcPNCB2mW4cWn1KfWs1awz3NVi08CGaBrLt0tfb9z93RwuCHHU1-IZn5M6kSYj-w__'
 										alt='img'

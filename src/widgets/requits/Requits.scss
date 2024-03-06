@@ -1,103 +1,124 @@
 .requits {
-  margin-top: 98px;
-  &__content {
-  }
-  &__block__btns {
-    button {
-      border-radius: 8px;
-      background: rgb(242, 250, 251);
-      width: 230px;
-      height: 64px;
-      color: rgb(44, 178, 187);
-      font-size: 12px;
-      font-weight: 600;
-      transition: 0.3s ease-in-out;
-    }
-    button:hover {
-      background: rgb(44, 178, 187);
-      color: rgb(255, 255, 255);
-      font-size: 12px;
-      font-weight: 600;
-      transition: 0.3s ease-in-out;
-    }
-  }
-  &__title {
-    text-align: center;
-    margin-bottom: 54px;
-    color: rgb(37, 63, 65);
-    font-size: 40px;
-    font-weight: 900;
-  }
+	margin-top: 98px;
+	&__content {
+	}
+	&__block__btns {
+		button {
+			border-radius: 8px;
+			background: rgb(242, 250, 251);
+			width: 230px;
+			height: 64px;
+			color: rgb(44, 178, 187);
+			font-size: 12px;
+			font-weight: 600;
+			transition: 0.3s ease-in-out;
+		}
+		button:hover {
+			background: rgb(44, 178, 187);
+			color: rgb(255, 255, 255);
+			font-size: 12px;
+			font-weight: 600;
+			transition: 0.3s ease-in-out;
+			svg {
+				fill: white;
+				stroke: white;
+				path {
+					fill: white;
+				}
+			}
+		}
+		button:nth-child(3):hover {
+			background: rgb(44, 178, 187);
+			color: rgb(255, 255, 255);
+			font-size: 12px;
+			font-weight: 600;
+			transition: 0.3s ease-in-out;
+			svg {
+				fill: white;
+				stroke: white;
+				path {
+					stroke: white;
+				}
+			}
+		}
+	}
+	&__title {
+		text-align: center;
+		margin-bottom: 54px;
+		color: rgb(37, 63, 65);
+		font-size: 40px;
+		font-weight: 900;
+	}
 }
 @media screen and (max-width: 1137px) {
-  .requits__copy__block-child {
-    width: 95%;
-  }
+	.requits__copy__block-child {
+		width: 95%;
+	}
 }
 @media screen and (max-width: 475px) {
-  .requits__copy__block-child-info {
-    p {
-      font-size: 14px;
-      margin: 0;
-      letter-spacing: normal;
-      text-align: start;
-      position: absolute;
-      top: -55px;
-      left: -90%;
-      width: 100%;
-    }
-  }
-  .requits__copy__block-child-name {
-    width: 100%;
-    font-size: 13px;
-  }
-  .requits__copy__block-child {
-    padding-left: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    grid-gap: 45px;
-  }
-  .requits__copy__block-child-copy {
-    margin-top: 4.5pc;
-  }
+	.requits__copy__block-child-info {
+		p {
+			font-size: 14px;
+			margin: 0;
+			letter-spacing: normal;
+			text-align: start;
+			position: absolute;
+			top: -55px;
+			left: -90%;
+			width: 100%;
+		}
+	}
+	.requits__copy__block-child-name {
+		width: 100%;
+		font-size: 13px;
+	}
+	.requits__copy__block-child {
+		padding-left: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: center;
+		grid-gap: 45px;
+	}
+	.requits__copy__block-child-copy {
+		margin-top: 4.5pc;
+	}
 }
 @media screen and (max-width: 900px) {
-  .requits__block__btns {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    grid-gap: 20px;
-  }
+	.requits__block__btns {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		grid-gap: 20px;
+	}
 }
 @media screen and (max-width: 1120px) {
-  .block__wrapper__categories__child {
-    width: 130%;
-  }
+	.block__wrapper__categories__child {
+		width: 130%;
+	}
 }
 @media screen and (max-width: 940px) {
-  .vakancies__block__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-  }
-  .block__wrapper__categories__child {
-    width: 100%;
-  }
+	.vakancies__block__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 30px;
+	}
+	.block__wrapper__categories__child {
+		width: 100%;
+	}
 }
 @media screen and (max-width: 460px) {
-  .block__wrapper__inputs {
-    width: 90%;
-  }
-  .wrapper__categories_block {
-    p {
-      font-size: 10px;
-    }
-    h3 {
-      font-size: 14px;
-    }
-  }
+	.block__wrapper__inputs {
+		width: 90%;
+	}
+	.wrapper__categories_block {
+		p {
+			font-size: 10px;
+		}
+		h3 {
+			font-size: 14px;
+		}
+	}
 }
