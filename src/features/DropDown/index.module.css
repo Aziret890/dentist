@@ -5,6 +5,7 @@
 }
 
 .dropdownButton {
+	
 	padding: 6px 10px;
 	border: none;
 	cursor: pointer;
@@ -13,6 +14,7 @@
 	justify-content: center;
 	gap: 10px;
 	font-size: 14px;
+	line-height: 18px;
 	& svg {
 		font-size: 12px;
 	}

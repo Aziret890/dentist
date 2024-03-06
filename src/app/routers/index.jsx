@@ -4,6 +4,7 @@ import AboutClinic from '../../pages/AboutClinic/page'
 import Doctors from '../../pages/Doctors/page'
 import Index from '../../pages/Vakancies/Index'
 import DetailDoctors from '../../pages/DetailDoctors/page'
+import Sale from '../../widgets/sale/Sale'
 
 export default function Routers() {
 	return (
@@ -14,6 +15,7 @@ export default function Routers() {
 				<Route path='/about/vakancies' element={<Index />} />
 				<Route path='/doctors' element={<Doctors />} />
 				<Route path='/doctors/:docId' element={<DetailDoctors />} />
+				<Route path='/sale' element={<Sale />} />
 			</Routes>
 		</>
 	)

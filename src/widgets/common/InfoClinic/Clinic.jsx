@@ -10,15 +10,17 @@ const Clinic = () => {
 			<div className='container'>
 				<div className='clinic'>
 					<div className='clinic-title'>
-						<h1>Название клиники</h1>
-						<p>
+						<h1 data-aos='fade-up' data-aos-duration={1 * 300}>
+							Название клиники
+						</h1>
+						<p data-aos='fade-up' data-aos-duration={2 * 300}>
 							Подробнее <FaArrowRight style={{ marginLeft: '10px' }} />
 						</p>
 					</div>
 					<div className='info-clinic'>
 						<div className='clinic-description'>
-							<p>
-								{`Стоматологическая клиника «Ника» на протяжении 20 лет оказывает
+							<p data-aos='fade-up' data-aos-duration={3 * 300}>
+								Стоматологическая клиника «Ника» на протяжении 20 лет оказывает
 								высококвалифицированные стоматологические услуги для жителей
 								Иркутска и Иркутской области. За это время нам удалось
 								сформировать коллектив, состоящий полностью из высококлассных
@@ -39,10 +41,14 @@ const Clinic = () => {
 								отбеливание ZOOM, лечение неприятного запаха изо рта, установку
 								голливудских виниров (люминиры) и многие другие услуги.
 								За плечами наших специалистов — большой опыт работы и владение
-								передовыми методиками лечения. `}
+								передовыми методиками лечения. 
 								<br />
 								<br />{' '}
-								<span className='span-description-clinic'>
+								<span
+									data-aos='fade-up'
+									data-aos-duration={4 * 300}
+									className='span-description-clinic'
+								>
 									Мы работаем ради вас и вашего здоровья! <br />
 									Стоматология — это наше призвание!
 								</span>
@@ -50,14 +56,37 @@ const Clinic = () => {
 						</div>
 						<div className='pic-clinic'>
 							<div className='photos-clinic'>
-								<img src={PicClinic} alt='image :/' />
-								<img src={PicClinic2} alt='image :/' />
+								<img
+									data-aos='fade-left'
+									data-aos-duration={1 * 300}
+									src={PicClinic}
+									alt='image :/'
+								/>
+								<img
+									data-aos='fade-left'
+									data-aos-duration={2 * 300}
+									src={PicClinic2}
+									alt='image :/'
+								/>
 							</div>
-							<div className='guarant-clinic'>
-								<img src={CheckCircle} alt='' />
-								<h2>Спасаем 99% зубов рекомендованных к удалению</h2>
-								<p>Лечение зубов без боли и неприятных ощущений в Иркутске</p>
-								<p>
+							<div
+								data-aos='fade-left'
+								data-aos-duration={1 * 300}
+								className='guarant-clinic'
+							>
+								<img
+									data-aos='fade-left'
+									data-aos-duration={2 * 300}
+									src={CheckCircle}
+									alt=''
+								/>
+								<h2 data-aos='fade-left' data-aos-duration={3 * 300}>
+									Спасаем 99% зубов рекомендованных к удалению
+								</h2>
+								<p data-aos='fade-left' data-aos-duration={4 * 300}>
+									Лечение зубов без боли и неприятных ощущений в Иркутске
+								</p>
+								<p data-aos='fade-left' data-aos-duration={5 * 300}>
 									Для лечения своих пациентов мы используем только
 									сертифицированные и проверенные препараты, качественное
 									оборудование и новейшие методики

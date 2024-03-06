@@ -29,14 +29,16 @@ function News() {
 			<div className='container'>
 				<div className='news__content'>
 					<div className='new__title'>
-						<h1>Новости</h1>
-						<h4>
+						<h1 data-aos='fade-up' data-aos-duration={1 * 300}>
+							Новости
+						</h1>
+						<h4 data-aos='fade-up' data-aos-duration={2 * 300}>
 							Все новости <img src={newIcon} alt='' />
 						</h4>
 					</div>
 					<div className='new__blocks'>
 						{cardData.map((el, ind) => (
-							<NewsCard el={el} key={ind} />
+							<NewsCard index={ind} el={el} key={ind} />
 						))}
 					</div>
 				</div>

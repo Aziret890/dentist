@@ -1,79 +1,93 @@
 .social__section {
-  margin-top: 114px;
+	margin-top: 114px;
 }
 .social__block1-title h1 {
-  color: rgb(37, 63, 65);
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 29px;
+	color: rgb(37, 63, 65);
+	font-size: 32px;
+	font-weight: 700;
+	margin-bottom: 29px;
 }
 .social__block1-title p {
-  font-family: Montserrat;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0%;
-  line-height: 30px;
+	font-family: Montserrat;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: 0%;
+	line-height: 30px;
 
-  text-align: left;
-  max-width: 75%;
+	text-align: left;
+	max-width: 75%;
 }
 .social__block1-title p span {
-  font-family: Montserrat;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0%;
-  text-align: left;
-  color: rgb(44, 178, 187);
+	font-family: Montserrat;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: 0%;
+	text-align: left;
+	color: rgb(44, 178, 187);
 }
-.block-child-left p {
-  color: rgb(37, 63, 65);
-  font-size: 14px;
-  font-weight: 600;
-}
-.block-child-left p span {
-  color: rgb(44, 178, 187);
-  font-size: 14px;
-  font-weight: 600;
+.social__block2 {
+	height: 340px;
+	.swiper-slide {
+		width: 300px !important;
+	}
 }
 .block-child-left {
-  background: rgb(44, 178, 187);
-  width: 60px;
-  height: 60px;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
-  transition: 0.5s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	svg {
+		font-size: 42px;
+	}
+}
+.block-child-left p {
+	color: rgb(37, 63, 65);
+	font-size: 14px;
+	font-weight: 600;
+}
+.block-child-left p span {
+	color: rgb(44, 178, 187);
+	font-size: 14px;
+	font-weight: 600;
+}
+.block-child-left {
+	background: rgb(44, 178, 187);
+	width: 60px;
+	height: 60px;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	transition: 0.5s ease-in-out;
 }
 .block-child-svg {
-  border-radius: 8px;
-  background: rgb(242, 250, 251);
-  object-fit: cover;
-  width: 232px;
-  height: 60px;
-  transition: 0.5s ease-in-out;
+	border-radius: 8px;
+	background: rgb(242, 250, 251);
+	object-fit: cover;
+	width: 232px;
+	height: 60px;
+	transition: 0.5s ease-in-out;
 }
 .block-child {
-  &-svg:hover {
-    transition: 0.2s ease-in-out;
-    background: rgb(253, 247, 242);
-    .block-child-left {
-      transition: 0.2s ease-in-out;
-      background: rgb(229, 126, 37);
-    }
-  }
+	&-svg:hover {
+		transition: 0.2s ease-in-out;
+		background: rgb(253, 247, 242);
+		.block-child-left {
+			transition: 0.2s ease-in-out;
+			background: rgb(229, 126, 37);
+		}
+	}
 }
 .block_social-likes {
-  color: rgb(37, 63, 65);
-  font-size: 14px;
-  font-weight: 700;
+	color: rgb(37, 63, 65);
+	font-size: 14px;
+	font-weight: 700;
 }
 .dfdf {
-  margin-top: 48px;
-  max-width: 100%;
-  overflow-x: scroll;
-  width: 1202px;
+	margin-top: 48px;
+	max-width: 100%;
+	overflow-x: scroll;
+	width: 1202px;
 }
 .dfdf::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
