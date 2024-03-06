@@ -114,4 +114,5 @@ const HeaderBottomSlice = () => {
 	)
 }
 
-export default HeaderBottomSlice
+
+export default HeaderBottomSlice;
