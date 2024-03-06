@@ -7,6 +7,7 @@ import Header from "../widgets/common/Header";
 import Form2Home from "../widgets/common/form2Home/Form2Home";
 import "./App.css";
 import Routers from "./routers";
+import { useEffect } from "react";
 function App() {
   const location = useLocation();
 
