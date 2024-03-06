@@ -62,17 +62,20 @@ const DropDown = ({ initialSelectedItem, items, links, width, width2 }) => {
 								}}
 								viewport={{ amount: 0 }}
 							>
-								<Link
-									to={
-										isOpen && links && Array.isArray(links) ? links[idx] : '#'
-									}
-									onClick={() => {
-										onSelectItem(links[idx])
-										toggleDropDown(false)
-									}}
-								>
-									{link}
-								</Link>
+								{isOpen && items && links && Array.isArray(links) && (
+									<Link
+										to={
+											isOpen && links && Array.isArray(links) ? links[idx] : ''
+										}
+										onClick={() => {
+											onSelectItem(links[idx])
+											toggleDropDown(false)
+										}}
+									>
+										{link}
+									</Link>
+								)}
+								{!links && <button>{link}</button>}
 							</motion.li>
 						)
 				)}

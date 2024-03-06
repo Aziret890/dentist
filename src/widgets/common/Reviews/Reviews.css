@@ -24,11 +24,22 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: start;
+	@media (max-width: 1000px) {
+		flex-wrap: wrap;
+	}
 }
 .text-review {
 	width: 284px;
 	height: 728px;
 	margin-top: 70px;
+	@media (max-width: 1000px) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 50px;
+		width: 100%;
+		height: auto;
+	}
 }
 
 .description-review {
@@ -63,8 +74,22 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	margin-top: 30px;
+	margin-top: 90px;
 	border-radius: 8px;
+	position: relative;
+	@media (max-width: 1000px) {
+		margin-top: 0;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		width: 140%;
+		height: 80px;
+		top: -50px;
+		left: -30%;
+		background-color: white;
+		transform: skewY(-5deg);
+	}
 }
 .write-review p {
 	color: #ffffff;
@@ -81,20 +106,17 @@
 	font-size: 14px;
 	font-weight: 700;
 }
-.cut-review {
-	position: absolute;
-	background-color: white;
-	width: 286px;
-	height: 46px;
-	transform: rotate(-8deg);
-	margin-top: 5px;
-	left: 153px;
-}
 
 .review-card {
 	box-shadow: 0px 4px 12px 0px #2cb2bb3d;
 	padding: 30px;
 	border-radius: 8px;
+	@media (max-width: 1000px) {
+		width: 80%;
+	}
+	@media (max-width: 840px) {
+		width: 100%;
+	}
 }
 .review-list {
 	width: 732px;
@@ -104,6 +126,16 @@
 	align-items: flex-start;
 	justify-content: flex-start;
 	gap: 30px;
+	@media (max-width: 1000px) {
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	@media (max-width: 840px) {
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
 }
 .user-info {
 	display: flex;
@@ -142,7 +174,7 @@
 	color: #2cb2bb;
 }
 .review-user {
-	width: 652px;
+	width: 100%;
 	color: #253f41;
 	font-size: 16px;
 	font-weight: 400;

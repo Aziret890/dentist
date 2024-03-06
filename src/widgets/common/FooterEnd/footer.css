@@ -35,7 +35,7 @@
 button {
 	border: none;
 	background-color: transparent;
-	font-size: 20px;
+	/* font-size: 20px; */
 }
 
 .button:hover {
@@ -49,6 +49,21 @@ button {
 .how:hover {
 	transform: scale(1.1);
 }
-.how {
-	transition: 0.6s;
+
+.hov {
+	display: flex;
+	align-items: flex-start;
+}
+@media (max-width: 940px) {
+	.hov {
+		display: grid !important;
+		grid-template-columns: repeat();
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+		grid-row-gap: 20px;
+		div {
+			a {
+			}
+		}
+	}
 }

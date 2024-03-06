@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './Form.css'
 import form1photo from '../../../shared/assets/images/from1photo.svg'
 import axios from 'axios'
+import { useWindowSize } from '../../../entity/hooks/useWindowSize'
 function Form1Home() {
 	const [objDataNum, setObjDataNum] = useState('')
 	const [objDataName, setObjDataName] = useState('')
@@ -30,23 +31,39 @@ function Form1Home() {
 		setObjDataName('')
 		setObjDataNum('')
 	}
+
+	const { width } = useWindowSize()
+
 	return (
 		<section className='from1__home'>
 			<div className='container'>
 				<div className='from1__content'>
 					<div className='from1__images'>
-						<img
+						<div className="image-poster">
+							<img
 							data-aos='fade-up'
 							data-aos-duration={300}
 							src={form1photo}
 							alt=''
 						/>
-					</div>
-					<div className='from1__from'>
-						<div className='from__child'>
+						</div>
+						{width <= 741 ? (
 							<h2 data-aos='fade-up' data-aos-duration={500}>
 								Остались вопросы? Мы ответим!
 							</h2>
+						) : (
+							''
+						)}
+					</div>
+					<div className='from1__from'>
+						<div className='from__child'>
+							{width >= 741 ? (
+								<h2 data-aos='fade-up' data-aos-duration={500}>
+									Остались вопросы? Мы ответим!
+								</h2>
+							) : (
+								''
+							)}
 							<div className='from__input'>
 								<input
 									data-aos='fade-up'

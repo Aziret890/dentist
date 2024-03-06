@@ -2,6 +2,7 @@
 import styles from '../index.module.scss'
 
 export default function ServicesTabContent({ tab }) {
+	
 	return (
 		<ul className={styles.services_tab_content}>
 			{servicesTabContent.map((item, idx) => (
