@@ -1,4 +1,3 @@
-import React from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { DocProviders } from './context/DoctorsContext'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
@@ -6,7 +5,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 const client = new QueryClient({
 	defaultOptions: {
 		queries: {
-			refetchOnWindowFocus: false
+			refetchOnWindowFocus: false,
+			
 		}
 	}
 })
