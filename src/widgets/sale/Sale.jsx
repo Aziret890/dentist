@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+import pngAziret from "../../shared/assets/images/png-aziret.png";
+import "./Sale.scss";
+// import ButtonRoutes from '../../app/routers/ButtonRoutes'
+// import ButtonRoutes from '../../app/'
+=======
 import pngAziret from '../../shared/assets/images/png-aziret.png'
 import './Sale.scss'
+>>>>>>> 1b5acdc4070f9f21695d9e5a5f0bd8b91d77d74f
 function Sale() {
 	return (
 		<section className='sale'>
