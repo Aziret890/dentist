@@ -1,6 +1,6 @@
+import ButtonRoutes from '../../app/routers/ButtonRoutes'
 import pngAziret from '../../shared/assets/images/png-aziret.png'
 import './Sale.scss'
-import ButtonRoutes from '../../app/routers/ButtonRoutes'
 function Sale() {
 	return (
 		<section className='sale'>
