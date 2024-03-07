@@ -57,8 +57,12 @@ html {
 	height: 100%;
 }
 
-.swiper {
+.swipers {
 	height: 540px;
+	display: none !important;
+	@media (max-width: 440px) {
+		display: block !important;
+	}
 }
 
 .backgrounds {

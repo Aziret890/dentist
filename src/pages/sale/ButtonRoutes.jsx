@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 function ButtonRoutes({ id }) {
 	return (
 		<div>
-			{' '}
 			<div className='requits__block__btns flex justify-between'>
 				<button
 					className={clsx('flex items-center justify-center gap-4', {

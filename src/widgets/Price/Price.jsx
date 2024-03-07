@@ -11,7 +11,6 @@ import SaleFiveButton from "../../pages/Sale/components/Sale1/SaleFiveButton";
 
 function Price({ id }) {
   const [tabContentIndex, setTabContentIndex] = useState(0);
-  console.log(tabContentIndex);
   return (
     <section className="price mt-[98px]">
       <div className="container">

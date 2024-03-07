@@ -7,6 +7,7 @@ import ServicesPage from '../../pages/Services/Page'
 import VacancyPage from '../../pages/Vakancies/Index'
 import Sale from '../../pages/Sale'
 import PricePage from '../../pages/Price/page'
+import News from '../../pages/News/page'
 
 export default function Routers() {
 	return (
@@ -20,6 +21,7 @@ export default function Routers() {
 				<Route path='/services' element={<ServicesPage />} />
 				<Route path='/action' element={<Sale />} />
 				<Route path='/price' element={<PricePage />} />
+				<Route path='/news' element={<News />} />
 			</Routes>
 		</>
 	)

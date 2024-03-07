@@ -35,7 +35,7 @@ function Form2Home() {
 	const { width } = useWindowSize()
 
 	return (
-		<section className='from1__home'>
+		<section className='from1__home pt-3'>
 			<div className='container'>
 				<div className='from1__content'>
 					<div className='from1__images'>

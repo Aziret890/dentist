@@ -5,6 +5,9 @@
 	font-size: 32px;
 	font-weight: 700;
 	color: #253f41;
+	@media (max-width: 320px) {
+		font-size: 24px;
+	}
 }
 .partners p {
 	color: #253f41;
@@ -12,6 +15,11 @@
 	font-weight: 400;
 	margin-top: 30px;
 	margin-bottom: 50px;
+	@media (max-width: 320px) {
+		margin: 10px 0 20px 0;
+		font-size: 16px;
+		font-weight: 550;
+	}
 }
 .pic-partners {
 	display: flex;
@@ -25,5 +33,11 @@
 	}
 	@media (max-width: 640px) {
 		grid-gap: 20px;
+	}
+	@media (max-width: 940px) {
+		display: grid;
+		grid-template-columns: repeat();
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 40px;
 	}
 }

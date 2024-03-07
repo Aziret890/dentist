@@ -1,21 +1,17 @@
-@media(max-width: 568px ) {
-    .apa {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        /* text-align: center; */
-    }
+@media (max-width: 568px) {
+	.apa {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		/* text-align: center; */
+	}
 }
-@media (max-width : 418px ) {
-    .how{
-        width: 280px;
-    }
-    .w-\[405px\] {
-        width: 280px;
-        font-size: 17px;
-    }
+@media (max-width: 418px) {
+	.how {
+		width: 280px;
+	}
+	.w-\[405px\] {
+		width: 280px;
+		font-size: 17px;
+	}
 }
-
-
-
-

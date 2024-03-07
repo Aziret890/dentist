@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 import './footer.css'
 const Footer3 = () => {
 	return (
-		<div className='container'>
+		<div className='container footer3-none'>
 			<hr className='w-full h-[1px] bg-black' />
 			<div className='my-11 flex items-start justify-between hov'>
 				<div className='flex flex-col w-[284px]'>

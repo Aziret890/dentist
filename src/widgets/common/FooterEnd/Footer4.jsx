@@ -15,7 +15,7 @@ const Footer4 = () => {
 	return (
 		<div className='container'>
 			<div className='zz flex items-start justify-between my-11'>
-				<div className='m-5 w 840:min-w-[180px] 1000:w-[300px] 1100:w-[220px] w-[284px]'>
+				<div className='m-5 first 840:min-w-[180px] 1000:w-[300px] 1100:w-[220px] w-[284px]'>
 					<h1>Москва</h1>
 					<h3 className='text-xs'>ул. Терешковой, 15Б</h3>
 					<p className='df text-xs text-[#253F41] my-11'>
@@ -62,7 +62,7 @@ const Footer4 = () => {
 						</div>
 					</div>
 				</div>
-				<div className='df m-5 1100:w-auto w-[284px]'>
+				<div className='df second m-5 1100:w-auto w-[284px]'>
 					<div className='flex items-start gap-3'>
 						<span className='mt-1'>
 							<MdOutlinePhoneInTalk />
@@ -101,7 +101,7 @@ const Footer4 = () => {
 						</div>
 					</div>
 				</div>
-				<div className='m-5 840:max-w-[140px] 1100:w-auto 1200:w-[284px]'>
+				<div className='m-5 third 840:max-w-[140px] 1100:w-auto 1200:w-[284px]'>
 					<div className='flex items-center flex-col gap-4 mr-11'>
 						<button className='how cursor-pointer  p-[2px] bg-black rounded-[5px] bg-gradient-to-t from-[#2CB2BB] to-[#2CB2BB] active:scale-95'>
 							<span className='w-[240px] h-full text-sm font-medium flex items-center gap-2 px-4 py-3 bg-[#2CB2BB] text-[white] rounded-[5px] from-[#2CB2BB] to-[#2CB2BB]'>
@@ -122,7 +122,7 @@ const Footer4 = () => {
 						</button>
 					</div>
 				</div>
-				<div className='m-5 1100:w-[260px] 1200:w-[284px]'>
+				<div className='m-5 four 1100:w-[260px] 1200:w-[284px]'>
 					<h3 className='text-sm font-bold text-[#253F41]'>
 						Подписывайте на нас в соцсетях, чтобы быть в курсе всех собтиый
 					</h3>

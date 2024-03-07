@@ -18,7 +18,7 @@ const Our = () => {
 						justifyContent: width <= 840 ? 'flex-start' : 'space-between'
 					}}
 				>
-					<h2 className='text-3xl font-bold'>Наши преимущества</h2>
+					<h2 className='text-3xl font-bold text-left'>Наши преимущества</h2>
 					<div className='flex items-center gap-5'>
 						<h1 className='text-[#2CB2BB] text-4xl font-bold'>10 000</h1>
 

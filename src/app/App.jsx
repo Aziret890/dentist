@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Footer from "../widgets/common/FooterEnd/Footer";
@@ -8,6 +9,18 @@ import Header from "../widgets/common/Header";
 import Form2Home from "../widgets/common/form2Home/Form2Home";
 import Routers from "./routers";
 import "./App.css";
+=======
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+import Footer from '../widgets/common/FooterEnd/Footer'
+import Footer2 from '../widgets/common/FooterEnd/Footer2'
+import Footer3 from '../widgets/common/FooterEnd/Footer3'
+import Footer4 from '../widgets/common/FooterEnd/Footer4'
+import Header from '../widgets/common/Header'
+import Form2Home from '../widgets/common/form2Home/Form2Home'
+import Routers from './routers'
+import './App.css'
+>>>>>>> 45e477beb84ab6513edc55aeaa1066caa9b0192c
 function App() {
   const location = useLocation();
 
