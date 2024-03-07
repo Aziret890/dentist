@@ -1,12 +1,14 @@
 import React from 'react'
+import './example_work.scss'
 
-const Workexamples = ({doc}) => {
+const Workexamples = ({ doc }) => {
+	const { examples_work } = doc
 	return (
-		<div>
+		<div className='container pt-28'>
 			<section id='section4' className='mb-20'>
-				<div className='flex items-center w-full justify-between'>
+				<div className='flex mb-5 items-center w-full justify-between top-start'>
 					<h1 data-aos='fade-up'>Примеры работ врача</h1>
-					<button data-aos='fade-up' className={styles.all_examples}>
+					<button data-aos='fade-up' className={'all_examples'}>
 						Все примеры работ
 						<svg
 							width='16'
@@ -32,14 +34,14 @@ const Workexamples = ({doc}) => {
 						</svg>
 					</button>
 				</div>
-				<ul className={styles['examples-content']}>
+				<ul className={'examples-content'}>
 					{examples_work &&
 						examples_work.map((item, idx) => (
 							<li data-aos='fade-up' data-aos-duration={idx * 500} key={idx}>
-								<div className={styles.images}>
+								<div className={'images'}>
 									<img data-aos='fade-up' src={item.image} alt='' />
 								</div>
-								<div className={styles.content}>
+								<div className={'content'}>
 									<div data-aos='fade-up' data-aos-duration={500}>
 										<h4>Технология</h4>
 										<h6>{item.technology}</h6>

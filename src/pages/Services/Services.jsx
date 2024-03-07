@@ -10,6 +10,9 @@ import Useful from './components/Useful'
 import Form from './components/Form'
 import Blocks from './components/Blocks'
 import Workexamples from './components/Workexamples'
+import Reviews from '../../widgets/common/Reviews/Reviews'
+import OurDoctors from './components/OurDoctors'
+import Often from './components/Often'
 
 const doc = {
 	examples_work: [
@@ -66,6 +69,9 @@ const ServicesPage = () => {
 				<Form />
 				<Blocks />
 				<Workexamples doc={doc}/>
+				<Reviews/>
+				<OurDoctors/>
+				<Often/>
 			</div>
 		</div>
 	)

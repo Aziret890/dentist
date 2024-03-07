@@ -75,7 +75,7 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const aboutClientConfig = {
-		width: 10,
+		width: 130,
 		items: ['О клинике', 'Сертификаты', 'Реквизиты', 'Вакансии'],
 		links: [
 			'/vacancy',
