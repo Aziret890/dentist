@@ -6,6 +6,9 @@ import "../Requits/Requits.scss";
 import "./Vakancies.scss";
 import VakanciesChil from "./VakanciesChil";
 import Requits from "../Requits/Requits";
+import Licenses from "../../pages/DetailDoctors/components/Licenses";
+import { docArr } from "../../entity/const/doc.const";
+
 function Vakancies({ id }) {
   const [dataVakanciesOne, setVakanciesOne] = useState("");
   const [objDataNum, setObjDataNum] = useState("");
@@ -320,7 +323,9 @@ function Vakancies({ id }) {
               </div>
             </div>
           ) : id === 2 ? (
-            "Сертификаты"
+            <div className="mt-10">
+              <Licenses doc={docArr[0]} />
+            </div>
           ) : id === 3 ? (
             // "Реквизиты"
             <Requits />
