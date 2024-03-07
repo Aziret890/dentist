@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import DetalPriceAll from "./detalPrice/DetalPriceAll";
+
+import "./Price.scss";
+import Images from "./detalPrice/Images";
+
 function PriceSortAll() {
   const dataInfo = [
     {
       title: "Чистка и отбеливание зубов",
-      info: "Зубы у человека вырастают два раза – молочные и постоянные. Если  в первом случае, будучи ребенком, можно радоваться, что вместо временного вырастет новый, то потеря постоянного зуба может стать настоящей трагедией. Если в первом случае, будучи ребенком, можно радоваться, что вместо временного вырастет новый, то потеря постоянного зуба может стать настоящей трагедией. Зубы у человека вырастают два раза – молочные и постоянные. Зубы у человека вырастают два раза – молочные и постоянные. Если  в первом случае, будучи ребенком, можно радоваться, что вместо временного вырастет новый, то потеря постоянного зуба может стать настоящей трагедией.",
+      info: "Зубы у человека вырастают два раза – молочные и постоянные. Если в первом случае, будучи ребенком, можно радоваться, что вместо временного вырастет новый, то потеря постоянного зуба может стать настоящей трагедией. Если в первом случае, будучи ребенком, можно радоваться, что вместо временного вырастет новый, то потеря постоянного зуба может стать настоящей трагедией. Зубы у человека вырастают два раза – молочные и постоянные. Зубы у человека вырастают два раза – молочные и постоянные. Если в первом случае, будучи ребенком, можно радоваться, что вместо временного вырастет новый, то потеря постоянного зуба может стать настоящей трагедией.",
       price: 30000,
     },
     {
@@ -30,13 +34,33 @@ function PriceSortAll() {
   ];
   return (
     <section className="price__mini-block mt-[38px]">
-      <div className="price__mini__block-left">
-        {dataInfo.map((el, inx) => (
-          <DetalPriceAll el={el} key={inx} />
-        ))}
+      <div className="price__content flex justify-between items-start">
+        <div className="price__mini__block-left ">
+          {dataInfo.map((el, inx) => (
+            <DetalPriceAll el={el} key={inx} />
+          ))}
+        </div>
+        <Images />
       </div>
     </section>
   );
 }
 
 export default PriceSortAll;
+
+{
+  /* <div className="price__content__images flex flex-col gap-[20px]">
+  <img src={pricePhoto1} alt="" />
+  <div className="price__content__images__child flex justify-between">
+    <div className="price__content__images__child-flex flex flex-col gap-[23px]">
+      <img src={pricePhoto2} alt="" />
+      <img src={pricePhoto4} alt="" />
+    </div>
+    <img
+      className="price__content__images__child-images2"
+      src={pricePhoto3}
+      alt=""
+    />
+  </div>
+</div> */
+}

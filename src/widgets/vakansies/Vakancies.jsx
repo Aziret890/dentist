@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "../Requits/Requits.scss";
 import "./Vakancies.scss";
 import VakanciesChil from "./VakanciesChil";
-
+import Requits from "../Requits/Requits";
 function Vakancies({ id }) {
   const [dataVakanciesOne, setVakanciesOne] = useState("");
   const [objDataNum, setObjDataNum] = useState("");
@@ -322,7 +322,8 @@ function Vakancies({ id }) {
           ) : id === 2 ? (
             "Сертификаты"
           ) : id === 3 ? (
-            "Реквизиты"
+            // "Реквизиты"
+            <Requits />
           ) : id == 4 ? (
             "Вакансии"
           ) : null}
