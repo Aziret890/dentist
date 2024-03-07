@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./Requits.scss";
-import medal from "../../images/medal.svg";
 import RequtsDetals from "./RequtsDetals";
 function Requits() {
   const dataCopyInfo = [
