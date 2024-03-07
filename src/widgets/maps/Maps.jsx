@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './Maps.scss'
 import clsx from 'clsx'
 function Maps() {
