@@ -105,6 +105,13 @@
 		height: 680px;
 	}
 }
+
+@media (max-width: 540px) {
+	.hh {
+		max-width: 100% !important;
+		padding: 0 !important ;
+	}
+}
 @media (max-width: 466px) {
 	.hh {
 		height: 710px;

@@ -19,6 +19,9 @@
 	@media (max-width: 940px) {
 		font-size: 30px;
 	}
+	@media (max-width: 440px) {
+		font-size: 20px;
+	}
 }
 .clinic-title p {
 	color: #2cb2bb;
@@ -32,6 +35,9 @@
 	@media (max-width: 940px) {
 		font-size: 1rem;
 	}
+	@media (max-width: 440px) {
+		font-size: 14px;
+	}
 }
 
 .info-clinic {
@@ -43,6 +49,9 @@
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 20px;
+	}
+	@media (max-width: 940px) {
+		font-size: 30px;
 	}
 }
 
@@ -85,9 +94,13 @@
 		width: 520px;
 	}
 	@media (max-width: 940px) {
+		margin-top: 40px;
 		width: 100%;
 		justify-content: center;
 		/* gap: 30px; */
+	}
+	@media (max-width: 440px) {
+		flex-direction: column;
 	}
 }
 .photos-clinic {
@@ -120,6 +133,9 @@
 		width: 40%;
 		gap: 20px;
 		height: calc(208px * 2.2);
+	}
+	@media (max-width: 540px) {
+		width: 48%;
 	}
 }
 .photos-clinic img {

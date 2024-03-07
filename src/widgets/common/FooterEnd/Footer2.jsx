@@ -6,7 +6,7 @@ const Footer2 = () => {
 	return (
 		<div className='container'>
 			<div
-				className={`flex justify-start gap-20 items-center my-11 ${
+				className={`flex justify-start gap-20 items-start my-11 ${
 					width <= 940
 						? 'flex-wrap gap-9 items-start justify-between px-3 mb-5'
 						: ''
@@ -17,8 +17,8 @@ const Footer2 = () => {
 						width <= 940 ? 'gap-2 text-xs' : ''
 					}`}
 				>
-					<NavLink>Адреса клиник</NavLink>
-					<NavLink>О стоматологии</NavLink>
+					<NavLink className={'1100:h-10 1200:h-auto'}>Адреса клиник</NavLink>
+					<NavLink className={'1100:h-10 1200:h-auto'}>О стоматологии</NavLink>
 				</div>
 
 				<div
@@ -26,32 +26,34 @@ const Footer2 = () => {
 						width <= 940 ? 'gap-2 text-xs' : ''
 					}`}
 				>
-					<NavLink>Цены</NavLink>
-					<NavLink>Для иногородних</NavLink>
+					<NavLink className={'1100:h-10 1200:h-auto'}>Цены</NavLink>
+					<NavLink className={'1100:h-10 1200:h-auto'}>Для иногородних</NavLink>
 				</div>
 				<div
 					className={`flex flex-col gap-3 font-bold text-sm text-[#253F41] ${
 						width <= 940 ? 'gap-2 text-xs' : ''
 					}`}
 				>
-					<NavLink>Новости</NavLink>
-					<NavLink>Вопросы и ответы</NavLink>
+					<NavLink className={'1100:h-10 1200:h-auto'}>Новости</NavLink>
+					<NavLink className={'1100:h-10 1200:h-auto'}>
+						Вопросы и ответы
+					</NavLink>
 				</div>
 				<div
 					className={`flex flex-col gap-3 font-bold text-sm text-[#253F41] ${
 						width <= 940 ? 'gap-2 text-xs' : ''
 					}`}
 				>
-					<NavLink>Врачи</NavLink>
-					<NavLink>Отзывы</NavLink>
+					<NavLink className={'1100:h-10 1200:h-auto'}>Врачи</NavLink>
+					<NavLink className={'1100:h-10 1200:h-auto'}>Отзывы</NavLink>
 				</div>
 				<div
 					className={`flex flex-col gap-3 font-bold text-sm text-[#253F41] ${
 						width <= 940 ? 'gap-2 text-xs' : ''
 					}`}
 				>
-					<NavLink>Акции</NavLink>
-					<NavLink>Примеры работ</NavLink>
+					<NavLink className={'1100:h-10 1200:h-auto'}>Акции</NavLink>
+					<NavLink className={'1100:h-10 1200:h-auto'}>Примеры работ</NavLink>
 				</div>
 
 				<div
@@ -59,8 +61,8 @@ const Footer2 = () => {
 						width <= 940 ? 'gap-2 text-xs' : ''
 					}`}
 				>
-					<NavLink>Сертификаты</NavLink>
-					<NavLink>Контакты</NavLink>
+					<NavLink className={'1100:h-10 1200:h-auto'}>Сертификаты</NavLink>
+					<NavLink className={'1100:h-10 1200:h-auto'}>Контакты</NavLink>
 				</div>
 			</div>
 		</div>

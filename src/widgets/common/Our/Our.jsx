@@ -9,7 +9,7 @@ const Our = () => {
 	const { width } = useWindowSize()
 	return (
 		<div className='container'>
-			<div className='py-11'>
+			<div className='py-11 740:py-5 540:py-0'>
 				<div
 					className={`our flex items-center my-11 ${
 						width <= 840 ? 'flex-wrap gap-5' : 'flex-wrap gap-3'

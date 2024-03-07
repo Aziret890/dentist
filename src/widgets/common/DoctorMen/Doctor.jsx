@@ -82,7 +82,7 @@ const Doctor = () => {
 							key={idx}
 						>
 							<div
-								className={`flex items-center justify-between px-[60px] 1000:px-[10px] 840:px-5 ${
+								className={`flex items-center justify-between px-[60px] 540:px-5 1000:px-[10px] 840:px-5 ${
 									width <= 940 && width >= 840
 										? 'px-3'
 										: width <= 840 && width >= 740
@@ -95,30 +95,24 @@ const Doctor = () => {
 									data-aos-duration={idx * 300}
 									className='w-[510px] 840:w-full'
 								>
-									<h3 className='text-3xl flex gap-3 text-black font-[700] leading-6 pt-14'>
-										<div className=''>
-											<div className='no'>
-												<img
-													data-aos='fade-up'
-													data-aos-duration={idx * 300}
-													className=' w-[66px] h-[62px] rounded-full object-cover'
-													src={men}
-													alt='img'
-												/>
-											</div>
+									<div className='flex gap-3 text-black font-[700] 640:items-center 540:items-center leading-6 pt-14'>
+										<div className='no'>
+											<img
+												data-aos='fade-up'
+												data-aos-duration={idx * 300}
+												className=' w-[66px] h-[62px] rounded-full object-cover'
+												src={men}
+												alt='img'
+											/>
 										</div>
-										{content.title}
-									</h3>
+										<h3 className='540:text-xl text-3xl'>{content.title}</h3>
+									</div>
 
-									<div className='flex items-center justify-between gap-11'>
+									<div className='flex items-center 640:mt-5 640:w-3/5 540:mt-5 540:w-full 540:justify-center 640:justify-between gap-11'>
 										<div
 											data-aos='fade-up'
 											data-aos-duration={idx * 300}
-											className='flex gap-2 '
-											style={{
-												textAlign: 'center',
-												marginTop: '20px'
-											}}
+											className='flex gap-2 text-center'
 										>
 											{slidesContent.map((content, index) => (
 												<span
@@ -151,12 +145,12 @@ const Doctor = () => {
 												</span>
 											))}
 										</div>
-										<div className=''>
+										<div className='540:hidden 640:hidden'>
 											<button
 												data-aos='fade-up'
 												data-aos-duration={idx * 500}
 												onClick={handleNextSlide}
-												className='relative pt-5 inline-flex items-center text-lg justify-center w-[202px] from-cyan-500  group-hover:from-cyan-500 group-hover:to-[#2CB2BB] hover:text-[#2CB2BB] dark:text-[#2CB2BB] hover:scale-110 duration-200 my-7'
+												className='relative  inline-flex items-center text-lg justify-center w-[202px] from-cyan-500  group-hover:from-cyan-500 group-hover:to-[#2CB2BB] hover:text-[#2CB2BB] dark:text-[#2CB2BB] hover:scale-110 duration-200 my-7'
 											>
 												<span className='relative font-bold px-5 text-sm py-[13px] transition-all ease-in duration-75 bg-[#2CB2BB] text-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0'>
 													Следующий шаг
@@ -181,13 +175,13 @@ const Doctor = () => {
 											<BiCheck />
 										</span>
 
-										<h1
+										<p
 											data-aos='fade-up'
 											data-aos-duration={idx * 300}
-											className='tt font-normal my-3 text-black'
+											className='tt font-normal my-3 text-black w-full 540:pr-10'
 										>
 											{content.description}
-										</h1>
+										</p>
 									</div>
 
 									<div className='flex items-start gap-3'>
@@ -199,13 +193,13 @@ const Doctor = () => {
 											<BiCheck />
 										</span>
 
-										<h1
+										<p
 											data-aos='fade-up'
 											data-aos-duration={idx * 300}
-											className='tt font-normal my-3 text-black'
+											className='tt w-full font-normal my-3 text-black 540:pr-10'
 										>
 											{content.description2}
-										</h1>
+										</p>
 									</div>
 								</div>
 								<div className='blo'>
