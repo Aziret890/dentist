@@ -22,6 +22,10 @@
 	@media (max-width: 940px) {
 		padding: 10px 0;
 	}
+	@media (max-width: 740px) {
+		padding: 30px 0;
+		
+	}
 }
 .from1__images {
 	margin-top: -64px;
@@ -35,7 +39,7 @@
 	}
 	@media (max-width: 940px) {
 		& img {
-			margin-bottom: -68px;
+			margin-bottom: -10px;
 			min-width: 400px;
 		}
 	}
@@ -43,6 +47,7 @@
 		& img {
 			min-width: 380px;
 			margin-left: -30px;
+			margin-bottom: -34px;
 		}
 	}
 
@@ -54,10 +59,11 @@
 		.image-poster {
 			background-color: white;
 			clip-path: circle();
-			min-width: 100px;
-			height: 100px;
+			min-width: 70px;
+			height: 70px;
+			margin-left: -30px;
 			& img {
-				min-width: 100px;
+				min-width: 70px;
 				object-position: center left;
 				margin: 0;
 			}
@@ -89,13 +95,19 @@
 @media (max-width: 840px) {
 	.footer-query-image {
 		min-width: 280px !important;
+		margin-top: -78px;
 	}
 }
 @media (max-width: 640px) {
 	.footer-query-image {
 		min-width: 180px !important;
 		max-width: 180px !important;
-		padding-bottom: 20px;
+		padding-bottom: 10px;
+	}
+}
+@media (max-width: 740px) {
+	.footer-query-image {
+		display: none;
 	}
 }
 
@@ -156,6 +168,9 @@
 	margin-top: 110px;
 	@media (max-width: 1000px) {
 		margin-top: 20px;
+	}
+	@media (max-width: 740px) {
+		margin: 0 !important;
 	}
 }
 .from__child h2 {

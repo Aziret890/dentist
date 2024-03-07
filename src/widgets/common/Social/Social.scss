@@ -1,5 +1,8 @@
 .social__section {
 	margin-top: 114px;
+	@media (max-width: 740px) {
+		margin-top: 50px;
+	}
 }
 .social__block1-title h1 {
 	color: rgb(37, 63, 65);

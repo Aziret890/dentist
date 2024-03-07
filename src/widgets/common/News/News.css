@@ -46,6 +46,11 @@
 	@media (max-width: 1000px) {
 		padding: 20px 15px 0 15px;
 	}
+	@media (max-width: 540px) {
+		max-width: 100%;
+		padding: 25px;
+		padding-bottom: 0;
+	}
 }
 .new__blocks {
 	margin-top: 47px;
@@ -63,6 +68,14 @@
 	}
 	.newCard p {
 		font-size: 12px;
+	}
+}
+@media (max-width: 640px) {
+	.newCard h3 {
+		font-size: 14px;
+	}
+	.newCard p {
+		font-size: 14px;
 	}
 }
 @media screen and (max-width: 842px) {

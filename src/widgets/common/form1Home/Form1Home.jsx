@@ -39,13 +39,13 @@ function Form1Home() {
 			<div className='container'>
 				<div className='from1__content'>
 					<div className='from1__images'>
-						<div className="image-poster">
+						<div className='image-poster'>
 							<img
-							data-aos='fade-up'
-							data-aos-duration={300}
-							src={form1photo}
-							alt=''
-						/>
+								data-aos='fade-up'
+								data-aos-duration={300}
+								src={form1photo}
+								alt=''
+							/>
 						</div>
 						{width <= 741 ? (
 							<h2 data-aos='fade-up' data-aos-duration={500}>

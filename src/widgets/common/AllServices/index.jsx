@@ -12,7 +12,7 @@ export default function AllServices() {
 	return (
 		<section>
 			<div className={`container ${styles.container}`}>
-				<div className='flex items-center justify-between gap-5'>
+				<div className={clsx(`${styles.first} flex items-center justify-between gap-5`)}>
 					<h1 data-aos='fade-up'>Все услуги</h1>
 					<ul
 						data-aos='fade-up'
@@ -30,7 +30,7 @@ export default function AllServices() {
 							>
 								<h4>{item}</h4>
 								<span>15</span>
-								{width > 840 && (
+								{width > 940 && (
 									<svg
 										width='284'
 										height='88'

@@ -1,28 +1,48 @@
 .our h5 {
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.2;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.2;
 }
 .doctor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 380px;
-    height: 120px;
-    background: #F2FAFB;
-    border-radius: 10px;
-    transition: .6s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	width: 380px;
+	height: 120px;
+	background: #f2fafb;
+	border-radius: 10px;
+	transition: 0.6s;
 }
 .doctor:hover {
-transform: scale(1.1);
-
+	transform: scale(1.1);
 }
 .doctor h1 {
-    font-size: 40px;
-    color: #2CB2BB;
+	font-size: 40px;
+	color: #2cb2bb;
 }
 .doctor h2 {
-    font-weight: 700;
-    font-size: 15px;
+	font-weight: 700;
+	font-size: 15px;
+}
+
+@media (max-width: 740px) {
+	.doctor {
+		width: 280px;
+	}
+}
+@media (max-width: 540px) {
+	.doctor {
+		width: 240px;
+	}
+}
+
+@media (max-width: 440px) {
+	.doctor {
+		width: 200px;
+		height: 80px;
+		& h1 {
+			font-size: 32px;
+		}
+	}
 }
