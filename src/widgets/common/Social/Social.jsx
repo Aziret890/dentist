@@ -41,7 +41,7 @@ function Social() {
 							знакомствам. Наш хэштэг <span>#названиеклиники</span>
 						</p>
 						<div className='social__block'>
-							<div className='social__block-child flex-wrap mt-14 flex justify-between gap-2'>
+							<div className='social__block-child flex- mt-14 flex justify-between'>
 								<div
 									data-aos='fade-up'
 									data-aos-duration={1 * 300}
@@ -71,7 +71,7 @@ function Social() {
 									</div>
 									<div className='flex-col'>
 										<p>вконтакте</p>
-										<p className='flex '>
+										<p className='flex'>
 											<img src={user} alt='' /> <span>4 560</span>
 										</p>
 									</div>
@@ -131,7 +131,7 @@ function Social() {
 						keyboard
 						autoplay={{ delay: 2000 }}
 						spaceBetween={1}
-						slidesPerView={4}
+						slidesPerView={'auto'}
 						className='social__block2  flex items-start gap-4'
 					>
 						{dataObj.map((el, ind) => (

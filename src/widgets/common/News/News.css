@@ -41,14 +41,21 @@
 .newCard {
 	padding: 25px 20px;
 	max-width: 284px;
-	height: 120%;
 	border-radius: 8px;
 	background: rgb(242, 250, 251);
+	@media (max-width: 1000px) {
+		padding: 20px 15px 0 15px;
+	}
 }
 .new__blocks {
 	margin-top: 47px;
 	display: flex;
 	justify-content: space-between;
+	@media (max-width: 1000px) {
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
 }
 @media screen and (max-width: 1134px) {
 	.newCard h3 {
@@ -75,4 +82,3 @@
 		grid-gap: 20px;
 	}
 }
-

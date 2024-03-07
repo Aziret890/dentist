@@ -1,4 +1,7 @@
 .container {
+	@media (max-width: 840px) {
+		padding-top: 30px;
+	}
 	div:nth-child(1) {
 		h1 {
 			font-family: Montserrat;
@@ -8,6 +11,14 @@
 			letter-spacing: 0em;
 			text-align: left;
 			color: #253f41;
+			@media (max-width: 1000px) {
+				font-size: 30px;
+				line-height: 30px;
+			}
+			@media (max-width: 840px) {
+				font-size: 24px;
+				line-height: 20px;
+			}
 		}
 		ul {
 			display: flex;
@@ -16,9 +27,8 @@
 			gap: 12px;
 			li {
 				width: 284px;
-				height: 64px;
 				border-radius: 8px;
-				padding: 8px 24px;
+				padding: 18px 24px;
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
@@ -28,11 +38,26 @@
 				cursor: pointer;
 				@media (min-width: 1100px) and (max-width: 1200px) {
 					width: 264px;
-					height: 64px;
 					svg {
 						width: 264px;
 					}
 				}
+
+				@media (max-width: 1000px) {
+					width: 244px;
+					svg {
+						width: 244px;
+					}
+				}
+
+				@media (max-width: 840px) {
+					width: 174px;
+					padding: 12px 14px;
+					svg {
+						width: 184px;
+					}
+				}
+
 				h4 {
 					font-family: Montserrat;
 					font-size: 14px;
@@ -40,6 +65,9 @@
 					line-height: 16px;
 					letter-spacing: 0em;
 					text-align: left;
+					@media (max-width: 940px) {
+						font-size: 12px;
+					}
 				}
 				span {
 					width: 24px;
@@ -57,6 +85,9 @@
 					letter-spacing: 0em;
 					text-align: center;
 					transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+					@media (max-width: 940px) {
+						width: 35px;
+					}
 				}
 				svg {
 					display: none;
@@ -64,6 +95,9 @@
 				&.active {
 					background-color: transparent;
 					color: white;
+					@media (max-width: 940px) {
+						background-color: #1fc6d0;
+					}
 					span {
 						background-color: white;
 						color: #2cb2bb;
@@ -86,6 +120,20 @@
 	align-items: flex-start;
 	justify-content: space-between;
 	width: 100%;
+
+	@media (max-width: 900px) {
+		display: grid;
+		grid-template-columns: repeat();
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 30px;
+	}
+	@media (max-width: 740px) {
+		display: grid;
+		grid-template-columns: repeat();
+		grid-template-columns: repeat(2, 1fr);
+		order: 1;
+		grid-gap: 30px;
+	}
 	li {
 		min-width: 284px;
 		max-width: 284px;
@@ -96,6 +144,10 @@
 		@media (max-width: 1100px) {
 			min-width: 254px;
 			max-width: 254px;
+		}
+		@media (max-width: 1000px) {
+			min-width: 184px;
+			max-width: 224px;
 		}
 		h4 {
 			font-family: Montserrat;
@@ -126,6 +178,10 @@
 				position: relative;
 				padding: 8px 0 8px 18px;
 				transition: all 0.15s ease-in;
+				@media (max-width: 1000px) {
+					padding-left: 12px;
+					padding-right: 30px;
+				}
 				&:hover {
 					transform: translateY(-5px) !important;
 				}
@@ -137,6 +193,9 @@
 					letter-spacing: 0em;
 					text-align: left;
 					color: #2cb2bb;
+					@media (max-width: 1000px) {
+						font-size: 12px;
+					}
 				}
 				span.action {
 					position: absolute;

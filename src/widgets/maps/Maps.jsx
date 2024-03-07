@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './Maps.scss'
+import clsx from 'clsx'
 function Maps() {
 	const [countMapsInx, setCountMapsInx] = useState(1)
 	const mapsData = [
@@ -22,7 +23,7 @@ function Maps() {
 						height='400'
 						allowfullscreen=''
 						loading='lazy'
-						referrerpolicy='no-referrer-when-downgrade'
+						referrerPolicy='no-referrer-when-downgrade'
 					></iframe>
 				</>
 			)
@@ -37,7 +38,7 @@ function Maps() {
 						height='400'
 						allowfullscreen=''
 						loading='lazy'
-						referrerpolicy='no-referrer-when-downgrade'
+						referrerPolicy='no-referrer-when-downgrade'
 					></iframe>
 				</>
 			)
@@ -52,7 +53,7 @@ function Maps() {
 						height='400'
 						allowfullscreen=''
 						loading='lazy'
-						referrerpolicy='no-referrer-when-downgrade'
+						referrerPolicy='no-referrer-when-downgrade'
 					></iframe>
 				</>
 			)
@@ -67,7 +68,7 @@ function Maps() {
 						height='400'
 						allowfullscreen=''
 						loading='lazy'
-						referrerpolicy='no-referrer-when-downgrade'
+						referrerPolicy='no-referrer-when-downgrade'
 					></iframe>
 				</>
 			)
@@ -82,7 +83,7 @@ function Maps() {
 						height='400'
 						allowfullscreen=''
 						loading='lazy'
-						referrerpolicy='no-referrer-when-downgrade'
+						referrerPolicy='no-referrer-when-downgrade'
 					></iframe>
 				</>
 			)
@@ -97,7 +98,7 @@ function Maps() {
 						height='400'
 						allowfullscreen=''
 						loading='lazy'
-						referrerpolicy='no-referrer-when-downgrade'
+						referrerPolicy='no-referrer-when-downgrade'
 					></iframe>
 				</>
 			)
@@ -115,12 +116,20 @@ function Maps() {
 							<div
 								data-aos='zoom-in-right'
 								data-aos-duration={1500}
-								className='maps__wrapper__contact__block flex flex-col items-start gap-[20px]'
+								className={clsx(
+									'maps__wrapper__contact__block flex flex-col items-start gap-[20px]'
+								)}
 							>
 								{mapsData.map((el, inx) => (
 									<div
+										key={inx}
 										onClick={() => setCountMapsInx(inx + 1)}
-										className='maps__wrapper__contact__block-child flex justify-start gap-5 items-center'
+										className={clsx(
+											'cursor-pointer maps__wrapper__contact__block-child flex justify-start gap-5 items-center',
+											{
+												active: countMapsInx === inx + 1
+											}
+										)}
 									>
 										<div className='maps__wrapper__contact__block-mini'></div>
 										<div className='flex flex-col'>

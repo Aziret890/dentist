@@ -44,7 +44,7 @@ const doc = {
 	]
 }
 
-const Page = () => {
+const ServicesPage = () => {
 	return (
 		<div className=''>
 			<div className='bg-[#F2FAFB] py-3'>
@@ -71,4 +71,4 @@ const Page = () => {
 	)
 }
 
-export default Page
+export default ServicesPage;

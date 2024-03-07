@@ -332,7 +332,16 @@
 	}
 
 	.bottom-slice {
-		display: none;
+		gap: 0;
+		& button {
+			font-size: 12px;
+		}
+		a:nth-child(1) {
+			font-size: 20px;
+		}
+		a {
+			font-size: 12px;
+		}
 	}
 	.buttons {
 		gap: 10px;
@@ -361,6 +370,9 @@
 	.container .div:nth-child(2) {
 		display: flex;
 		gap: 5px;
+	}
+	.bottom-slice {
+		display: none;
 	}
 }
 @media (min-width: 320px) and (max-width: 450px) {

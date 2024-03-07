@@ -5,7 +5,7 @@ import styles from '../index.module.css'
 
 const HeaderBottomSlice = () => {
 	const patientsConfig = {
-		links: [
+		items: [
 			'Рекомендация перед приемом',
 			'Рекомендация после лечение',
 			'Гарантии'
@@ -18,7 +18,7 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const workExampleConfig = {
-		links: [
+		items: [
 			'Рекомендация перед приемом',
 			'Рекомендация после лечение',
 			'Гарантии'
@@ -31,7 +31,7 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const feedbackConfig = {
-		links: [
+		items: [
 			'Рекомендация перед приемом',
 			'Рекомендация после лечение',
 			'Гарантии'
@@ -44,10 +44,15 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const priceConfig = {
+		width: 190,
+		items: ['Цена', 'Акции', 'Рассрочка и кредит', 'Бонусная программа', 'ДМС'],
 		links: [
-			'Рекомендация перед приемом',
-			'Рекомендация после лечение',
-			'Гарантии'
+			'/price',
+			'/price?tabId=1',
+			'/price?tabId=2',
+			'/price?tabId=3',
+			'/price?tabId=4',
+			'/price?tabId=6'
 		],
 		initialSelectedItem: (
 			<>
@@ -57,7 +62,7 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const commuterConfig = {
-		links: [
+		items: [
 			'Рекомендация перед приемом',
 			'Рекомендация после лечение',
 			'Гарантии'
@@ -70,10 +75,13 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const aboutClientConfig = {
+		width: 10,
+		items: ['О клинике', 'Сертификаты', 'Реквизиты', 'Вакансии'],
 		links: [
-			'Рекомендация перед приемом',
-			'Рекомендация после лечение',
-			'Гарантии'
+			'/vacancy',
+			'/vacancy?tabId=2',
+			'/vacancy?tabId=3',
+			'/vacancy?tabId=4'
 		],
 		initialSelectedItem: (
 			<>
@@ -98,7 +106,7 @@ const HeaderBottomSlice = () => {
 				<DropDown {...patientsConfig} />
 				<DropDown {...commuterConfig} />
 				<DropDown {...aboutClientConfig} />
-				<Link className={styles.a} to={'/about/clinic'}>
+				<Link className={styles.a} to={'/contact/information'}>
 					Контакты
 				</Link>
 			</div>
@@ -106,4 +114,5 @@ const HeaderBottomSlice = () => {
 	)
 }
 
-export default HeaderBottomSlice
+
+export default HeaderBottomSlice;

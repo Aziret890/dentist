@@ -1,81 +1,92 @@
-import React from "react";
-import medal from "../../shared/assets/images/medal.svg";
-import ButtonRoutes from "../../app/routers/ButtonRoutes";
-import { Link, NavLink, Route, Routes } from "react-router-dom";
+/* eslint-disable react/prop-types */
+import clsx from "clsx";
+import ButtonRoutes from "../../pages/Sale/ButtonRoutes";
 import "./Price.scss";
-import PriceSortAll from "./PriceSortAll";
-import PriceReStart from "./PriceReStart";
-import PriceCure from "./PriceCure";
-import PriceBetifulSmile from "./PriceBetifulSmile";
-import pricePhoto1 from "../../shared/assets/images/price-photo1.png";
-import pricePhoto2 from "../../shared/assets/images/price-photo2.png";
-import pricePhoto3 from "../../shared/assets/images/price-photo3.png";
-import pricePhoto4 from "../../shared/assets/images/price-photo4.png";
+import { useState } from "react";
 
-function Price() {
+function Price({ id }) {
+  const [tabContentIndex, setTabContentIndex] = useState(0);
   return (
     <section className="price mt-[98px]">
       <div className="container">
         <div className="price__content">
-          <div className="price__btns">
-            <ButtonRoutes />
-          </div>
-          <div className="price__sort mt-[64px] flex justify-between">
-            <NavLink
-              className={"price__sort-xa"}
-              to={`/about/clinikInfo/restart`}
-            >
-              <p className="text-center mb-1">Восстановить зуб</p>
-              <div className="price__sort__div-none"></div>
-            </NavLink>
-            <NavLink className={"price__sort-xa"} to={`/about/clinikInfo/all`}>
-              <p className="text-center mb-1">Восстановить все зубы</p>
-              <div className="price__sort__div-none"></div>
-            </NavLink>
-            <NavLink className={"price__sort-xa"} to={`/about/clinikInfo/cure`}>
-              <p className="text-center mb-1">Вылечить зубы</p>
-              <div className="price__sort__div-none"></div>
-            </NavLink>
-            <NavLink
-              className={"price__sort-xa"}
-              to={`/about/clinikInfo/buetifull`}
-            >
-              <p className="text-center mb-1">Красивая улыбка</p>
-              <div className="price__sort__div-none"></div>
-            </NavLink>
-          </div>
-          <hr className="w-full h-1 mt-2" />
-          <div className="price__info flex justify-between">
-            <Routes>
-              <Route path="/about/clinikInfo/all" element={<PriceSortAll />} />
-              <Route
-                path="/about/clinikInfo/restart"
-                element={<PriceReStart />}
-              />
-              <Route path="/about/clinikInfo/cure" element={<PriceCure />} />
-              <Route
-                path="/about/clinikInfo/buetifull"
-                element={<PriceBetifulSmile />}
-              />
-            </Routes>
-            <div className="price__content__images flex flex-col gap-[20px]">
-              <img src={pricePhoto1} alt="" />
-              <div className="price__content__images__child flex justify-between">
-                <div className="price__content__images__child-flex flex flex-col gap-[23px]">
-                  <img src={pricePhoto2} alt="" />
-                  <img src={pricePhoto4} alt="" />
-                </div>
-                <img
-                  className="price__content__images__child-images2"
-                  src={pricePhoto3}
-                  alt=""
-                />
+          <center>{onTitle(id)}</center>
+          <ButtonRoutes id={id} />
+        </div>
+        <div className="price__tab--content">
+          {id === 0 ? (
+            <>
+              <div className="price__sort mt-[64px] flex justify-between">
+                <button
+                  onClick={() => setTabContentIndex(0)}
+                  className={clsx("price__sort-xa", {
+                    active: tabContentIndex === 0,
+                  })}
+                >
+                  <p className="text-center mb-1">Восстановить зуб</p>
+                  <div className="price__sort__div-none"></div>
+                </button>
+                <button
+                  onClick={() => setTabContentIndex(1)}
+                  className={clsx("price__sort-xa", {
+                    active: tabContentIndex === 1,
+                  })}
+                >
+                  <p className="text-center mb-1">Восстановить все зубы</p>
+                  <div className="price__sort__div-none"></div>
+                </button>
+                <button
+                  onClick={() => setTabContentIndex(2)}
+                  className={clsx("price__sort-xa", {
+                    active: tabContentIndex === 2,
+                  })}
+                >
+                  <p className="text-center mb-1">Вылечить зубы</p>
+                  <div className="price__sort__div-none"></div>
+                </button>
+                <button
+                  onClick={() => setTabContentIndex(3)}
+                  className={clsx("price__sort-xa", {
+                    active: tabContentIndex === 3,
+                  })}
+                >
+                  <p className="text-center mb-1">Красивая улыбка</p>
+                  <div className="price__sort__div-none"></div>
+                </button>
               </div>
-            </div>
-          </div>
+              <hr className="w-full h-1" />
+              Цены
+            </>
+          ) : id === 1 ? (
+            "Акции"
+          ) : id === 2 ? (
+            "Рассрочка и кредит"
+          ) : id === 3 ? (
+            "Бонусная программа"
+          ) : id === 4 ? (
+            "ДМС"
+          ) : null}
         </div>
       </div>
     </section>
+  );
+}
+
+function onTitle(index) {
+  return (
+    <h1>
+      {!index
+        ? "Цены"
+        : index === 1
+        ? "Акция"
+        : index === 2
+        ? "Рассрочка и кредит"
+        : index === 3
+        ? "Бонусная программа"
+        : index === 4
+        ? "ДМС"
+        : ""}
+    </h1>
   );
 }
 

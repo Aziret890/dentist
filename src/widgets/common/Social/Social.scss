@@ -37,6 +37,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	min-width: 62px;
 	svg {
 		font-size: 42px;
 	}
@@ -59,16 +60,35 @@
 	border-bottom-left-radius: 8px;
 	transition: 0.5s ease-in-out;
 }
+
+.social__block-child {
+	@media (max-width: 940px) {
+		flex-wrap: wrap;
+		gap: 20px;
+		justify-content: flex-start !important;
+	}
+}
+
 .block-child-svg {
 	border-radius: 8px;
 	background: rgb(242, 250, 251);
 	object-fit: cover;
-	width: 232px;
+	min-width: 222px;
+	padding-right: 20px;
 	height: 60px;
 	transition: 0.5s ease-in-out;
+
 	@media (max-width: 1100px) {
 		width: 222px;
 		height: 60px;
+	}
+	p {
+		font-size: 16px;
+	}
+	p {
+		span {
+			font-size: 14px;
+		}
 	}
 }
 .block-child {

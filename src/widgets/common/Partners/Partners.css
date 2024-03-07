@@ -17,4 +17,10 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@media (max-width: 1000px) {
+		display: grid;
+		grid-template-columns: repeat();
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 40px;
+	}
 }

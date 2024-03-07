@@ -8,38 +8,15 @@
 			background: rgb(242, 250, 251);
 			width: 230px;
 			height: 64px;
-			color: rgb(44, 178, 187);
 			font-size: 12px;
 			font-weight: 600;
-			transition: 0.3s ease-in-out;
+			transition: 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+			a {
+				color: rgb(44, 178, 187);
+			}
 		}
 		button:hover {
-			background: rgb(44, 178, 187);
-			color: rgb(255, 255, 255);
-			font-size: 12px;
-			font-weight: 600;
-			transition: 0.3s ease-in-out;
-			svg {
-				fill: white;
-				stroke: white;
-				path {
-					fill: white;
-				}
-			}
-		}
-		button:nth-child(3):hover {
-			background: rgb(44, 178, 187);
-			color: rgb(255, 255, 255);
-			font-size: 12px;
-			font-weight: 600;
-			transition: 0.3s ease-in-out;
-			svg {
-				fill: white;
-				stroke: white;
-				path {
-					stroke: white;
-				}
-			}
+			transform: translateY(-5px);
 		}
 	}
 	&__title {

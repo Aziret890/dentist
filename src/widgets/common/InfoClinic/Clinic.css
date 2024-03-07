@@ -1,6 +1,10 @@
 #clinic {
 	padding: 50px 0;
 	padding-bottom: 100px;
+	min-height: 70vh;
+	@media (max-width: 1000px) {
+		min-height: 120dvh;
+	}
 }
 .clinic-title {
 	display: flex;
@@ -11,6 +15,10 @@
 	color: #253f41;
 	font-size: 32px;
 	font-weight: 700;
+
+	@media (max-width: 940px) {
+		font-size: 30px;
+	}
 }
 .clinic-title p {
 	color: #2cb2bb;
@@ -20,6 +28,10 @@
 	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;
+
+	@media (max-width: 940px) {
+		font-size: 1rem;
+	}
 }
 
 .info-clinic {
@@ -27,14 +39,37 @@
 	justify-content: space-between;
 	align-items: start;
 	padding-top: 40px;
+	@media (max-width: 940px) {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+	}
 }
+
+.clinic-description {
+	@media (max-width: 940px) {
+		height: auto;
+		width: 100%;
+	}
+}
+
 .clinic-description p {
 	width: 550px;
-	height: 664px;
+	height: auto;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 400;
 	color: #253f41;
+	@media (max-width: 1000px) {
+		font-size: 14px;
+		width: 400px;
+		padding-right: 30px;
+	}
+	@media (max-width: 940px) {
+		font-size: 16px;
+		font-weight: 550;
+		width: 100%;
+	}
 }
 .span-description-clinic {
 	color: black;
@@ -46,6 +81,14 @@
 	justify-content: space-between;
 	align-items: center;
 	width: 588px;
+	@media (max-width: 1000px) {
+		width: 520px;
+	}
+	@media (max-width: 940px) {
+		width: 100%;
+		justify-content: center;
+		/* gap: 30px; */
+	}
 }
 .photos-clinic {
 	display: flex;
@@ -54,10 +97,42 @@
 	align-items: center;
 	height: 592px;
 	width: 284px;
+	@media (max-width: 1000px) {
+		height: calc(238px * 2.05);
+	}
+	@media (max-width: 940px) {
+		width: 60%;
+		height: auto;
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		flex-direction: row;
+		gap: 30px;
+	}
+	@media (max-width: 940px) {
+		flex-direction: column;
+		width: 30%;
+		gap: 20px;
+		height: calc(208px * 2.2);
+	}
+	@media (max-width: 740px) {
+		flex-direction: column;
+		width: 40%;
+		gap: 20px;
+		height: calc(208px * 2.2);
+	}
 }
 .photos-clinic img {
 	width: 284px;
 	height: 284px;
+	@media (max-width: 1000px) {
+		width: 238px;
+		height: 238px;
+	}
+	@media (max-width: 840px) {
+		width: 218px;
+		height: 218px;
+	}
 }
 .guarant-clinic {
 	width: 284px;
@@ -69,6 +144,17 @@
 	align-items: center;
 	background: #f2fafb;
 	border-radius: 8px;
+	@media (max-width: 1000px) {
+		height: 492px;
+	}
+	@media (max-width: 940px) {
+		height: auto;
+		width: 35%;
+		padding: 30px 0;
+	}
+	@media (max-width: 740px) {
+		width: 50%;
+	}
 }
 .guarant-clinic img {
 	width: 52px;

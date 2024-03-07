@@ -3,6 +3,7 @@ import { BiCheck } from 'react-icons/bi'
 import Slider from 'react-slick'
 import men from '../../../shared/assets/images/men.png'
 import './doctor.css'
+import { useWindowSize } from '../../../entity/hooks/useWindowSize'
 
 const Doctor = () => {
 	const [currentSlide, setCurrentSlide] = useState(0)
@@ -68,6 +69,8 @@ const Doctor = () => {
 		}
 	]
 
+	const { width } = useWindowSize()
+
 	return (
 		<div className='container'>
 			<div className='relative my-11'>
@@ -75,14 +78,22 @@ const Doctor = () => {
 				<Slider {...sliderSettings} ref={sliderRef}>
 					{slidesContent.map((content, idx) => (
 						<div
-							className='hh w-full h-[656px] bg-[#F2FAFB] flex items-center justify justify-between px-4'
+							className='hh w-full h-auto bg-[#F2FAFB] flex items-center justify justify-between px-4 pb-12'
 							key={idx}
 						>
-							<div className='flex items-center justify-between px-[60px]'>
+							<div
+								className={`flex items-center justify-between px-[60px] 1000:px-[10px] 840:px-5 ${
+									width <= 940 && width >= 840
+										? 'px-3'
+										: width <= 840 && width >= 740
+										? 'px-3'
+										: ''
+								}`}
+							>
 								<div
 									data-aos='fade-up'
 									data-aos-duration={idx * 300}
-									className='w-[510px]'
+									className='w-[510px] 840:w-full'
 								>
 									<h3 className='text-3xl flex gap-3 text-black font-[700] leading-6 pt-14'>
 										<div className=''>

@@ -20,7 +20,7 @@ import DropDown from '../../../../features/DropDown'
 export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 	const { width } = useWindowSize()
 	const dropDownConfig = {
-		links: ['Оставить отзыв', 'Написать директору'],
+		items: ['Оставить отзыв', 'Написать директору'],
 		initialSelectedItem: (
 			<>
 				<img src={Message} alt='' />

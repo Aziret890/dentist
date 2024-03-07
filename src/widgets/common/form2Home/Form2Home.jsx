@@ -2,6 +2,7 @@ import { useState } from 'react'
 import '../form1Home/Form.css'
 import form2photo from '../../../shared/assets/images/from2photo.svg'
 import axios from 'axios'
+import { useWindowSize } from '../../../entity/hooks/useWindowSize'
 function Form2Home() {
 	const [objDataNum, setObjDataNum] = useState('')
 	const [objDataName, setObjDataName] = useState('')
@@ -31,16 +32,18 @@ function Form2Home() {
 		setObjDataName('')
 		setObjDataNum('')
 	}
+	const { width } = useWindowSize()
+
 	return (
 		<section className='from1__home'>
 			<div className='container'>
 				<div className='from1__content'>
 					<div className='from1__images'>
-						<img src={form2photo} alt='' />
+						<img className='footer-query-image' src={form2photo} alt='' />
 					</div>
 					<div className='from1__from'>
 						<div className='from__child'>
-							<h2>Остались вопросы? Мы ответим!</h2>
+							{<h2>Остались вопросы? Мы ответим!</h2>}
 							<div className='from__input'>
 								<input
 									onChange={e => setObjDataName(e.target.value)}

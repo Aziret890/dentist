@@ -1,4 +1,3 @@
-import React from "react";
 import equateImages from "../../src/images/equateImages.png";
 import "./Equiment.scss";
 function Equiment() {

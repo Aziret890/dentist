@@ -18,8 +18,8 @@ const Reviews = () => {
 						</p>
 					</div>
 					<div className='main-reviews'>
-						<div className='text-review'>
-							<div className='description-review'>
+						<div data-aos={'fade-up'} className='text-review'>
+							<div data-aos={'date-up'} className='description-review'>
 								<img
 									data-aos='fade-up'
 									data-aos-duration={1 * 300}
@@ -36,8 +36,7 @@ const Reviews = () => {
 									нашей стоматологии
 								</p>
 							</div>
-							<div className='cut-review'></div>
-							<div className='write-review'>
+							<div data-aos={'date-up'} className='write-review'>
 								<img
 									data-aos='fade-up'
 									data-aos-duration={1 * 300}

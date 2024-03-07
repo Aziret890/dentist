@@ -15,12 +15,16 @@ import ExamplesOfWork from './components/ExamplesOfWork'
 import Photos from './components/Photos'
 import Articles from './components/Articles'
 import HonestReviewsDoc from './components/HonestReviewsDoc'
+import { useEffect } from 'react'
 
 export default function DetailDoctors() {
 	const { docId } = useParams()
 	const [tab, setTab] = useState('Вид деятельности')
 	const findDoc = docArr.find(item => item.id.toString() === docId)
 
+	useEffect(() => {
+		document.title = findDoc.name
+	}, [])
 	return (
 		<main className={styles['detail-doc']}>
 			<div

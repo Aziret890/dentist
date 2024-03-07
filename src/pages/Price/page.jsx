@@ -1,16 +1,15 @@
-import Vakancies from '../../widgets/Vakansies/Vakancies'
 import { useLocation } from 'react-router-dom'
+import Price from '../../widgets/Price/Price'
 
-function VacancyPage() {
+function PricePage() {
 	const location = useLocation().search
 	const searchParams = new URLSearchParams(location)
 	const tabId = searchParams.get('tabId')
-
 	return (
 		<>
-			<Vakancies id={Number(tabId)} />
+			<Price id={Number(tabId)} />
 		</>
 	)
 }
 
-export default VacancyPage
+export default PricePage

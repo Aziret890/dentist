@@ -1,4 +1,3 @@
-import React from 'react'
 import { TbUserSquare } from 'react-icons/tb'
 import teeth from '../../../shared/assets/images/teeth.png'
 const Year = () => {
