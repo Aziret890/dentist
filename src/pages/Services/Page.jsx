@@ -9,7 +9,7 @@ import Card from './components/Card'
 import Useful from './components/Useful'
 import Form from './components/Form'
 import Blocks from './components/Blocks'
-import ExamplesOfWork from '../DetailDoctors/components/ExamplesOfWork'
+import Workexamples from './components/Workexamples'
 
 const doc = {
 	examples_work: [
@@ -65,7 +65,7 @@ const ServicesPage = () => {
 				<Useful />
 				<Form />
 				<Blocks />
-				
+				<Workexamples doc={doc}/>
 			</div>
 		</div>
 	)

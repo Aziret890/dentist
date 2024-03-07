@@ -7,6 +7,7 @@ import Footer4 from '../widgets/common/FooterEnd/Footer4'
 import Header from '../widgets/common/Header'
 import Form2Home from '../widgets/common/form2Home/Form2Home'
 import Routers from './routers'
+import './App.css'
 function App() {
 	const location = useLocation()
 
