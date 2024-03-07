@@ -1,9 +1,9 @@
-import Maps from '../../widgets/maps/Maps'
+import Maps from "../../widgets/Maps/Maps";
 
 export default function AboutClinic() {
-	return (
-		<>
-			<Maps />
-		</>
-	)
+  return (
+    <>
+      <Maps />
+    </>
+  );
 }
