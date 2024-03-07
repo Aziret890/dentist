@@ -39,7 +39,7 @@
 
 @media (max-width: 440px) {
 	.doctor {
-		width: 200px;
+		width: 80%;
 		height: 80px;
 		& h1 {
 			font-size: 32px;

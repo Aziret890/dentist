@@ -1,7 +1,7 @@
-import { IoIosArrowDown } from 'react-icons/io'
-import { Link } from 'react-router-dom'
-import DropDown from '../../../../features/DropDown'
-import styles from '../index.module.css'
+import { IoIosArrowDown } from "react-icons/io";
+import { Link } from "react-router-dom";
+import DropDown from "../../../../features/DropDown";
+import styles from "../index.module.css";
 
 const HeaderBottomSlice = () => {
 	const patientsConfig = {
@@ -75,7 +75,7 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const aboutClientConfig = {
-		width: 130,
+		width: 10,
 		items: ['О клинике', 'Сертификаты', 'Реквизиты', 'Вакансии'],
 		links: [
 			'/vacancy',
@@ -91,28 +91,27 @@ const HeaderBottomSlice = () => {
 		)
 	}
 
-	return (
-		<div className={styles['bottom-slice']}>
-			<div className={`container ${styles.container}`}>
-				<Link to={'/services'} className={styles.h1}>
-					Услуги
-				</Link>
-				<DropDown {...workExampleConfig} />
-				<Link className={styles.a} to={'/doctors'}>
-					Врач
-				</Link>
-				<DropDown {...priceConfig} />
-				<DropDown {...feedbackConfig} />
-				<DropDown {...patientsConfig} />
-				<DropDown {...commuterConfig} />
-				<DropDown {...aboutClientConfig} />
-				<Link className={styles.a} to={'/contact/information'}>
-					Контакты
-				</Link>
-			</div>
-		</div>
-	)
-}
-
+  return (
+    <div className={styles["bottom-slice"]}>
+      <div className={`container ${styles.container}`}>
+        <Link to={"/services"} className={styles.h1}>
+          Услуги
+        </Link>
+        <DropDown {...workExampleConfig} />
+        <Link className={styles.a} to={"/doctors"}>
+          Врач
+        </Link>
+        <DropDown {...priceConfig} />
+        <DropDown {...feedbackConfig} />
+        <DropDown {...patientsConfig} />
+        <DropDown {...commuterConfig} />
+        <DropDown {...aboutClientConfig} />
+        <Link className={styles.a} to={"/contact/information"}>
+          Контакты
+        </Link>
+      </div>
+    </div>
+  );
+};
 
 export default HeaderBottomSlice;

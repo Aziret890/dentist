@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import Providers from './providers'
+import Providers from './providers.jsx'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
