@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 
-function DetalPriceAll({ el }) {
+function DetailPriceAll({ el }) {
   const [thisClass, setThisClass] = useState("");
-  const [thisClass1, setThisClass1] = useState("none");
-  console.log(thisClass);
   return (
     <>
       <div
         onClick={() => setThisClass("-block")}
         className="price__mini__block-left-block flex items-center"
       >
-        <h2>{el.title}</h2>
+        <h2>{el && el.title}</h2>
         <svg
           className={thisClass == "-block" ? "hidden" : ""}
           width="24.000000"
@@ -52,10 +50,10 @@ function DetalPriceAll({ el }) {
         </svg>
       </div>
       <div className={`price__mini__block-left-block-none` + thisClass}>
-        <p>{el.info}</p>
+        <p>{el && el.info}</p>
       </div>
     </>
   );
 }
 
-export default DetalPriceAll;
+export default DetailPriceAll;
