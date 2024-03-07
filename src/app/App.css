@@ -32,6 +32,20 @@ select {
 	background: 0;
 }
 
+a.link {
+	margin-top: 30px;
+	padding: 16px 24px;
+	border-radius: 20px;
+	gap: 10px;
+	background-color: #252f40;
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 17px;
+	letter-spacing: 0em;
+	text-align: center;
+	color: #ffffff;
+}
+
 a,
 li,
 ul {
@@ -57,7 +71,7 @@ html {
 	height: 100%;
 }
 
-.swiper {
+.swipers {
 	height: 540px;
 	display: none !important;
 	@media (max-width: 440px) {

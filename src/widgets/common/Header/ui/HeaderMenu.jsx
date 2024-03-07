@@ -6,8 +6,8 @@ import styles from '../index.module.css'
 import { motion } from 'framer-motion'
 import { FaArrowLeftLong } from 'react-icons/fa6'
 import { IoIosArrowForward } from 'react-icons/io'
-import Pencil from '../../../../shared/assets/images/pencil.svg'
 import Message from '../../../../shared/assets/images/message.icons.svg'
+import Pencil from '../../../../shared/assets/images/pencil.svg'
 
 const variants = {
 	hidden: {
@@ -17,7 +17,7 @@ const variants = {
 	visible: { opacity: 1, translateY: 0 }
 }
 // eslint-disable-next-line react/prop-types
-export default function HeaderMenu({ isMenu }) {
+export default function HeaderMenu({ isMenu, toggleIsMenu }) {
 	const [isMenus, setIsMenus] = useState(null)
 
 	const toggleIsMenus = d => {
@@ -110,15 +110,24 @@ export default function HeaderMenu({ isMenu }) {
 									viewport={{ amount: 0 }}
 									key={item.title}
 								>
-									<h3>{item.title}</h3>
-									{item.title !== 'Врачи' && item.title !== 'Контакты' && (
+									{item.title.toLowerCase() !== 'Врачи'.toLowerCase() &&
+									item.title.toLowerCase() !== 'Контакты'.toLowerCase() ? (
 										<button
 											onClick={() => {
 												toggleIsMenus(item.title.toLowerCase().trim())
 											}}
+											className='flex w-full items-center justify-between'
 										>
+											{item.title}
 											<IoIosArrowForward />
 										</button>
+									) : (
+										<Link
+											onClick={() => toggleIsMenu(false)}
+											to={item.links[0].path}
+										>
+											{item.title}
+										</Link>
 									)}
 								</motion.li>
 							))}
@@ -144,8 +153,9 @@ export default function HeaderMenu({ isMenu }) {
 									}}
 									viewport={{ amount: 0 }}
 									key={idx}
+									onClick={() => toggleIsMenu(false)}
 								>
-									{item.text}
+									<Link to={item.path ? item.path : ''}> {item.text}</Link>
 								</motion.li>
 							))}
 						</ol>
@@ -266,8 +276,8 @@ const menuList2 = [
 				text: 'Рекомендации перед приёмом'
 			},
 			{
-				path: '',
-				text: 'Рекомендации после лечения'
+				path: '/news',
+				text: 'Новости'
 			},
 			{
 				path: '',
@@ -279,16 +289,8 @@ const menuList2 = [
 		title: 'Врачи',
 		links: [
 			{
-				path: '',
-				text: 'Рекомендации перед приёмом'
-			},
-			{
-				path: '',
-				text: 'Рекомендации после лечения'
-			},
-			{
-				path: '',
-				text: 'Гарантии'
+				path: '/doctors',
+				text: ''
 			}
 		]
 	},
@@ -296,8 +298,24 @@ const menuList2 = [
 		title: 'Цены',
 		links: [
 			{
-				path: '',
-				text: ''
+				path: '/price',
+				text: 'Цены'
+			},
+			{
+				path: '/price?tabId=1',
+				text: 'Акции'
+			},
+			{
+				path: '/price?tabId=2',
+				text: 'Рассрочка и кредит'
+			},
+			{
+				path: '/price?tabId=3',
+				text: 'Бонусная программа'
+			},
+			{
+				path: '/price?tabId=4',
+				text: 'ДМС'
 			}
 		]
 	},
@@ -336,19 +354,23 @@ const menuList2 = [
 		]
 	},
 	{
-		title: 'О клнике',
+		title: 'О клинике',
 		links: [
 			{
-				path: '',
-				text: 'Рекомендации перед приёмом'
+				path: '/about/clinic',
+				text: 'О клинике'
 			},
 			{
-				path: '',
-				text: 'Рекомендации после лечения'
+				path: '/about/clinic?tabId=2',
+				text: 'Сертификаты'
 			},
 			{
-				path: '',
-				text: 'Гарантии'
+				path: '/about/clinic?tabId=3',
+				text: 'Реквизиты'
+			},
+			{
+				path: '/about/clinic?tabId=4',
+				text: 'Вакансии'
 			}
 		]
 	},
@@ -356,8 +378,8 @@ const menuList2 = [
 		title: 'Контакты',
 		links: [
 			{
-				path: '',
-				text: 'Пициенты'
+				path: '/contact/information',
+				text: ''
 			}
 		]
 	}

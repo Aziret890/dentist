@@ -1,0 +1,16 @@
+.review-tab {
+	padding: 30px 0;
+	box-shadow: 0px 8px 12px 0px #164a8714;
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		a {
+			width: 280px;
+			text-align: center;
+			&.actives {
+				border-bottom: 2px solid #2cb2bb;
+			}
+		}
+	}
+}

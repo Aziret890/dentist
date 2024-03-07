@@ -1,10 +1,9 @@
-import React from "react";
 import DetalPriceAll from "./detalPrice/DetalPriceAll";
 
-import "./Price.scss";
+import "../page.scss";
 import Images from "./detalPrice/Images";
 
-function PriceSortAll() {
+function PriceCure() {
   const dataInfo = [
     {
       title: "стоматологии",
@@ -46,4 +45,4 @@ function PriceSortAll() {
   );
 }
 
-export default PriceSortAll;
+export default PriceCure;

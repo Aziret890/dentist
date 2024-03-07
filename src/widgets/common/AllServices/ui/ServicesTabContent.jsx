@@ -73,9 +73,9 @@ export default function ServicesTabContent({ tab }) {
 				pagination={{
 					clickable: true
 				}}
-				spaceBetween={0}
+				spaceBetween={10}
 				slidesPerView={1}
-				className={'swiper block'}
+				className={'swipers block'}
 			>
 				{servicesTabContent.map((item, idx) => (
 					<SwiperSlide key={idx} className={styles.li}>

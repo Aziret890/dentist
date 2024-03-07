@@ -167,13 +167,6 @@ const Reviews = () => {
 								</h4>
 							</div>
 							<button className='more-review'>Показать ещё отзыв</button>
-							<p
-								className='flex items-center justify-center gap-2 text-[#2cb2bb]'
-								data-aos='fade-up'
-								data-aos-duration={2 * 300}
-							>
-								Все отзывы <FaArrowRight />
-							</p>
 						</div>
 					</div>
 				</div>

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react'
-import './Requits.scss'
-function RequtsDetals({ el }) {
+import './index.scss'
+function RequisitesDetail({ el }) {
 	const [thisTrue, setThisTrue] = useState(false)
 	function copyToInfo(info) {
 		setThisTrue(!thisTrue)
@@ -67,4 +67,4 @@ function RequtsDetals({ el }) {
 	)
 }
 
-export default RequtsDetals
+export default RequisitesDetail
