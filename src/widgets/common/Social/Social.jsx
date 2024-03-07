@@ -41,7 +41,7 @@ function Social() {
 							знакомствам. Наш хэштэг <span>#названиеклиники</span>
 						</p>
 						<div className='social__block'>
-							<div className='social__block-child flex- mt-14 flex justify-between'>
+							<div className='social__block-child 440:mt-8 mt-14 flex justify-between'>
 								<div
 									data-aos='fade-up'
 									data-aos-duration={1 * 300}
@@ -132,7 +132,7 @@ function Social() {
 						autoplay={{ delay: 2000 }}
 						spaceBetween={1}
 						slidesPerView={'auto'}
-						className='social__block2  flex items-start gap-4'
+						className='social__block2 flex items-start gap-4'
 					>
 						{dataObj.map((el, ind) => (
 							<SwiperSlide key={ind}>

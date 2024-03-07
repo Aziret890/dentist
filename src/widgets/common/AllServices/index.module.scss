@@ -50,6 +50,9 @@
 				flex-direction: column;
 				width: 60%;
 			}
+			@media (max-width: 320px) {
+				width: 100%;
+			}
 			li {
 				width: 284px;
 				border-radius: 8px;
@@ -97,6 +100,9 @@
 
 				@media (max-width: 540px) {
 					width: 160px;
+				}
+				@media (max-width: 320px) {
+					width: 100%;
 				}
 
 				h4 {

@@ -9,6 +9,20 @@ const Clinic = () => {
 		<div id='clinic'>
 			<div className='container'>
 				<div className='clinic'>
+					<div className='photos-clinic block'>
+						<img
+							data-aos='fade-left'
+							data-aos-duration={1 * 300}
+							src={PicClinic}
+							alt='image :/'
+						/>
+						<img
+							data-aos='fade-left'
+							data-aos-duration={2 * 300}
+							src={PicClinic2}
+							alt='image :/'
+						/>
+					</div>
 					<div className='clinic-title'>
 						<h1 data-aos='fade-up' data-aos-duration={1 * 300}>
 							Название клиники
@@ -55,7 +69,7 @@ const Clinic = () => {
 							</p>
 						</div>
 						<div className='pic-clinic'>
-							<div className='photos-clinic'>
+							<div className='photos-clinic none'>
 								<img
 									data-aos='fade-left'
 									data-aos-duration={1 * 300}

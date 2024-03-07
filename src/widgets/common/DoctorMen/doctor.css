@@ -12,6 +12,9 @@
 	font-weight: 500;
 	color: black;
 	background-color: white;
+	@media (max-width: 320px) {
+		padding: 16px 24px !important;
+	}
 }
 
 .btn:hover {

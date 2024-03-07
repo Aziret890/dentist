@@ -13,7 +13,6 @@ import pricePhoto3 from "../../shared/assets/images/price-photo3.png";
 import pricePhoto4 from "../../shared/assets/images/price-photo4.png";
 function Price({ id }) {
   const [tabContentIndex, setTabContentIndex] = useState(0);
-  console.log(tabContentIndex);
   return (
     <section className="price mt-[98px]">
       <div className="container">

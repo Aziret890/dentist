@@ -38,3 +38,31 @@
 		column-gap: 100px;
 	}
 }
+
+@media (max-width: 440px) {
+	.zz {
+		width: 100%;
+		max-width: 100%;
+		margin: 0 !important;
+		& div {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		& div.third {
+			width: auto;
+			margin: 0;
+		}
+		& div.four {
+			& * {
+				text-align: left !important;
+			}
+			div {
+				width: 80%;
+			}
+		}
+		& div.first {
+			width: auto;
+		}
+	}
+}
