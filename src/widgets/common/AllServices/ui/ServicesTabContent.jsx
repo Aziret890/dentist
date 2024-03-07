@@ -75,7 +75,7 @@ export default function ServicesTabContent({ tab }) {
 				}}
 				spaceBetween={0}
 				slidesPerView={1}
-				className={''}
+				className={'swiper'}
 			>
 				{servicesTabContent.map((item, idx) => (
 					<SwiperSlide key={idx} className={styles.li}>
