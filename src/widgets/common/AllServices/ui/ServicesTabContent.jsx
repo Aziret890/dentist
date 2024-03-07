@@ -2,6 +2,8 @@
 import clsx from 'clsx'
 import styles from '../index.module.scss'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination } from 'swiper/modules'
+import 'swiper/css/pagination'
 
 export default function ServicesTabContent({ tab }) {
 	return (
@@ -66,7 +68,15 @@ export default function ServicesTabContent({ tab }) {
 				))}
 			</ul>
 
-			<Swiper spaceBetween={0} slidesPerView={1} className={''}>
+			<Swiper
+				modules={[Pagination]}
+				pagination={{
+					clickable: true
+				}}
+				spaceBetween={0}
+				slidesPerView={1}
+				className={''}
+			>
 				{servicesTabContent.map((item, idx) => (
 					<SwiperSlide key={idx} className={styles.li}>
 						<h4 data-aos={'fade-up'} data-aos-duration={idx + 1 * 300}>

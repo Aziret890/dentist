@@ -12,7 +12,11 @@ export default function AllServices() {
 	return (
 		<section>
 			<div className={`container ${styles.container}`}>
-				<div className={clsx(`${styles.first} flex items-center justify-between gap-5`)}>
+				<div
+					className={clsx(
+						`${styles.first} flex items-center justify-between gap-5`
+					)}
+				>
 					<h1 data-aos='fade-up'>Все услуги</h1>
 					<ul
 						data-aos='fade-up'
