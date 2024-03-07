@@ -7,10 +7,8 @@ import PriceSortAll from "./PriceSortAll";
 import PriceReStart from "./PriceReStart";
 import PriceCure from "./PriceCure";
 import Sale from "../Sale/Sale";
-import pricePhoto1 from "../../shared/assets/images/price-photo1.png";
-import pricePhoto2 from "../../shared/assets/images/price-photo2.png";
-import pricePhoto3 from "../../shared/assets/images/price-photo3.png";
-import pricePhoto4 from "../../shared/assets/images/price-photo4.png";
+import SaleFiveButton from "../../pages/Sale/components/Sale1/SaleFiveButton";
+
 function Price({ id }) {
   const [tabContentIndex, setTabContentIndex] = useState(0);
   return (
@@ -76,7 +74,7 @@ function Price({ id }) {
               )}
             </>
           ) : id === 1 ? (
-            "Акции"
+            <SaleFiveButton />
           ) : id === 2 ? (
             <Sale />
           ) : id === 3 ? (

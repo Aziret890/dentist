@@ -1,11 +1,13 @@
-import axios from "axios";
-import clsx from "clsx";
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import "../Requits/Requits.scss";
-import "./Vakancies.scss";
-import VakanciesChil from "./VakanciesChil";
-import Requits from "../Requits/Requits";
+import axios from 'axios'
+import clsx from 'clsx'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import '../Requits/Requits.scss'
+import './Vakancies.scss'
+import VakanciesChil from './VakanciesChil'
+import Requits from '../Requits/Requits'
+import Licenses from '../../pages/DetailDoctors/components/Licenses'
+import { docArr } from '../../entity/const/doc.const'
 
 function Vakancies({ id }) {
 	const [dataVakanciesOne, setVakanciesOne] = useState('')
@@ -300,48 +302,50 @@ function Vakancies({ id }) {
 										className='input'
 									/>
 
-                  <input
-                    onChange={(e) => setObjDataJobData(e.target.value)}
-                    placeholder="Желаемая должность"
-                    type="text"
-                    name="text"
-                    className="input"
-                  />
-                  <div className=" flex justify-center mt-[45px]">
-                    <button onClick={() => sendMessageBot()}>
-                      <div>
-                        <span>
-                          <p>Отправить</p>
-                          <p>:)</p>
-                        </span>
-                      </div>
-                      <div>
-                        <span>
-                          <p>спасибо</p>
-                          <p>:D</p>
-                        </span>
-                      </div>
-                    </button>
-                  </div>
-                  <p className="text-center mt-[15px]">
-                    Нажимая на кнопку вы подтверждаете, что прочитали и
-                    соглашаетесь с политикой обработки перс. данных
-                  </p>
-                </div>
-              </div>
-            </div>
-          ) : id === 2 ? (
-            "Сертификаты"
-          ) : id === 3 ? (
-            // "Реквизиты"
-            <Requits />
-          ) : id == 4 ? (
-            "Вакансии"
-          ) : null}
-        </div>
-      </div>
-    </section>
-  );
+									<input
+										onChange={e => setObjDataJobData(e.target.value)}
+										placeholder='Желаемая должность'
+										type='text'
+										name='text'
+										className='input'
+									/>
+									<div className=' flex justify-center mt-[45px]'>
+										<button onClick={() => sendMessageBot()}>
+											<div>
+												<span>
+													<p>Отправить</p>
+													<p>:)</p>
+												</span>
+											</div>
+											<div>
+												<span>
+													<p>спасибо</p>
+													<p>:D</p>
+												</span>
+											</div>
+										</button>
+									</div>
+									<p className='text-center mt-[15px]'>
+										Нажимая на кнопку вы подтверждаете, что прочитали и
+										соглашаетесь с политикой обработки перс. данных
+									</p>
+								</div>
+							</div>
+						</div>
+					) : id === 2 ? (
+						<div className='mt-10'>
+							<Licenses doc={docArr[0]} />
+						</div>
+					) : id === 3 ? (
+						// "Реквизиты"
+						<Requits />
+					) : id == 4 ? (
+						'Вакансии'
+					) : null}
+				</div>
+			</div>
+		</section>
+	)
 }
 
 export default Vakancies

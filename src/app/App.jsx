@@ -9,23 +9,23 @@ import Form2Home from '../widgets/common/form2Home/Form2Home'
 import Routers from './routers'
 import './App.css'
 function App() {
-	const location = useLocation()
+  const location = useLocation();
 
-	useEffect(() => {
-		window.scrollTo(0, 0)
-	}, [location.pathname])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
-	return (
-		<>
-			<Header />
-			<Routers />
-			<Form2Home />
-			<Footer />
-			<Footer2 />
-			<Footer3 />
-			<Footer4 />
-		</>
-	)
+  return (
+    <>
+      <Header />
+      <Routers />
+      <Form2Home />
+      <Footer />
+      <Footer2 />
+      <Footer3 />
+      <Footer4 />
+    </>
+  );
 }
 
-export default App
+export default App;

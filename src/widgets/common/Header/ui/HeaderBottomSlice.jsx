@@ -18,11 +18,8 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const workExampleConfig = {
-		items: [
-			'Рекомендация перед приемом',
-			'Рекомендация после лечение',
-			'Гарантии'
-		],
+		items: ['Рекомендация перед приемом', 'Новости', 'Гарантии'],
+		links: ['#', '/news', '#'],
 		initialSelectedItem: (
 			<>
 				Пример работы

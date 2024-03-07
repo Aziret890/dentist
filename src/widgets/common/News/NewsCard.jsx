@@ -7,8 +7,10 @@ function NewsCard({ el, index }) {
 			data-aos-duration={index * 300}
 			className='newCard'
 		>
-			<h3>{el.title}</h3>
-			<p>{el.info}</p>
+			<div>
+				<h3>{el.title}</h3>
+				<p>{el.info}</p>
+			</div>
 			<p>
 				<span>{el.date}</span>
 			</p>

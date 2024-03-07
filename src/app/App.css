@@ -59,6 +59,10 @@ html {
 
 .swiper {
 	height: 540px;
+	display: none !important;
+	@media (max-width: 440px) {
+		display: block !important;
+	}
 }
 
 .backgrounds {
