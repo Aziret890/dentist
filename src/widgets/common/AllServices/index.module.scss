@@ -10,6 +10,10 @@
 			color: #253f41;
 		}
 		ul {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			gap: 12px;
 			li {
 				width: 284px;
 				height: 64px;
@@ -22,6 +26,13 @@
 				position: relative;
 				transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1), background 1ms;
 				cursor: pointer;
+				@media (min-width: 1100px) and (max-width: 1200px) {
+					width: 264px;
+					height: 64px;
+					svg {
+						width: 264px;
+					}
+				}
 				h4 {
 					font-family: Montserrat;
 					font-size: 14px;
@@ -78,6 +89,14 @@
 	li {
 		min-width: 284px;
 		max-width: 284px;
+		@media (max-width: 1200px) {
+			min-width: 254px;
+			max-width: 254px;
+		}
+		@media (max-width: 1100px) {
+			min-width: 254px;
+			max-width: 254px;
+		}
 		h4 {
 			font-family: Montserrat;
 			font-size: 16px;
@@ -99,7 +118,7 @@
 				align-items: center;
 				justify-content: flex-start;
 				gap: 8px;
-				min-width: 284px;
+				width: 100%;
 				height: 56px;
 				border-radius: 8px;
 

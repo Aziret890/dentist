@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom'
-import Home from '../../pages/Home/page'
 import AboutClinic from '../../pages/AboutClinic/page'
-import Doctors from '../../pages/Doctors/page'
-import Index from '../../pages/Vakancies/Index'
 import DetailDoctors from '../../pages/DetailDoctors/page'
+import Doctors from '../../pages/Doctors/page'
+import Home from '../../pages/Home/page'
 import Page from '../../pages/Services/Page'
-// import Page from '../../pages/Services/Page'
+import Index from '../../pages/Vakancies/Index'
+import Sale from '../../widgets/sale/Sale'
 
 export default function Routers() {
 	return (
@@ -16,7 +16,8 @@ export default function Routers() {
 				<Route path='/about/vakancies' element={<Index />} />
 				<Route path='/doctors' element={<Doctors />} />
 				<Route path='/doctors/:docId' element={<DetailDoctors />} />
-				<Route path='/services' element={ <Page/> }/>
+				<Route path='/services' element={<Page />} />
+				<Route path='/sale' element={<Sale />} />
 			</Routes>
 		</>
 	)

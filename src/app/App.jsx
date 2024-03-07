@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import Footer from '../widgets/common/FooterEnd/Footer'
 import Footer2 from '../widgets/common/FooterEnd/Footer2'
 import Footer3 from '../widgets/common/FooterEnd/Footer3'
@@ -6,9 +8,6 @@ import Header from '../widgets/common/Header'
 import Form2Home from '../widgets/common/form2Home/Form2Home'
 import './App.css'
 import Routers from './routers'
-import { useLocation } from 'react-router-dom'
-import './App.css'
-import { useEffect } from 'react'
 function App() {
 	const location = useLocation()
 

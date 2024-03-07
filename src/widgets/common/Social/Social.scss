@@ -66,6 +66,10 @@
 	width: 232px;
 	height: 60px;
 	transition: 0.5s ease-in-out;
+	@media (max-width: 1100px) {
+		width: 222px;
+		height: 60px;
+	}
 }
 .block-child {
 	&-svg:hover {

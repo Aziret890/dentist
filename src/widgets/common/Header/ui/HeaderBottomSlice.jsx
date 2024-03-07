@@ -1,7 +1,7 @@
-import styles from '../index.module.css'
 import { IoIosArrowDown } from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import DropDown from '../../../../features/DropDown'
+import styles from '../index.module.css'
 
 const HeaderBottomSlice = () => {
 	const patientsConfig = {
@@ -86,7 +86,9 @@ const HeaderBottomSlice = () => {
 	return (
 		<div className={styles['bottom-slice']}>
 			<div className={`container ${styles.container}`}>
-				<Link to={'/services'} className={styles.h1}>Услуги</Link>
+				<Link to={'/services'} className={styles.h1}>
+					Услуги
+				</Link>
 				<DropDown {...workExampleConfig} />
 				<Link className={styles.a} to={'/doctors'}>
 					Врач

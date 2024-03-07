@@ -4,11 +4,14 @@
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
+<<<<<<< HEAD
 .container {
 	max-width: 1202px;
 	margin: 0 auto;
 }
 
+=======
+>>>>>>> 6618fcf8b54e4125228f67d3752bf32ad67d8aad
 * {
 	margin: 0;
 	padding: 0;
@@ -77,5 +80,21 @@ html {
 		visibility: visible;
 		z-index: 999;
 		pointer-events: all;
+	}
+}
+
+.container {
+	max-width: 1202px;
+	margin: 0 auto;
+}
+@media (max-width: 1200px) {
+	.container {
+		width: 1150px;
+	}
+}
+
+@media (max-width: 1100px) {
+	.container {
+		width: 1050px;
 	}
 }
