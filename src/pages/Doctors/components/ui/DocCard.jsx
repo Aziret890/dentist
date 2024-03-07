@@ -35,7 +35,9 @@ export default function DocCard({ idx, item, styles }) {
 							Лет <br /> опыта
 						</span>
 					</h1>
-					<h4>{item.name}</h4>
+					<Link to={`/doctors/${item.id}`}>
+						<h4>{item.name}</h4>
+					</Link>
 					<ul>
 						{item.specialization.map((item, idx) => (
 							<li key={idx}>

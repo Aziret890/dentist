@@ -10,6 +10,7 @@ import Reviews from '../../widgets/common/Reviews/Reviews'
 import Social from '../../widgets/common/Social/Social'
 import Teeth from '../../widgets/common/Teeth/Teeth'
 import Form1Home from '../../widgets/common/form1Home/Form1Home'
+
 export default function Home() {
 	useEffect(() => {
 		document.title = 'Newyork dentist'

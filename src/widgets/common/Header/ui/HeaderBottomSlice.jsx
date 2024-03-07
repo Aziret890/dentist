@@ -28,10 +28,18 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const feedbackConfig = {
+		minWidth: 250,
 		items: [
-			'Рекомендация перед приемом',
-			'Рекомендация после лечение',
-			'Гарантии'
+			'Отзывы',
+			'Интервью с пациентами',
+			'Отзывы в социальных сетях',
+			'Отзывы пациентов'
+		],
+		links: [
+			'/reviews',
+			'/reviews?tabId=2',
+			'/reviews?tabId=3',
+			'/reviews?tabId=4'
 		],
 		initialSelectedItem: (
 			<>
@@ -41,15 +49,14 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const priceConfig = {
-		width: 190,
+		minWidth: 210,
 		items: ['Цена', 'Акции', 'Рассрочка и кредит', 'Бонусная программа', 'ДМС'],
 		links: [
 			'/price',
 			'/price?tabId=1',
 			'/price?tabId=2',
 			'/price?tabId=3',
-			'/price?tabId=4',
-			'/price?tabId=6'
+			'/price?tabId=4'
 		],
 		initialSelectedItem: (
 			<>
@@ -72,13 +79,20 @@ const HeaderBottomSlice = () => {
 		)
 	}
 	const aboutClientConfig = {
-		width: 130,
-		items: ['О клинике', 'Сертификаты', 'Реквизиты', 'Вакансии'],
+		minWidth: 210,
+		items: [
+			'О клинике',
+			'Сертификаты',
+			'Правовая информация',
+			'Реквизиты',
+			'Вакансии'
+		],
 		links: [
-			'/vacancy',
-			'/vacancy?tabId=2',
-			'/vacancy?tabId=3',
-			'/vacancy?tabId=4'
+			'/about/clinic',
+			'/about/clinic?tabId=2',
+			'/about/clinic?tabId=3',
+			'/about/clinic?tabId=4',
+			'/about/clinic?tabId=5'
 		],
 		initialSelectedItem: (
 			<>

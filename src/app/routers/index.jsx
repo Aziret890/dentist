@@ -1,27 +1,29 @@
 import { Route, Routes } from 'react-router-dom'
-import AboutClinic from '../../pages/AboutClinic/page'
+import AboutClinicPage from '../../pages/AboutClinic/page'
+import ContactInformation from '../../pages/ContactInformation/page'
 import DetailDoctors from '../../pages/DetailDoctors/page'
 import Doctors from '../../pages/Doctors/page'
 import Home from '../../pages/Home/page'
-import VacancyPage from '../../pages/Vakancies/Index'
-import Sale from '../../pages/Sale'
-import PricePage from '../../pages/Price/page'
 import News from '../../pages/News/page'
-import ServicesPage from '../../pages/Services/Services'
+import PricePage from '../../pages/Price/page'
+import ServicesPage from '../../pages/Services/page'
+import NotFoundPage from '../../pages/NotFoundPage/page'
+import ReviewsPage from '../../pages/ReviewsPage/page'
 
 export default function Routers() {
 	return (
 		<>
 			<Routes>
 				<Route path='/' element={<Home />} />
-				<Route path='/contact/information' element={<AboutClinic />} />
-				<Route path='/vacancy' element={<VacancyPage />} />
+				<Route path='/contact/information' element={<ContactInformation />} />
+				<Route path='/about/clinic' element={<AboutClinicPage />} />
 				<Route path='/doctors' element={<Doctors />} />
 				<Route path='/doctors/:docId' element={<DetailDoctors />} />
 				<Route path='/services' element={<ServicesPage />} />
-				<Route path='/action' element={<Sale />} />
 				<Route path='/price' element={<PricePage />} />
 				<Route path='/news' element={<News />} />
+				<Route path='/reviews' element={<ReviewsPage />} />
+				<Route path='*' element={<NotFoundPage />} />
 			</Routes>
 		</>
 	)

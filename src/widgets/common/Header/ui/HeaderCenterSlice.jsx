@@ -34,7 +34,11 @@ export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 	return (
 		<div className={styles['center-slice']}>
 			<div className={`${styles.container}`}>
-				<Link to={'/'} className={styles.logo}>
+				<Link
+					onClick={() => toggleIsMenu(false)}
+					to={'/'}
+					className={styles.logo}
+				>
 					<img src={width < 841 ? HeaderWhiteLogo : HeaderLogo} alt='logo' />
 				</Link>
 				<div className={styles.end}>
