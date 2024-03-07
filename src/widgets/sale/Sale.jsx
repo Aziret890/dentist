@@ -1,4 +1,3 @@
-import ButtonRoutes from '../../app/routers/ButtonRoutes'
 import pngAziret from '../../shared/assets/images/png-aziret.png'
 import './Sale.scss'
 function Sale() {
@@ -6,9 +5,7 @@ function Sale() {
 		<section className='sale'>
 			<div className='container'>
 				<div className='sale__content'>
-					<div className='sale__content__btns'>
-						<ButtonRoutes />
-					</div>
+					<div className='sale__content__btns'>{/* <ButtonRoutes /> */}</div>
 					<div className='sale__content__block flex justify-between'>
 						<div className='sale__content__block-info'>
 							<h2>Лечите зубы сейчас, оплачивайте потом</h2>
