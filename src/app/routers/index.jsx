@@ -3,11 +3,11 @@ import AboutClinic from '../../pages/AboutClinic/page'
 import DetailDoctors from '../../pages/DetailDoctors/page'
 import Doctors from '../../pages/Doctors/page'
 import Home from '../../pages/Home/page'
-import ServicesPage from '../../pages/Services/Page'
 import VacancyPage from '../../pages/Vakancies/Index'
 import Sale from '../../pages/Sale'
 import PricePage from '../../pages/Price/page'
 import News from '../../pages/News/page'
+import ServicesPage from '../../pages/Services/Services'
 
 export default function Routers() {
 	return (
