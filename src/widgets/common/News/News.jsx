@@ -1,8 +1,8 @@
 import axios from 'axios'
+import { useEffect, useState } from 'react'
 import newIcon from '../../../shared/assets/images/newsicon.svg'
 import './News.css'
 import NewsCard from './NewsCard'
-import { useEffect, useState } from 'react'
 function News() {
 	const [data, setData] = useState([])
 	useEffect(() => {

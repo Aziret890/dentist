@@ -1,10 +1,10 @@
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 import './Clinic.css'
 import PicClinic from './Rectangle 56.png'
 import PicClinic2 from './Rectangle 57.png'
 import CheckCircle from './check-circle 1.png'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
 const Clinic = () => {
 	const [data, setData] = useState([])
 	useEffect(() => {
@@ -75,7 +75,7 @@ const Clinic = () => {
 								</span>
 							</p>
 						</div>
-						<div className='pic-clinic flex-wrap'>
+						<div className='pic-clinic'>
 							<div className='photos-clinic none'>
 								<img
 									data-aos='fade-left'

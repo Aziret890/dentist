@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useQuery } from '@tanstack/react-query'
-import styles from '../page.module.scss'
 import axios from 'axios'
+import styles from '../page.module.scss'
 
 export default function ExamplesOfWork({ id }) {
 	const { data } = useQuery({

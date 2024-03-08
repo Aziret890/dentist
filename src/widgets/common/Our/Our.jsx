@@ -1,7 +1,7 @@
-import './our.css'
-import { useWindowSize } from '../../../entity/hooks/useWindowSize'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { useWindowSize } from '../../../entity/hooks/useWindowSize'
+import './our.css'
 
 const Our = () => {
 	const [data, setData] = useState([])

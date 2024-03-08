@@ -22,7 +22,113 @@
 		transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	}
 }
+.images {
+	min-width: 181px;
+	max-width: 181px;
+	min-height: 376px;
+	max-height: 376px;
+	border-radius: 8px;
+	object-fit: cover;
+	background: url('https://s3-alpha-sig.figma.com/img/a9f1/57fb/36781958caaef34fde1a0e6c1c644b84?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=RXbXzM1L1tTBOGI-ATPVSP0ptNMzThn7BSlrnLLi1fz1nZA7OMdh4-AziMzVmbZaYgkIHn1wG7zLUwXj7yXlUnQN~jtbxbcApWIUWQIjvyiK4Qqdkt0fUmi6ITu8sfTuLEle2nZ1eQP72dOQE9yx-A3MsS~E6rfmsTZESnA9lMkQhgYJm63KSZ~UQ7hocLP6mAB4lZC1prLqfmATavOYMLtsCS0YB6BJ-oPnGm9Sg7hQdBVRcNNCsd-SRhy-eE~pQ7HCgtxwi-4-OUSvz~Iqb~U~XM9EqDow3W~NLuPuYq0snuKS7tMdU4-tq4FwvEwDZFKI2hXvb25XEKyOqKrXlQ__');
+	background-size: cover;
+	background-position: center left -100px;
+	background-repeat: no-repeat;
+}
 .service_container {
+	padding: 20px 0;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 20px;
+	.restart {
+		display: flex;
+		align-items: flex-start;
+		gap: 20px;
+	}
+	.services_tab_content {
+		display: grid;
+		grid-template-columns: repeat();
+		grid-template-columns: repeat(2, 1fr);
+		li {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			gap: 8px;
+			width: 280px;
+			height: 56px;
+			border-radius: 8px;
+
+			background: #f2fafb;
+			position: relative;
+			padding: 8px 0 8px 18px;
+			transition: all 0.15s ease-in;
+
+			&:hover {
+				transform: translateY(-5px) !important;
+				background-color: white;
+			}
+			h5 {
+				font-family: Montserrat;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 20px;
+				letter-spacing: 0em;
+				text-align: left;
+				color: #2cb2bb;
+				@media (max-width: 1000px) {
+					font-size: 12px;
+				}
+				@media (max-width: 640px) {
+					font-size: 14px;
+				}
+			}
+			span.action {
+				position: absolute;
+				top: 35%;
+				right: 10px;
+				height: 100%;
+				font-family: Montserrat;
+				font-size: 10px;
+				font-weight: 700;
+				line-height: 16px;
+				letter-spacing: 0em;
+				text-align: left;
+				color: #ffffff;
+			}
+			svg.actions_avg {
+				position: absolute;
+				right: 0;
+				right: 0;
+			}
+		}
+	}
+	.left {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 14px;
+		button {
+			width: 284px;
+			height: 40px;
+			border-radius: 4px;
+			padding: 8px 16px;
+			text-align: left;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			&.tab__active {
+				color: white;
+				background-color: #2cb2bb;
+				&:hover {
+					background-color: #38d5e0;
+				}
+			}
+			&:hover {
+				background-color: white;
+			}
+		}
+	}
 }
 .last {
 	position: relative;

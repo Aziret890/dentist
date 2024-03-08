@@ -16,7 +16,7 @@ export default function Certificate() {
 					slidesPerView={4}
 					keyboard
 					pagination={{ clickable: true }}
-					className={clsx(` licenses-content`)}
+					className={clsx(`licenses-content`)}
 				>
 					{licenses &&
 						licenses.map((item, idx) => (

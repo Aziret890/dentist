@@ -1,6 +1,6 @@
+import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './Rating.css'
-import axios from 'axios'
 
 function Rating() {
 	const [data, setData] = useState([])
@@ -69,7 +69,7 @@ function Rating() {
 
 	return (
 		<section className='rating' id='section1'>
-			<div className='container'>
+			<div className='container px-10'>
 				<div className='rating__content'>
 					<div className='rating__block__left'>
 						<h2 data-aos='fade-up' data-aos-duration={500}>

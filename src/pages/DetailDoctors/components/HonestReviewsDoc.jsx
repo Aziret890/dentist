@@ -1,7 +1,53 @@
 /* eslint-disable react/prop-types */
+import { useState } from 'react'
+import { useMoreDetail } from '../../../entity/more_detail/store'
 import styles from '../page.module.scss'
+import { useAuth } from '../../../entity/auth/store'
+import Cookies from 'js-cookie'
+import axios from 'axios'
 
-export default function HonestReviewsDoc({ doc }) {
+export default function HonestReviewsDoc({ doc, id }) {
+	const { setModalContent } = useMoreDetail()
+	const { setIsAuth } = useAuth()
+
+	async function postReviewForDoctors(title) {
+		try {
+			const jwtToken = Cookies.get('jwt')
+			if (!jwtToken) {
+				alert('Нету токена')
+				return
+			}
+			const { data } = await axios.post(
+				`https://akmatovt.pythonanywhere.com/addReviewToDoctor/${id}`,
+				{ title },
+				{
+					headers: {
+						Authorization: `JWT ${jwtToken}`
+					}
+				}
+			)
+			if (data.title) {
+				alert('Feedback successfully sent')
+			}
+		} catch (error) {
+			console.log('err', error)
+		}
+	}
+
+	async function postReviewToDoctors() {
+		const cookies = Cookies.get('jwt')
+		if (!cookies) {
+			setIsAuth('in')
+			return
+		}
+
+		setModalContent(() => (
+			<div className='flex items-start pt-20 justify-center w-full h-full'>
+				<CreateReview post={postReviewForDoctors} />
+			</div>
+		))
+	}
+
 	return (
 		<section className='mb-20'>
 			<h1 data-aos='fade-up'>Только честные отзывы о враче</h1>
@@ -83,7 +129,9 @@ export default function HonestReviewsDoc({ doc }) {
 								результате.
 							</span>
 						</p>
-						<button>Написать отзыв о враче</button>
+						<button onClick={postReviewToDoctors}>
+							Написать отзыв о враче
+						</button>
 					</div>
 				</div>
 				<ul className={styles['review-right']}>
@@ -100,7 +148,7 @@ export default function HonestReviewsDoc({ doc }) {
 							>
 								<div className='flex items-center gap-3'>
 									<div className={styles['user_photo_url']}>
-										{item?.user.photoUrl !== null ? (
+										{item?.user.image !== null ? (
 											<img src={item?.user?.image} alt='' />
 										) : (
 											<div className='bg-[#2CB2BB]'>
@@ -148,11 +196,31 @@ export default function HonestReviewsDoc({ doc }) {
 						</li>
 					))}
 
-					{doc?.review?.length > 2 && (
+					{doc?.review?.length > 3 && (
 						<button className={styles.more_review}>Показать ещё отзыв</button>
 					)}
 				</ul>
 			</div>
 		</section>
+	)
+}
+
+export function CreateReview({ post }) {
+	const [title, setTitle] = useState('')
+
+	return (
+		<div className={`${styles.create_review}`}>
+			<div className={styles.review_input_box}>
+				<label htmlFor='title'>Title</label>
+				<textarea
+					value={title}
+					onChange={e => setTitle(e.target.value)}
+					type='text'
+					name='title'
+					id='title'
+				/>
+			</div>
+			<button onClick={() => post(title)}>Отправить</button>
+		</div>
 	)
 }

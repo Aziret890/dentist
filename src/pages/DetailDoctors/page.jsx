@@ -1,21 +1,19 @@
-import clsx from 'clsx'
-import styles from './page.module.scss'
-import './page.scss'
-import { Link } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
-import HomeDetailDoctors from './components/HomeDetailDoctors'
-import { useState } from 'react'
-import AboutDocTabs from './components/AboutDocTabs'
-import TypeOfActivity from './components/TypeOfActivity'
-import Characteristics from './components/Characteristics '
-import Education from './components/Education'
-import Licenses from './components/Licenses'
-import ExamplesOfWork from './components/ExamplesOfWork'
-import Photos from './components/Photos'
-import Articles from './components/Articles'
-import HonestReviewsDoc from './components/HonestReviewsDoc'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
+import clsx from 'clsx'
+import { useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
+import AboutDocTabs from './components/AboutDocTabs'
+import Articles from './components/Articles'
+import Characteristics from './components/Characteristics '
+import Education from './components/Education'
+import ExamplesOfWork from './components/ExamplesOfWork'
+import HomeDetailDoctors from './components/HomeDetailDoctors'
+import HonestReviewsDoc from './components/HonestReviewsDoc'
+import Licenses from './components/Licenses'
+import TypeOfActivity from './components/TypeOfActivity'
+import styles from './page.module.scss'
+import './page.scss'
 
 export default function DetailDoctors() {
 	const { docId } = useParams()
@@ -37,7 +35,9 @@ export default function DetailDoctors() {
 
 	const { data } = useQuery({
 		queryKey: ['detail-doctors', docId],
-		queryFn: async () => await getDetailDoctor(docId)
+		queryFn: async () => await getDetailDoctor(docId),
+		retry: 3000,
+		refetchInterval: 2000
 	})
 
 	return (
@@ -58,7 +58,7 @@ export default function DetailDoctors() {
 				<Characteristics id={docId} doc={data} />
 				<Education doc={data} />
 				<Licenses doc={data} />
-				<HonestReviewsDoc doc={data} />
+				<HonestReviewsDoc id={docId} doc={data} />
 				<ExamplesOfWork id={docId} doc={data} />
 				{/* <Photos doc={findDoc} /> */}
 				<Articles id={docId} doc={data} />

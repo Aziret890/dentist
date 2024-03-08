@@ -63,8 +63,9 @@ export async function handleSignUp(e) {
 		const data = await res.data
 		console.log(data)
 		if (data) {
-			const { jwt } = data
+			const { jwt, id } = data
 			Cookies.set('jwt', jwt)
+			Cookies.set('userId', id)
 			return jwt ? 'success' : 'error'
 		}
 	} catch (error) {

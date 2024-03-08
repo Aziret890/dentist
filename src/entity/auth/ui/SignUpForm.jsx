@@ -3,16 +3,26 @@ import { useState } from 'react'
 import { FcAddImage } from 'react-icons/fc'
 import { handleImageUpload } from '../../../features/Base64File'
 import { handleSignUp } from '../api/fetch'
+import { useAuth } from '../store'
 
 export default function SignInForm({ styles }) {
 	const [base64String, setBase64String] = useState('')
+	const { setIsAuth } = useAuth()
 
 	return (
 		<form
 			className={`${styles.form} ${
 				base64String.trim() !== '' ? styles.form_up : ''
 			}`}
-			onSubmit={handleSignUp}
+			onSubmit={async e => {
+				const result = await handleSignUp(e)
+				if (result === 'success') {
+					alert('Регистрация прошла успешно')
+					setTimeout(() => {
+						setIsAuth(null)
+					}, 1000)
+				}
+			}}
 		>
 			{base64String.trim() !== '' && (
 				<div className={styles.user_avatar}>
