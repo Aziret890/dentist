@@ -10,6 +10,7 @@ import Reviews from '../../widgets/common/Reviews/Reviews'
 import Social from '../../widgets/common/Social/Social'
 import Teeth from '../../widgets/common/Teeth/Teeth'
 import Form1Home from '../../widgets/common/form1Home/Form1Home'
+import { FaArrowRight } from 'react-icons/fa'
 
 export default function Home() {
 	useEffect(() => {
@@ -27,7 +28,16 @@ export default function Home() {
 			<Partners />
 			<News />
 			<Doctor />
-			<Reviews />
+			<Reviews>
+				<div className='reviews-title'>
+					<h1 data-aos='fade-up' data-aos-duration={1 * 300}>
+						Только честные отзывы
+					</h1>
+					<p className='none' data-aos='fade-up' data-aos-duration={2 * 300}>
+						Все отзывы <FaArrowRight />
+					</p>
+				</div>
+			</Reviews>
 		</>
 	)
 }

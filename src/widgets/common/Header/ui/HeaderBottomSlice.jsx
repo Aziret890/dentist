@@ -37,9 +37,9 @@ const HeaderBottomSlice = () => {
 		],
 		links: [
 			'/reviews',
-			'/reviews?tabId=2',
-			'/reviews?tabId=3',
-			'/reviews?tabId=4'
+			'/reviews?tabIndex=2',
+			'/reviews?tabIndex=3',
+			'/reviews?tabIndex=4'
 		],
 		initialSelectedItem: (
 			<>

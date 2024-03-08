@@ -68,7 +68,7 @@ function Rating() {
 	}
 
 	return (
-		<section className='rating'>
+		<section className='rating' id='section1'>
 			<div className='container'>
 				<div className='rating__content'>
 					<div className='rating__block__left'>

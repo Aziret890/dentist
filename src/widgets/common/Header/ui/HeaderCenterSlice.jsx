@@ -15,6 +15,8 @@ import Message from '../../../../shared/assets/images/message.icons.svg'
 import Pencil from '../../../../shared/assets/images/pencil.svg'
 import { useWindowSize } from '../../../../entity/hooks/useWindowSize'
 import DropDown from '../../../../features/DropDown'
+import { useMoreDetail } from '../../../../entity/more_detail/store'
+import MoreDetail from '../../../MoreDetail'
 
 // eslint-disable-next-line react/prop-types
 export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
@@ -30,6 +32,8 @@ export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 			</>
 		)
 	}
+
+	const { toggleIsModal } = useMoreDetail()
 
 	return (
 		<div className={styles['center-slice']}>
@@ -60,7 +64,7 @@ export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 							className={styles.dropDown}
 							{...dropDownConfig}
 						/>
-						<button>
+						<button onClick={() => toggleIsModal(true)}>
 							<img src={Pencil} alt='' />
 							Записаться на приём
 						</button>
@@ -70,6 +74,20 @@ export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 					</div>
 				</div>
 			</div>
+			<MoreDetail>
+				Mujer uno dolor, más de poder mismo si. Molde síndrome león oficio mirar
+				namibia sed paño enigma paloma alma cara permacultura vietnamita inmune
+				montaña necesariamente, magma obcecado. Marejada paloma nascimiento
+				quindío chicharra renuncia analfabeto sintió oficinista yugo suntuoso
+				resiliencia mínima, laboral números verdades impedimento torre
+				repugnante asunción animal corchea voluble fantasía? Alias verdades
+				dolor autoinmune odio ventana, expedición materialidad magma dignísimo
+				molestias dolores patrón columna voluble placenta séquito resiliencia
+				asunción modo adiposidad ataque justo cábala décima represión oficio pan
+				mosca. Manantial asunción suntuoso ataque trote síndrome oficinista
+				excepción alma abogada desierto, león, cábala odio, planeador
+				perspicacia incidente lejos voluble deletéreo.
+			</MoreDetail>
 		</div>
 	)
 }

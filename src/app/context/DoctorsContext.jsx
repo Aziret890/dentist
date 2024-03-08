@@ -23,12 +23,14 @@ export const DocProviders = ({ children }) => {
     onChange: (e) => setQueryDoc(e.target.value),
   };
 
-  async function getDoctors() {
-    try {
-      const res = await axios("https://akmatovt.pythonanywhere.com/doctor/", {
-        timeout: 1800,
-      });
-      let filteredDoctors = res.data;
+
+	async function getDoctors() {
+		try {
+			const res = await axios('https://akmatovt.pythonanywhere.com/doctor/', {
+				timeout: 1800
+			})
+
+			let filteredDoctors = res.data
 
       if (queryDoc) {
         const queryLowerCase = queryDoc.toLowerCase();
@@ -54,19 +56,20 @@ export const DocProviders = ({ children }) => {
     }
   }
 
-  const filteredDoc = Array.isArray(doctors) ? doctors : [];
-  const values = {
-    docTabs,
-    inputBind,
-    setDocTabs,
-    tabSpec,
-    setTabSpec,
-    filteredDoc,
-    getDoctors,
-    queryDoc,
-  };
 
-  return (
-    <DoctorsContext.Provider value={values}>{children}</DoctorsContext.Provider>
-  );
-};
+	const filteredDoc = Array.isArray(doctors) ? doctors : []
+	const values = {
+		docTabs,
+		inputBind,
+		setDocTabs,
+		tabSpec,
+		setTabSpec,
+		filteredDoc,
+		getDoctors,
+		queryDoc
+	}
+
+	return (
+		<DoctorsContext.Provider value={values}>{children}</DoctorsContext.Provider>
+	)
+}

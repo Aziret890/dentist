@@ -22,7 +22,7 @@ export const HeaderTopSlice = () => {
 			<div className={`${styles.container}`}>
 				<div className={styles.cursor}>
 					<img src={Cursor} alt='' />
-					<DropDown width={160} {...cityConfig} />
+					<DropDown minWidth={170} {...cityConfig} />
 				</div>
 				<div className={`${styles.div} flex items-center gap-2`}>
 					<img src={TelIcon} alt='' />
