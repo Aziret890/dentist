@@ -58,7 +58,11 @@ export default function TabContentResult({ id }) {
         <Requisites />
       ) : id == 5 ? (
         <div className="vakancies__block__wrapper mt-[48px]">
-          <div className="block__wrapper__categories">
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="900"
+            className="block__wrapper__categories"
+          >
             {dataVacancies.map((el, inx) => (
               <VaсanciesChil
                 el={el}
@@ -67,7 +71,11 @@ export default function TabContentResult({ id }) {
               />
             ))}
           </div>
-          <div className="block__wrapper__inputs">
+          <div
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            className="block__wrapper__inputs"
+          >
             <h2>Заявка на вакансию</h2>
             <div className=" flex flex-col gap-[16px] mt-[30px]">
               <input
