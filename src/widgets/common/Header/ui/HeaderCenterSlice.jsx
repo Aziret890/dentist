@@ -6,7 +6,7 @@ import HeaderWhiteLogo from '../../../../shared/assets/images/header-logo-white.
 import VK from '../../../../shared/assets/images/header-vk.svg'
 import Youtube from '../../../../shared/assets/images/header-you.svg'
 import HeaderLogo from '../../../../shared/assets/images/header1-logo.png'
-import styles from '../index.module.css'
+import styles from '../index.module.scss'
 //
 import { FiMenu } from 'react-icons/fi'
 import { IoClose } from 'react-icons/io5'
@@ -21,8 +21,18 @@ import MoreDetail from '../../../MoreDetail'
 // eslint-disable-next-line react/prop-types
 export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 	const { width } = useWindowSize()
+
+	const { setModalContent } = useMoreDetail()
+
 	const dropDownConfig = {
 		items: ['Оставить отзыв', 'Написать директору'],
+		functions: [
+			{
+				func: () => {
+					setModalContent(() => <div>Оставить отзыв</div>)
+				}
+			}
+		],
 		initialSelectedItem: (
 			<>
 				<img src={Message} alt='' />
@@ -32,8 +42,6 @@ export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 			</>
 		)
 	}
-
-	const { setModalContent } = useMoreDetail()
 
 	return (
 		<div className={styles['center-slice']}>

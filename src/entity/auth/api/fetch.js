@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { baseURL } from '../../../api/URL'
+import Cookies from 'js-cookie'
 
 /**
  *
@@ -41,27 +41,32 @@ export async function handleSignUp(e) {
 	e.preventDefault()
 
 	let email = e.target.email.value
-	let username = e.target.email.value
+	let firstName = e.target.firstName.value
+	let lastName = e.target.lastName.value
 	let password = e.target.password.value
 
-	if (!email.includes('@gmail.com')) {
-		alert('There is no @gmail.com in the email field.')
-	}
-
 	const newUser = {
-		email,
-		password,
-		username
+		email: email,
+		url_profile: '',
+		firstName: firstName,
+		lastName: lastName,
+		image: '',
+		password: password
 	}
 
 	try {
 		const res = await axios.post(
-			`https://akmatovt.pythonanywhere.com/registration/`,
+			`https://akmatovt.pythonanywhere.com/registration`,
 			newUser
 		)
 
 		const data = await res.data
-		console.log(data, 'data')
+		console.log(data)
+		if (data) {
+			const { jwt } = data
+			Cookies.set('jwt', jwt)
+			return jwt ? 'success' : 'error'
+		}
 	} catch (error) {
 		console.log({ error }, 'error')
 	}

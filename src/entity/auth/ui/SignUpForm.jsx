@@ -31,11 +31,20 @@ export default function SignInForm({ styles }) {
 			<div className={styles.input_box}>
 				<input
 					required
-					placeholder='Имя пользователя'
+					placeholder='Имя'
 					type='text'
-					name='text'
+					name='firstName'
 					id='text'
-					minLength={6}
+					minLength={3}
+				/>
+			</div>
+			<div className={styles.input_box}>
+				<input
+					placeholder='Фамилия (необязательно)'
+					type='text'
+					name='lastName'
+					id='text'
+					minLength={3}
 				/>
 			</div>
 			<div className={styles.input_box}>
@@ -45,7 +54,7 @@ export default function SignInForm({ styles }) {
 					type='email'
 					name='email'
 					id='email'
-					minLength={10}
+					minLength={5}
 				/>
 			</div>
 			<div className={styles.input_box}>
@@ -55,13 +64,14 @@ export default function SignInForm({ styles }) {
 					type='password'
 					name='password'
 					id='password'
-					minLength={6}
+					minLength={5}
 				/>
 			</div>
 			<div className={styles.input_boxes}>
 				<label htmlFor='file_image'>
 					<FcAddImage />
-					{base64String.trim() === '' ? 'Добавить' : 'Изменить'} фотографию{' '}
+					{base64String.trim() === '' ? 'Добавить' : 'Изменить'} фотографию
+					(необязательно)
 				</label>
 				<input
 					onChange={e => handleImageUpload(e, setBase64String)}

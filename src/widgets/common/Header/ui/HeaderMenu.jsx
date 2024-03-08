@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import styles from '../index.module.css'
+import styles from '../index.module.scss'
 
 import { motion } from 'framer-motion'
 import { FaArrowLeftLong } from 'react-icons/fa6'

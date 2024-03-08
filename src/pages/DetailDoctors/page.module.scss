@@ -188,7 +188,7 @@
 		line-height: 20px;
 		letter-spacing: 0em;
 		text-align: left;
-		transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+		transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 		&:hover {
 			transform: translateY(-5px);
 		}
@@ -210,7 +210,7 @@
 		align-items: flex-start;
 		gap: 10px;
 		background: #f2fafb;
-		transition: all 0.15s cubic-bezier(0.39, 0.575, 0.565, 1);
+		transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 		&:hover {
 			transform: translateY(-5px);
