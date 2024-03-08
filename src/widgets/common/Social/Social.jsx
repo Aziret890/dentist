@@ -28,7 +28,7 @@ function Social() {
 		{ img: post4, count: 32 }
 	]
 	return (
-		<section className='social__section' id='section2'>
+		<section className='social__section' id='section3'>
 			<div className='container'>
 				<div className='social__block1'>
 					<div className='social__block1-title'>

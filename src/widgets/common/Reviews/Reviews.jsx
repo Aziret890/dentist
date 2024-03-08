@@ -17,7 +17,7 @@ const Reviews = ({ children }) => {
 	}
 
 	return (
-		<section id='section3'>
+		<section id='section4'>
 			<div className='container'>
 				<div className='reviews'>
 					{children}

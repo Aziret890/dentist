@@ -1,16 +1,15 @@
 /* eslint-disable react/prop-types */
-import { Link } from 'react-router-dom'
-import styles from '../page.module.scss'
 import clsx from 'clsx'
 import gsap from 'gsap'
+import { Link } from 'react-router-dom'
+import styles from '../page.module.scss'
 
 export default function ReviewTab({ reviewPageIndex }) {
 	async function onClick(index) {
 		gsap.to(window, {
 			duration: 0.5,
-			scrollTo: { y: '#section' + index, offsetY: index === 0 ? 110 : 40 },
-			// ease: 'expo'
-			ease: 'power3'
+			scrollTo: { y: '#section' + index, offsetY: index === 1 ? 110 : 80 },
+			ease: 'expo'
 		})
 	}
 
@@ -40,7 +39,7 @@ export default function ReviewTab({ reviewPageIndex }) {
 						[styles.actives]: +reviewPageIndex === 3
 					})}
 					to='/reviews?tabIndex=3'
-					onClick={() => onClick(2)}
+					onClick={() => onClick(3)}
 				>
 					Отзывы в социальных сетях
 				</Link>
@@ -49,7 +48,7 @@ export default function ReviewTab({ reviewPageIndex }) {
 						[styles.actives]: +reviewPageIndex === 4
 					})}
 					to='/reviews?tabIndex=4'
-					onClick={() => onClick(3)}
+					onClick={() => onClick(4)}
 				>
 					Отзывы пациентов
 				</Link>

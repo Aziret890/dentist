@@ -25,8 +25,23 @@ export default function ReviewStartContent() {
 					</button>
 				</div>
 				<div className={styles.right}>
-					<img src={Rectangle} alt='rect' />
+					<div>
+						<img src={Rectangle} alt='rect' />
+					</div>
 				</div>
+					<svg
+						width='582'
+						height='290'
+						viewBox='0 0 582 290'
+						fill='none'
+						xmlns='http://www.w3.org/2000/svg'
+					>
+						<path
+							opacity='0.1'
+							d='M291 0C130.285 0 0 129.837 0 290H582C582 129.837 451.715 0 291 0Z'
+							fill='white'
+						/>
+					</svg>
 			</div>
 		</div>
 	)

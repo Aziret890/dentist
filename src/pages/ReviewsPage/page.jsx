@@ -9,6 +9,7 @@ import Reviews from '../../widgets/common/Reviews/Reviews'
 import styles from './page.module.scss'
 import { IoSearchOutline } from 'react-icons/io5'
 import ReviewStartContent from './components/ReviewStartContent'
+import InterviewsWithPatients from './components/InterviewsWithPatients'
 
 export default function ReviewsPage() {
 	const location = useLocation().search
@@ -36,6 +37,7 @@ export default function ReviewsPage() {
 					setReviewPageIndex={setReviewPageIndex}
 				/>
 				<Rating />
+				<InterviewsWithPatients />
 				<Social />
 				<Reviews>
 					<div className=''>
