@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { FcAddImage } from 'react-icons/fc'
 import { handleImageUpload } from '../../../features/Base64File'
+import { handleSignUp } from '../api/fetch'
 
 export default function SignInForm({ styles }) {
 	const [base64String, setBase64String] = useState('')
@@ -11,6 +12,7 @@ export default function SignInForm({ styles }) {
 			className={`${styles.form} ${
 				base64String.trim() !== '' ? styles.form_up : ''
 			}`}
+			onSubmit={handleSignUp}
 		>
 			{base64String.trim() !== '' && (
 				<div className={styles.user_avatar}>
