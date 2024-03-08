@@ -8,13 +8,16 @@ import Header from "../widgets/common/Header";
 import Form2Home from "../widgets/common/form2Home/Form2Home";
 import Routers from "./routers";
 import "./App.css";
+import axios from "axios";
 function App() {
   const location = useLocation();
 
   useEffect(() => {
+    axios
+      .get("https://akmatovt.pythonanywhere.com/news/")
+      .then((res) => console.log(res.data));
     window.scrollTo(0, 0);
   }, [location.pathname]);
-
   return (
     <>
       <Header />
