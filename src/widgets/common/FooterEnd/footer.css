@@ -32,12 +32,6 @@
 	box-shadow: 0px 10px 10px rgb(1, 49, 182);
 }
 
-button {
-	border: none;
-	background-color: transparent;
-	/* font-size: 20px; */
-}
-
 .button:hover {
 	width: inherit;
 	height: inherit;

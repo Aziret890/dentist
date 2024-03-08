@@ -1,9 +1,6 @@
 @media (max-width: 568px) {
 	.apa {
 		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		/* text-align: center; */
 	}
 }
 @media (max-width: 418px) {
@@ -13,5 +10,23 @@
 	.w-\[405px\] {
 		width: 280px;
 		font-size: 17px;
+	}
+}
+@media (max-width: 320px) {
+	.apa {
+		justify-content: center;
+		align-items: center !important;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.how.bo {
+		width: 90%;
+		margin: 0 auto;
+		padding: 0 30px;
+		justify-content: center;
+		& p {
+			min-width: 80%;
+		}
 	}
 }

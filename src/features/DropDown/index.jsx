@@ -13,7 +13,7 @@ const variants = {
 	visible: { opacity: 1, translateY: 0 }
 }
 
-const DropDown = ({ initialSelectedItem, items, links, width, width2 }) => {
+const DropDown = ({ initialSelectedItem, items, links, minWidth,maxWidth, width2 }) => {
 	const { selectedItem, isOpen, toggleDropDown, onSelectItem, dropDownRef } =
 		useDropDown({
 			initialSelectedItem,
@@ -41,7 +41,8 @@ const DropDown = ({ initialSelectedItem, items, links, width, width2 }) => {
 				onMouseOut={() => toggleDropDown(false)}
 				ref={!isOpen ? dropDownRef : null}
 				style={{
-					minWidth: width
+					minWidth: minWidth,
+					maxWidth: maxWidth
 				}}
 				className={clsx(styles.dropdownContent, {
 					[styles.show]: isOpen

@@ -73,7 +73,7 @@ export default function ServicesTabContent({ tab }) {
 				pagination={{
 					clickable: true
 				}}
-				spaceBetween={0}
+				spaceBetween={10}
 				slidesPerView={1}
 				className={'swipers block'}
 			>

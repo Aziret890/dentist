@@ -1,6 +1,6 @@
-import React from "react";
 import DetalPriceRestart from "./detalPrice/DetalPriceRestart";
-import "./Price.scss";
+import '../page.scss'
+
 import Images from "./detalPrice/Images";
 
 function PriceReStart() {

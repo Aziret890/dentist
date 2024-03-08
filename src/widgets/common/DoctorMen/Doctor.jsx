@@ -118,7 +118,7 @@ const Doctor = () => {
 												<span
 													data-aos='fade-up'
 													data-aos-duration={index * 300}
-													className='hover:border-b-2 border-[#2CB2BB] text-[#2CB2BB]'
+													className='hover:border-b-2  border-[#2CB2BB] text-[#2CB2BB]'
 													key={index}
 													onClick={() => handleTitleClick(index)}
 													style={{
@@ -133,7 +133,7 @@ const Doctor = () => {
 														style={{
 															fontWeight: '700',
 															color:
-																currentSlide === index ? 'white' : '#2CB2BB',
+																currentSlide !== index ? '#2cb2bb' : 'white',
 															backgroundColor:
 																currentSlide === index ? '#2CB2BB' : 'white'
 														}}
