@@ -328,7 +328,7 @@ function Vakancies({ id }) {
                   </div>
                   <p className="text-center mt-[15px]">
                     Нажимая на кнопку вы подтверждаете, что прочитали и
-                    соглашаетесь с политикой обработки перс. данных
+                    соглашаетесь с политикой обработки перс. данных aziret
                   </p>
                 </div>
               </div>
@@ -349,4 +349,6 @@ function Vakancies({ id }) {
   );
 }
 //aziret finish
+//gnepiwebibeniwebnwe0ribneibnwe
+//n
 export default Vakancies;
