@@ -14,3 +14,58 @@
 		}
 	}
 }
+
+.search {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid #2cb2bb;
+	padding: 6px 17px;
+	border-radius: 8px;
+	margin: 20px 0;
+
+	button {
+		svg {
+			stroke: #2cb2bb;
+			font-size: 20px;
+		}
+	}
+}
+.input-box {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 6px;
+	width: 100%;
+
+	label {
+		font-size: 14px;
+		font-weight: 600;
+	}
+	input {
+		width: 100%;
+		font-size: 15px;
+		padding: 3px 0;
+		font-weight: 450;
+		&::placeholder {
+			color: black;
+		}
+	}
+}
+
+.start {
+	margin-top: 50px;
+	min-height: 50vh;
+}
+.container {
+	width: 1202px;
+	min-height: 464px;
+	border-radius: 16px;
+	padding: 30px 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #2CB2BB;
+
+}

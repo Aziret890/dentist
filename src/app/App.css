@@ -17,7 +17,7 @@ hr {
 	border: 0;
 	outline: 0;
 	background: 0;
-	cursor: pointer;
+	cursor: pointer !important;
 }
 
 input,

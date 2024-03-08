@@ -65,12 +65,16 @@
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 6px;
+	width: 100%;
+
 	label {
 		font-size: 14px;
 		font-weight: 600;
 	}
 	input {
+		width: 100%;
 		font-size: 15px;
+		padding: 6px 0;
 		font-weight: 450;
 		&::placeholder {
 			color: black;

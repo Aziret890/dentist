@@ -28,6 +28,7 @@ export const DocProviders = ({ children }) => {
 			const res = await axios('https://akmatovt.pythonanywhere.com/doctor/', {
 				timeout: 1800
 			})
+
 			let filteredDoctors = res.data
 
 			if (queryDoc) {
@@ -54,8 +55,6 @@ export const DocProviders = ({ children }) => {
 		}
 	}
 
-	
-
 	const filteredDoc = Array.isArray(doctors) ? doctors : []
 	const values = {
 		docTabs,
@@ -64,7 +63,8 @@ export const DocProviders = ({ children }) => {
 		tabSpec,
 		setTabSpec,
 		filteredDoc,
-		getDoctors
+		getDoctors,
+		queryDoc
 	}
 
 	return (
