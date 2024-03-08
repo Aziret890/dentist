@@ -32,11 +32,11 @@ export default function HomeDetailDoctors({ doc }) {
 				className={`container ${styles['home-container']}`}
 			>
 				<div className={styles['home-left']}>
-					<motion.h1>{doc.name}</motion.h1>
-					<motion.h3>{doc.experience} лет опыта</motion.h3>
+					<motion.h1>{doc?.firstName}</motion.h1>
+					<motion.h3>{doc?.experience} лет опыта</motion.h3>
 					<ul>
-						{doc.specialization.map((item, idx) => (
-							<motion.li key={idx}>{item},</motion.li>
+						{doc?.spec?.map((item, idx) => (
+							<motion.li key={idx}>{item?.title},</motion.li>
 						))}
 					</ul>
 					<div className={styles['sign-up-doc']}>
@@ -76,9 +76,7 @@ export default function HomeDetailDoctors({ doc }) {
 				</svg>
 				<div className={styles['home-right']}>
 					<img
-						src={
-							'https://s3-alpha-sig.figma.com/img/cd34/d12f/2ea2ee676053d7d6d2eabdceb35b35be?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZUSw2Wp1Uyf8WaF6m46AzQJe9mtD781ssku~zonMn-kPcIDZM2giB6ncTMBjUGm8tjzc744sCij~Rv3DioeLYJ0c155ogJvbhjvHlWnwT1ac7zpepS0fZnDymSJBw344geOe8i4QpYwZXi3hawPMmmuoPBwOq4~Nnv5KUyqjyfaK~LFnnbknwIGeVsU8-88DpQJNJMMAL5CPOvIx6QaQ8LZGoTjKSsAXQFwrPUHvvoAQIPq459fcprMBOwEnuKniTzXDY3tI2oieK0sgdMCZJYuGtdVbjhhhAGjpTZIaBW~QMiEF1zGaw2jQVMQtJJB5d2CPky1D2aZdTFQ3BnAhXA__'
-						}
+						src={'https://akmatovt.pythonanywhere.com/media/' + doc?.image1_png}
 						alt=''
 					/>
 				</div>
@@ -94,7 +92,7 @@ export default function HomeDetailDoctors({ doc }) {
 					viewport={{ amount: 0 }}
 					className={styles['doc-task']}
 				>
-					{doc.my_task}
+					{doc?.description}
 				</motion.div>
 			</motion.div>
 		</section>

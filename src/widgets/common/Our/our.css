@@ -24,6 +24,7 @@
 .doctor h2 {
 	font-weight: 700;
 	font-size: 15px;
+	width: 50%;
 }
 
 @media (max-width: 740px) {

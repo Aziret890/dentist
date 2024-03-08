@@ -1,1 +1,1 @@
-export const baseURL = 'https://akmatovt.pythonanywhere.com/doctor'
+export const baseURL = 'https://akmatovt.pythonanywhere.com'

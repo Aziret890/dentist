@@ -6,7 +6,6 @@ import { Pagination, Keyboard } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 export default function Licenses({ doc }) {
-	const { licenses } = doc
 	return (
 		<section id='section3' className='mb-20'>
 			<h1 data-aos='fade-up'>Лицензии и сертификаты врача</h1>
@@ -18,14 +17,19 @@ export default function Licenses({ doc }) {
 				pagination={{ clickable: true }}
 				className={clsx(`${styles['licenses-content']} licenses-content`)}
 			>
-				{licenses &&
-					licenses.map((item, idx) => (
+				{doc?.certificate &&
+					doc?.certificate?.map((item, idx) => (
 						<SwiperSlide key={idx}>
 							<li data-aos='fade-up' data-aos-duration={idx * 500}>
 								<div className={styles['licenses-image']}>
-									<img src={item.photo} alt='' />
+									<img
+										src={
+											'https://akmatovt.pythonanywhere.com/media/' + item.image
+										}
+										alt=''
+									/>
 								</div>
-								<h4>{item.text}</h4>
+								<h4>{item.title}</h4>
 							</li>
 						</SwiperSlide>
 					))}

@@ -1,8 +1,9 @@
 /* eslint-disable react/prop-types */
+import { handleSignIn } from '../api/fetch'
 
 export default function SignInForm({ styles }) {
 	return (
-		<form className={styles.form}>
+		<form onSubmit={handleSignIn} className={styles.form}>
 			<div className={styles.input_box}>
 				<input
 					required
@@ -20,7 +21,6 @@ export default function SignInForm({ styles }) {
 					type='password'
 					name='password'
 					id='password'
-					minLength={6}
 				/>
 			</div>
 			<button className={styles.sign} type='submit'>

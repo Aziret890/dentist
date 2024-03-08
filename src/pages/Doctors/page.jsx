@@ -1,9 +1,9 @@
 import clsx from 'clsx'
 import DoctorResult from './components/DoctorResult'
 import DoctorSearch from './components/DoctorSearch'
-import DoctorTabs from './components/DoctorTabs'
 import styles from './page.module.scss'
 import { useEffect } from 'react'
+import DoctorSpecTabs from './components/DoctorSpecTabs'
 export default function Doctors() {
 	useEffect(() => {
 		document.title = 'Doctors'
@@ -22,9 +22,8 @@ export default function Doctors() {
 				<h1 className='text-center w-full text-[40px] leading-[48px] font-black mb-10'>
 					Врачи
 				</h1>
-				<DoctorTabs />
+				<DoctorSpecTabs />
 				<hr className={styles.hr} />
-
 				<DoctorSearch />
 				<DoctorResult />
 

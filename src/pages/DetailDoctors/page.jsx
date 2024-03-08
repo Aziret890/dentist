@@ -15,16 +15,33 @@ import ExamplesOfWork from './components/ExamplesOfWork'
 import Photos from './components/Photos'
 import Articles from './components/Articles'
 import HonestReviewsDoc from './components/HonestReviewsDoc'
-import { useEffect } from 'react'
+import { useDoc } from '../../app/context/DoctorsContext'
+import { useQuery } from '@tanstack/react-query'
+import axios from 'axios'
 
 export default function DetailDoctors() {
 	const { docId } = useParams()
 	const [tab, setTab] = useState('Вид деятельности')
-	const findDoc = docArr.find(item => item.id.toString() === docId)
 
-	useEffect(() => {
-		document.title = findDoc.name
-	}, [])
+	async function getDetailDoctor() {
+		try {
+			const { data } = await axios(
+				`https://akmatovt.pythonanywhere.com/doctor/${docId}/`
+			)
+
+			document.title = data.firstName
+
+			return data
+		} catch (error) {
+			console.log('doc detail [err]', error)
+		}
+	}
+
+	const { data } = useQuery({
+		queryKey: ['detail-doctors', docId],
+		queryFn: async () => await getDetailDoctor(docId)
+	})
+
 	return (
 		<main className={styles['detail-doc']}>
 			<div
@@ -33,20 +50,20 @@ export default function DetailDoctors() {
 				<div className='container flex items-center gap-3 text-[#2CB2BB] text-sm'>
 					<Link to='/doctors'>Врачи</Link>
 					<div className={styles.dot}></div>
-					<span>{findDoc.name}</span>
+					<span>{data?.firstName}</span>
 				</div>
 			</div>
-			<HomeDetailDoctors doc={findDoc} />
+			<HomeDetailDoctors doc={data} />
 			<AboutDocTabs tab={tab} setTab={setTab} />
 			<div className={`container pt-10 ${styles['doc-about']}`}>
-				<TypeOfActivity doc={findDoc} />
-				<Characteristics doc={findDoc} />
-				<Education doc={findDoc} />
-				<Licenses doc={findDoc} />
-				<HonestReviewsDoc doc={findDoc} />
-				<ExamplesOfWork doc={findDoc} />
-				<Photos doc={findDoc} />
-				<Articles doc={findDoc} />
+				<TypeOfActivity doc={data} />
+				<Characteristics id={docId} doc={data} />
+				<Education doc={data} />
+				<Licenses doc={data} />
+				<HonestReviewsDoc doc={data} />
+				<ExamplesOfWork doc={data} />
+				{/* <Photos doc={findDoc} /> */}
+				{/* <Articles doc={findDoc} /> */}
 			</div>
 		</main>
 	)
