@@ -70,7 +70,7 @@ function Price({ id }) {
               ) : tabContentIndex == 0 ? (
                 <PriceReStart />
               ) : (
-                ""
+                "pieweponwerpobnwebpo"
               )}
             </>
           ) : id === 1 ? (
