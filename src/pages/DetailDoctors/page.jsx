@@ -3,7 +3,6 @@ import styles from './page.module.scss'
 import './page.scss'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
-import { docArr } from '../../entity/const/doc.const'
 import HomeDetailDoctors from './components/HomeDetailDoctors'
 import { useState } from 'react'
 import AboutDocTabs from './components/AboutDocTabs'
@@ -15,7 +14,6 @@ import ExamplesOfWork from './components/ExamplesOfWork'
 import Photos from './components/Photos'
 import Articles from './components/Articles'
 import HonestReviewsDoc from './components/HonestReviewsDoc'
-import { useDoc } from '../../app/context/DoctorsContext'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 
@@ -61,9 +59,9 @@ export default function DetailDoctors() {
 				<Education doc={data} />
 				<Licenses doc={data} />
 				<HonestReviewsDoc doc={data} />
-				{/* <ExamplesOfWork doc={data} /> */}
+				<ExamplesOfWork id={docId} doc={data} />
 				{/* <Photos doc={findDoc} /> */}
-				{/* <Articles doc={findDoc} /> */}
+				<Articles id={docId} doc={data} />
 			</div>
 		</main>
 	)
