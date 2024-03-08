@@ -9,9 +9,7 @@ function NewsCard({ el, index }) {
     >
       <div>
         <h3>{el.title1}</h3>
-        <h3>{el.title3}</h3>
-
-        <p>{el.description3}</p>
+        <p>{el.description1}</p>
       </div>
       <p>
         <span>{el.date}</span>
@@ -19,5 +17,5 @@ function NewsCard({ el, index }) {
     </div>
   );
 }
-
+//aziet finish add
 export default NewsCard;
