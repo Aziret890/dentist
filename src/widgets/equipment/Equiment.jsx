@@ -1,6 +1,15 @@
-import equateImages from "../../src/images/equateImages.png";
+import { useEffect, useState } from "react";
 import "./Equiment.scss";
+import axios from "axios";
 function Equiment() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios("https://akmatovt.pythonanywhere.com/equipment/").then((res) =>
+      setData(res.data)
+    );
+  }, []);
+  console.log(data);
   return (
     <section className="equiment">
       <div className="container">
@@ -9,7 +18,12 @@ function Equiment() {
         </div>
         <div className="equiment__info">
           <div className="equiment__info__img">
-            <img src={equateImages} alt="" />
+            <img
+              src={
+                "https://akmatovt.pythonanywhere.com/media/" + data[0]?.image
+              }
+              alt=""
+            />
           </div>
           <div className="equiment__info__info">
             <div className="equiment__info__info-block">

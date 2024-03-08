@@ -1,5 +1,5 @@
-import pngAziret from '../../shared/assets/images/png-aziret.png'
-import './Sale.scss'
+import pngAziret from "../../shared/assets/images/png-aziret.png";
+import "./Sale.scss";
 function Sale() {
   return (
     <section className="sale">
