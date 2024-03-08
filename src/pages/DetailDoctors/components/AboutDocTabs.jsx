@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import clsx from 'clsx'
-import styles from '../page.module.scss'
 import { motion } from 'framer-motion'
 import gsap from 'gsap'
 import { ScrollToPlugin } from 'gsap/all'
+import styles from '../page.module.scss'
 gsap.registerPlugin(ScrollToPlugin)
 
 const variants = {
@@ -30,7 +30,7 @@ export default function AboutDocTabs({ tab, setTab }) {
 			duration: 0.5,
 			scrollTo: { y: '#section' + index, offsetY: index === 0 ? 110 : 40 },
 			// ease: 'expo'
-			ease: 'power3'
+			ease: 'expo'
 		})
 	}
 
