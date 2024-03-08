@@ -61,7 +61,7 @@ export default function DetailDoctors() {
 				<Education doc={data} />
 				<Licenses doc={data} />
 				<HonestReviewsDoc doc={data} />
-				<ExamplesOfWork doc={data} />
+				{/* <ExamplesOfWork doc={data} /> */}
 				{/* <Photos doc={findDoc} /> */}
 				{/* <Articles doc={findDoc} /> */}
 			</div>
