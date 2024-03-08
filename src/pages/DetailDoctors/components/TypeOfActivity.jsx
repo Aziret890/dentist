@@ -6,10 +6,9 @@ export default function TypeOfActivity({ doc }) {
 		<section id={'section0'} className='mb-20'>
 			<h1 data-aos='fade-up'>Основные направления врача</h1>
 			<ul className={styles['activity-content']}>
-				{doc.typeOfActivity &&
-					doc.typeOfActivity.map((item, idx) => (
+				{doc?.spec &&
+					doc?.spec?.map((item, idx) => (
 						<li data-aos-duration={idx * 500} data-aos='fade-up' key={idx}>
-							{' '}
 							<svg
 								width='24'
 								height='24'
@@ -22,7 +21,7 @@ export default function TypeOfActivity({ doc }) {
 									fill='#2CB2BB'
 								/>
 							</svg>
-							<span>{item}</span>
+							<span>{item?.title}</span>
 						</li>
 					))}
 			</ul>

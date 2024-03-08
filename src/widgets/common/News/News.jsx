@@ -1,61 +1,36 @@
-import axios from "axios";
-import newIcon from "../../../shared/assets/images/newsicon.svg";
-import "./News.css";
-import NewsCard from "./NewsCard";
-import { useEffect, useState } from "react";
+import axios from 'axios'
+import newIcon from '../../../shared/assets/images/newsicon.svg'
+import './News.css'
+import NewsCard from './NewsCard'
+import { useEffect, useState } from 'react'
 function News() {
-  const cardData = [
-    {
-      title: "Уникальная технология – Компьютерная анестезия STA",
-      info: "Болезненное обезболивание уколами теперь в прошлом. Ведь мы привезли в Иркутск уникальную компьютерную анестезию STA – технологию, позволяющую лечить зубы без страха и боли",
-      date: "20 сентрября",
-    },
-    {
-      title: "Введена бонусная программа UDSgame",
-      info: "Друзья, у нас для вас отличная новость. В нашей клинике действует бонусная система",
-      date: "19 сентрября",
-    },
-    {
-      title: "В клинике начали использовать 3D каппы",
-      info: "Выравнять зубы и исправить раз и навсегда прикус! Об этом мечтают многие из нас. Но зачастую, уже будучи взрослым человеком, мы не можем себе позволить носить брекеты",
-      date: "5 июля",
-    },
-    {
-      title: "Новая технология удаления зубов",
-      info: "При выборе стоматологической клиники помните, что низкие цены — это неминуемо низкое качество услуги",
-      date: "15 декабря 2020",
-    },
-  ];
-  //   let API = "https://akmatovt.pythonanywhere.com/service/";
-
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    axios("https://akmatovt.pythonanywhere.com/news/").then((res) =>
-      setData(res.data)
-    );
-  }, []);
-  console.log(data);
-  return (
-    <section className="news">
-      <div className="container">
-        <div className="news__content">
-          <div className="new__title">
-            <h1 data-aos="fade-up" data-aos-duration={1 * 300}>
-              Новости
-            </h1>
-            <h4 data-aos="fade-up" data-aos-duration={2 * 300}>
-              Все новости <img src={newIcon} alt="" />
-            </h4>
-          </div>
-          <div className="new__blocks">
-            {data.map((el, ind) => (
-              <NewsCard index={ind} el={el} key={ind} />
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+	const [data, setData] = useState([])
+	useEffect(() => {
+		axios('https://akmatovt.pythonanywhere.com/news/').then(res =>
+			setData(res.data)
+		)
+	}, [])
+	return (
+		<section className='news'>
+			<div className='container'>
+				<div className='news__content'>
+					<div className='new__title'>
+						<h1 data-aos='fade-up' data-aos-duration={1 * 300}>
+							Новости
+						</h1>
+						<h4 data-aos='fade-up' data-aos-duration={2 * 300}>
+							Все новости <img src={newIcon} alt='' />
+						</h4>
+					</div>
+					<div className='new__blocks'>
+						{data.map((el, ind) => (
+							<NewsCard index={ind} el={el} key={ind} />
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+	)
 }
 
-export default News;
+export default News

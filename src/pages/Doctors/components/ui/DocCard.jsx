@@ -26,7 +26,11 @@ export default function DocCard({ idx, item, styles }) {
 		>
 			<div className={styles.start}>
 				<div className={styles['card-image']}>
-					<img width={200} src={item.profile} alt={item.name} />
+					<img
+						width={200}
+						src={'https://akmatovt.pythonanywhere.com/media/' + item.image1_png}
+						alt={item.name}
+					/>
 				</div>
 				<div className={styles['card-content']}>
 					<h1>
@@ -36,15 +40,15 @@ export default function DocCard({ idx, item, styles }) {
 						</span>
 					</h1>
 					<Link to={`/doctors/${item.id}`}>
-						<h4>{item.name}</h4>
+						<h4>
+							{item.firstName} {item.lastName}
+						</h4>
 					</Link>
 					<ul>
-						{item.specialization.map((item, idx) => (
+						{item?.spec?.map((item, idx) => (
 							<li key={idx}>
-								{item}
-								{idx !==
-								(Array.isArray(item.specialization) &&
-									item.specialization.length)
+								{item.title}
+								{idx !== (Array.isArray(item?.spec) && item.spec?.length)
 									? ', '
 									: ''}
 							</li>

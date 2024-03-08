@@ -3,7 +3,6 @@ import styles from './index.module.scss'
 import SignInForm from '../../entity/auth/ui/SignInForm'
 import SignUpForm from '../../entity/auth/ui/SignUpForm'
 import clsx from 'clsx'
-import { IoClose } from 'react-icons/io5'
 import { useKeyDown } from '../../entity/hooks/useKeyDown'
 
 export default function AuthModal() {
@@ -22,7 +21,7 @@ export default function AuthModal() {
 						onClick={() => setIsAuth(null)}
 						className={styles.close_auth_modal}
 					>
-						<IoClose />
+						ESC
 					</button>
 					<h1>{isAuth === 'up' ? 'Регистрация' : 'Авторизация'}</h1>
 					<div>

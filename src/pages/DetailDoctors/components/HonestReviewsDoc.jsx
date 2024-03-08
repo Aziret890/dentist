@@ -2,7 +2,6 @@
 import styles from '../page.module.scss'
 
 export default function HonestReviewsDoc({ doc }) {
-	const { reviews } = doc
 	return (
 		<section className='mb-20'>
 			<h1 data-aos='fade-up'>Только честные отзывы о враче</h1>
@@ -88,33 +87,33 @@ export default function HonestReviewsDoc({ doc }) {
 					</div>
 				</div>
 				<ul className={styles['review-right']}>
-					{reviews &&
-						reviews.map((item, idx) => (
-							<li
+					{doc?.review?.map((item, idx) => (
+						<li
+							data-aos='fade-up'
+							data-aos-duration={idx * 500}
+							className={styles.review}
+							key={item?.id}
+						>
+							<div
 								data-aos='fade-up'
-								data-aos-duration={idx * 500}
-								className={styles.review}
-								key={idx}
+								className='flex items-center justify-between w-full gap-5'
 							>
-								<div
-									data-aos='fade-up'
-									className='flex items-center justify-between w-full gap-5'
-								>
-									<div className='flex items-center gap-3'>
-										<div className={styles['user_photo_url']}>
-											{item.user.photoUrl !== null ? (
-												<img src={item.user.photoUrl} alt='' />
-											) : (
-												<div className='bg-[#2CB2BB]'>
-													{item.user.name.slice(0, 1)}
-												</div>
-											)}
-										</div>
-										<div className='flex flex-col items-start'>
-											<h5>{item.user.fullName}</h5>
-											<span>{item.created}</span>
-										</div>
+								<div className='flex items-center gap-3'>
+									<div className={styles['user_photo_url']}>
+										{item?.user.photoUrl !== null ? (
+											<img src={item?.user?.image} alt='' />
+										) : (
+											<div className='bg-[#2CB2BB]'>
+												{item?.user.firstName.slice(0, 1)}
+											</div>
+										)}
 									</div>
+									<div className='flex flex-col items-start'>
+										<h5>{item?.user.firstName}</h5>
+										<span>{item?.date}</span>
+									</div>
+								</div>
+								{item?.url_profile && (
 									<div className={styles['profile_link']}>
 										<span>ссылка на профиль в</span>
 										<svg
@@ -136,17 +135,22 @@ export default function HonestReviewsDoc({ doc }) {
 											/>
 										</svg>
 									</div>
-								</div>
-								<p data-aos='fade-up' className={styles.review_description}>
-									{item.review1} <br /> <br /> {item.review2}
-								</p>
-								<hr />
+								)}
+							</div>
+							<p data-aos='fade-up' className={styles.review_description}>
+								{item?.title}
+							</p>
+							{item.parent_review && (
 								<p data-aos='fade-up' className={styles.response}>
-									{item.response.message}
+									{item.parent_review}
 								</p>
-							</li>
-						))}
-					<button className={styles.more_review}>Показать ещё отзыв</button>
+							)}
+						</li>
+					))}
+
+					{doc?.review?.length > 2 && (
+						<button className={styles.more_review}>Показать ещё отзыв</button>
+					)}
 				</ul>
 			</div>
 		</section>

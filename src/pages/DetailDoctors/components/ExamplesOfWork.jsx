@@ -1,8 +1,15 @@
 /* eslint-disable react/prop-types */
+import { useQuery } from '@tanstack/react-query'
 import styles from '../page.module.scss'
+import axios from 'axios'
 
-export default function ExamplesOfWork({ doc }) {
-	const { examples_work } = doc
+export default function ExamplesOfWork({ id }) {
+	const { data } = useQuery({
+		queryKey: ['doc_examples_of_work', id],
+		queryFn: async () => {
+			return (await axios(`https://akmatovt.pythonanywhere.com/example/`)).data
+		}
+	})
 	return (
 		<section id='section4' className='mb-20'>
 			<div className='flex items-center w-full justify-between'>
@@ -34,24 +41,34 @@ export default function ExamplesOfWork({ doc }) {
 				</button>
 			</div>
 			<ul className={styles['examples-content']}>
-				{examples_work &&
-					examples_work.map((item, idx) => (
-						<li data-aos='fade-up' data-aos-duration={idx * 500} key={idx}>
+				{data &&
+					data?.map((item, idx) => (
+						<li data-aos='fade-up' data-aos-duration={idx * 300} key={idx}>
 							<div className={styles.images}>
-								<img data-aos='fade-up' src={item.image} alt='' />
+								<img
+									data-aos='fade-up'
+									src={
+										'https://akmatovt.pythonanywhere.com/media/' +
+										item?.sub_example?.images
+									}
+									alt={item.sub_example.doctor.firstName}
+								/>
 							</div>
 							<div className={styles.content}>
 								<div data-aos='fade-up' data-aos-duration={500}>
 									<h4>Технология</h4>
-									<h6>{item.technology}</h6>
+									<h6>{item?.sub_example?.technology}</h6>
 								</div>
 								<div data-aos='fade-up' data-aos-duration={1500}>
 									<h4>Врач</h4>
-									<h6>{item.doctor}</h6>
+									<h6>
+										{item?.sub_example?.doctor?.firstName}{' '}
+										{item?.sub_example?.doctor?.lastName}
+									</h6>
 								</div>
 								<div data-aos='fade-up' data-aos-duration={2000}>
 									<h4>Срок лечения</h4>
-									<h6>{item.treatment_period}</h6>
+									<h6>{item?.sub_example?.duration} дней</h6>
 								</div>
 							</div>
 							<button

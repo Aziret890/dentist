@@ -24,7 +24,7 @@
 	right: 7%;
 	padding: 20px;
 	width: 582px;
-	height: 172px;
+	height: auto;
 	border-radius: 8px;
 	background-color: #ffffff;
 	box-shadow: 0px 8px 12px 0px #164a8714;
@@ -238,11 +238,13 @@
 }
 
 .education-content {
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
-	width: 100%;
-	gap: 30px;
+	.list {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 30px;
+		width: 100%;
+	}
 	* {
 		color: #253f41;
 	}
@@ -334,7 +336,7 @@
 .licenses-content {
 	li {
 		width: 284px !important;
-		height: 492px !important;
+		height: 452px !important;
 		border-radius: 8px;
 		box-shadow: 0px 8px 12px 0px #164a8714;
 
@@ -520,15 +522,9 @@
 }
 
 .user_photo_url {
-	max-width: 56px;
-	max-height: 56px;
-	min-width: 56px;
-	min-height: 56px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	overflow: hidden;
-	clip-path: circle();
 
 	div {
 		max-width: 56px;
@@ -542,8 +538,12 @@
 		color: white;
 	}
 	img {
-		width: 100%;
-		height: 100%;
+		max-width: 56px;
+		max-height: 56px;
+		min-width: 56px;
+		min-height: 56px;
+		object-fit: cover;
+		border-radius: 50%;
 	}
 }
 
@@ -711,7 +711,7 @@
 	gap: 20px;
 	li {
 		width: 284px;
-		height: 264px;
+		min-height: 264px;
 		border-radius: 8px;
 		background: #f2fafb;
 		padding: 20px 15px;

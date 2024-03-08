@@ -12,7 +12,6 @@ const Clinic = () => {
       setData(res.data)
     );
   }, []);
-  console.log(data);
   return (
     <div id="clinic">
       <div className="container">

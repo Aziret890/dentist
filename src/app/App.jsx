@@ -1,5 +1,3 @@
-import { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
 import Footer from '../widgets/common/FooterEnd/Footer'
 import Footer2 from '../widgets/common/FooterEnd/Footer2'
 import Footer3 from '../widgets/common/FooterEnd/Footer3'
@@ -10,12 +8,6 @@ import Routers from './routers'
 import './App.css'
 import AuthModal from '../widgets/AuthModal'
 function App() {
-	const location = useLocation()
-
-	useEffect(() => {
-		window.scrollTo(0, 0)
-	}, [location.pathname])
-
 	return (
 		<>
 			<Header />
