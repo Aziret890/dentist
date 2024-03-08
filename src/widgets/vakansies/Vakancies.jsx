@@ -348,5 +348,5 @@ function Vakancies({ id }) {
     </section>
   );
 }
-
+//aziret finish
 export default Vakancies;
