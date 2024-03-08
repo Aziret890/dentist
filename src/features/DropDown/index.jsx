@@ -8,12 +8,19 @@ import { useDropDown } from '../../entity/hooks/useDropDown'
 const variants = {
 	hidden: {
 		opacity: 0,
-		translateY: 10
+		scaleY: 0
 	},
-	visible: { opacity: 1, translateY: 0 }
+	visible: { opacity: 1, scaleY: 1 }
 }
 
-const DropDown = ({ initialSelectedItem, items, links, minWidth,maxWidth, width2 }) => {
+const DropDown = ({
+	initialSelectedItem,
+	items,
+	links,
+	minWidth,
+	maxWidth,
+	width2
+}) => {
 	const { selectedItem, isOpen, toggleDropDown, onSelectItem, dropDownRef } =
 		useDropDown({
 			initialSelectedItem,
@@ -62,6 +69,7 @@ const DropDown = ({ initialSelectedItem, items, links, minWidth,maxWidth, width2
 									duration: 0.25
 								}}
 								viewport={{ amount: 0 }}
+								className={idx === 0 ? styles.li : ''}
 							>
 								{isOpen && items && links && Array.isArray(links) && (
 									<Link
@@ -76,7 +84,16 @@ const DropDown = ({ initialSelectedItem, items, links, minWidth,maxWidth, width2
 										{link}
 									</Link>
 								)}
-								{!links && <button>{link}</button>}
+								{!links && (
+									<button
+										onClick={() => {
+											toggleDropDown(false)
+											onSelectItem(link)
+										}}
+									>
+										{link}
+									</button>
+								)}
 							</motion.li>
 						)
 				)}
