@@ -3,8 +3,20 @@ import UserPic from './Group 585.png'
 import './Reviews.css'
 import PenReview from './edit (1) 1.png'
 import ChatSquare from './message-square 2.png'
+import { useCurrentUser } from '../../../entity/user/store'
+import { useAuth } from '../../../entity/auth/store'
 
 const Reviews = () => {
+	const { currentUser } = useCurrentUser()
+	const { setIsAuth } = useAuth()
+
+	function createAndSetReview() {
+		if (!currentUser) {
+			setIsAuth('in')
+			return
+		}
+	}
+
 	return (
 		<div id='reviews'>
 			<div className='container'>
@@ -47,7 +59,11 @@ const Reviews = () => {
 									Оставьте свой отзыв. Это очень ценно для нас! <br />
 									<br /> Всего несколько слов о качестве, сервисе и результате.
 								</p>
-								<button data-aos='fade-up' data-aos-duration={3 * 300}>
+								<button
+									onClick={createAndSetReview}
+									data-aos='fade-up'
+									data-aos-duration={3 * 300}
+								>
 									Написать отзыв
 								</button>
 							</div>
