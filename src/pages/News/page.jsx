@@ -1,54 +1,53 @@
-import { useEffect, useState } from "react";
-import styles from "./page.module.scss";
-import axios from "axios";
-import MoreDetail from "../../widgets/MoreDetail";
-import { useMoreDetail } from "../../entity/more_detail/store";
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+import { useMoreDetail } from '../../entity/more_detail/store'
+import styles from './page.module.scss'
 
 export default function News() {
-  const [indexPage, setIndexPage] = useState(0);
-  const [objData, setObjData] = useState({});
-  const [data, setData] = useState([]);
-  const { setModallContent } = useMoreDetail();
+	const [indexPage, setIndexPage] = useState(0)
+	const [objData, setObjData] = useState({})
+	const [data, setData] = useState([])
+	const { setModalContent } = useMoreDetail()
 
-  useEffect(() => {
-    axios("https://akmatovt.pythonanywhere.com/news/").then((res) =>
-      setData(res.data)
-    );
-    axios(`https://akmatovt.pythonanywhere.com/news/${indexPage}/`).then(
-      (res) => setObjData(res.data)
-    );
-  }, [indexPage]);
+	useEffect(() => {
+		axios('https://akmatovt.pythonanywhere.com/news/').then(res =>
+			setData(res.data)
+		)
+		axios(`https://akmatovt.pythonanywhere.com/news/${indexPage}/`).then(res =>
+			setObjData(res.data)
+		)
+	}, [indexPage])
 
-  return (
-    <main>
-      <section className="pt-10 container">
-        <h1 className={styles.h1}>Новости</h1>
-        <div className="flex items-start flex-wrap gap-5 justify-between">
-          {data.map((item, idx) => (
-            <li key={idx}>
-              <div
-                onClick={() => {
-                  setModallContent(() => <div>{objData.description2}</div>);
-                  setIndexPage(item.id);
-                }}
-                data-aos="fade-up"
-                data-aos-duration={idx * 100}
-                className={styles["newCard"]}
-              >
-                <div>
-                  <h3>{item.title1}</h3>
-                  <p>{item.description1}</p>
-                </div>
-                <p>
-                  <span>{item.date}</span>
-                </p>
-              </div>
-            </li>
-          ))}
-        </div>
-      </section>
-    </main>
-  );
+	return (
+		<main>
+			<section className='pt-10 container'>
+				<h1 className={styles.h1}>Новости</h1>
+				<div className='flex items-start flex-wrap gap-5 justify-between'>
+					{data.map((item, idx) => (
+						<li key={idx}>
+							<div
+								onClick={() => {
+									setModalContent(() => <div>{objData.description2}</div>)
+									setIndexPage(item.id)
+								}}
+								data-aos='fade-up'
+								data-aos-duration={idx * 100}
+								className={styles['newCard']}
+							>
+								<div>
+									<h3>{item.title1}</h3>
+									<p>{item.description1}</p>
+								</div>
+								<p>
+									<span>{item.date}</span>
+								</p>
+							</div>
+						</li>
+					))}
+				</div>
+			</section>
+		</main>
+	)
 }
 
 // const cardData = [

@@ -2,7 +2,7 @@ import { create } from "zustand";
 
 export const useMoreDetail = create((set) => ({
   modalContent: null,
-  setModallContent: (d) => {
+  setModalContent: (d) => {
     set(() => ({
       modalContent: d,
     }));
