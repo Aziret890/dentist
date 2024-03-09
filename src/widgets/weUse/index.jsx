@@ -1,8 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './weUse.scss'
-// import images1 from '../../src/images/pages2-slidger.png'
-// import images2 from '../../src/images/pages2-slider1.png'
 
 function WeUse() {
 	const [data, setData] = useState([])
@@ -11,7 +9,6 @@ function WeUse() {
 			setData(res.data)
 		)
 	}, [])
-	console.log(data)
 	return (
 		<section className='weUse'>
 			<div className='container px-10'>

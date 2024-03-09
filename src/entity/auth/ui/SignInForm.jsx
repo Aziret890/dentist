@@ -11,7 +11,7 @@ export default function SignInForm({ styles }) {
 					type='email'
 					name='email'
 					id='email'
-					minLength={10}
+					minLength={5}
 				/>
 			</div>
 			<div className={styles.input_box}>
@@ -21,6 +21,7 @@ export default function SignInForm({ styles }) {
 					type='password'
 					name='password'
 					id='password'
+					minLength={5}
 				/>
 			</div>
 			<button className={styles.sign} type='submit'>

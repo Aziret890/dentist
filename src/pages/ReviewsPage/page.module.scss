@@ -70,10 +70,16 @@
 	background: #2cb2bb;
 	position: relative;
 	z-index: 20;
+	@media (max-width: 940px) {
+		padding: 5vw;
+		min-height: auto;
+		max-height: auto;
+	}
+
 	svg {
 		position: absolute;
 		bottom: 0;
-		right: 50px;
+		right: 5vw;
 		z-index: -1;
 	}
 }
@@ -128,9 +134,10 @@
 }
 
 .right {
-	div {
-		margin-bottom: 24px;
-		margin-right: 50px;
+	margin-bottom: 24px;
+	margin-right: 50px;
+	@media (max-width: 940px) {
+		display: none;
 	}
 }
 
