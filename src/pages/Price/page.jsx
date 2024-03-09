@@ -5,7 +5,7 @@ import PriceReStart from './components/PriceReStart'
 import clsx from 'clsx'
 import PriceCure from './components/PriceCure'
 import { useState } from 'react'
-import Sale from '../../widgets/Sale/Sale'
+import Sale from '../../widgets/Sale'
 import SaleFiveButton from './components/detalPrice/SaleFiveButton'
 import NoResultFound from '../NoResultFound/page'
 

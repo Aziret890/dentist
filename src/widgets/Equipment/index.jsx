@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import './Equiment.scss'
+import './index.scss'
 import clsx from 'clsx'
 import { IoClose } from 'react-icons/io5'
 import { useRef } from 'react'

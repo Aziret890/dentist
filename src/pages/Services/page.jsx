@@ -1,6 +1,6 @@
 import { LuDot } from 'react-icons/lu'
 import Year from './components/Year'
-import Our from '../../widgets/common/Our/Our'
+import Our from '../../widgets/common/Our'
 import Description from './components/Description'
 import Implants from './components/Implants'
 import Stage from './components/Stage'
