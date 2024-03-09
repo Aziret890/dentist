@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { IoIosArrowDown } from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import DropDown from '../../../../features/DropDown'
@@ -159,4 +158,4 @@ const HeaderBottomSlice = ({ setIsServiceModal, isServiceModal }) => {
 	)
 }
 
-export default HeaderBottomSlice
+export default HeaderBottomSlice;
