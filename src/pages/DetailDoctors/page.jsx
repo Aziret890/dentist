@@ -33,7 +33,7 @@ export default function DetailDoctors() {
 		}
 	}
 
-	const { data } = useQuery({
+	const { data, refetch } = useQuery({
 		queryKey: ['detail-doctors', docId],
 		queryFn: async () => await getDetailDoctor(docId),
 		retry: 3000,
@@ -46,7 +46,14 @@ export default function DetailDoctors() {
 				className={clsx(`${styles['start']} w-full h-[52px] opacity-60 pt-3 `)}
 			>
 				<div className='container flex items-center gap-3 text-[#2CB2BB] text-sm'>
-					<Link to='/doctors'>Врачи</Link>
+					<Link
+						onClick={() => {
+							window.scrollTo(0, 0)
+						}}
+						to='/doctors'
+					>
+						Врачи
+					</Link>
 					<div className={styles.dot}></div>
 					<span>{data?.firstName}</span>
 				</div>
@@ -58,7 +65,7 @@ export default function DetailDoctors() {
 				<Characteristics id={docId} doc={data} />
 				<Education doc={data} />
 				<Licenses doc={data} />
-				<HonestReviewsDoc id={docId} doc={data} />
+				<HonestReviewsDoc refetch={refetch} id={docId} doc={data} />
 				<ExamplesOfWork id={docId} doc={data} />
 				{/* <Photos doc={findDoc} /> */}
 				<Articles id={docId} doc={data} />

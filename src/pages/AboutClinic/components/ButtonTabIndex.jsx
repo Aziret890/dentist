@@ -10,7 +10,9 @@ export default function ButtonTabIndex({ id }) {
 					actives: !id || id === 1
 				})}
 			>
-				<Link to={'/about/clinic'}>
+				<Link
+					to={'/about/clinic'}
+				>
 					<svg
 						width='24'
 						height='24'
@@ -104,7 +106,9 @@ export default function ButtonTabIndex({ id }) {
 					actives: id === 2
 				})}
 			>
-				<Link to={'/about/clinic?tabId=2'}>
+				<Link
+					to={'/about/clinic?tabId=2'}
+				>
 					<svg
 						width='24'
 						height='24'
@@ -128,7 +132,9 @@ export default function ButtonTabIndex({ id }) {
 					actives: id === 3
 				})}
 			>
-				<Link to={'/about/clinic?tabId=3'}>
+				<Link
+					to={'/about/clinic?tabId=3'}
+				>
 					<svg
 						width='24'
 						height='24'
@@ -180,7 +186,9 @@ export default function ButtonTabIndex({ id }) {
 					actives: id === 4
 				})}
 			>
-				<Link to={'/about/clinic?tabId=4'}>
+				<Link
+					to={'/about/clinic?tabId=4'}
+				>
 					<svg
 						width='24'
 						height='24'
@@ -239,7 +247,9 @@ export default function ButtonTabIndex({ id }) {
 					actives: id === 5
 				})}
 			>
-				<Link to={'/about/clinic?tabId=5'}>
+				<Link
+					to={'/about/clinic?tabId=5'}
+				>
 					<svg
 						width='24'
 						height='24'
