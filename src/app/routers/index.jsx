@@ -9,6 +9,7 @@ import PricePage from '../../pages/Price/page'
 import ServicesPage from '../../pages/Services/page'
 import NotFoundPage from '../../pages/NotFoundPage/page'
 import ReviewsPage from '../../pages/ReviewsPage/page'
+import FreeConsultation from '../../pages/FreeConsultation/page'
 
 export default function Routers() {
 	return (
@@ -21,6 +22,7 @@ export default function Routers() {
 				<Route path='/doctors/:docId' element={<DetailDoctors />} />
 				<Route path='/services' element={<ServicesPage />} />
 				<Route path='/price' element={<PricePage />} />
+				<Route path='/consultancy' element={<FreeConsultation />} />
 				<Route path='/news' element={<News />} />
 				<Route path='/reviews' element={<ReviewsPage />} />
 				<Route path='*' element={<NotFoundPage />} />
