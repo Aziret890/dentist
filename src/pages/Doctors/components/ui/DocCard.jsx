@@ -39,7 +39,12 @@ export default function DocCard({ idx, item, styles }) {
 							Лет <br /> опыта
 						</span>
 					</h1>
-					<Link to={`/doctors/${item.id}`}>
+					<Link
+						onClick={() => {
+							window.scrollTo(0, 0)
+						}}
+						to={`/doctors/${item.id}`}
+					>
 						<h4>
 							{item.firstName} {item.lastName}
 						</h4>
@@ -94,7 +99,12 @@ export default function DocCard({ idx, item, styles }) {
 					</svg>
 					Отзывы
 				</button>
-				<Link to={`/doctors/${item.id}`}>
+				<Link
+					onClick={() => {
+						window.scrollTo(0, 0)
+					}}
+					to={`/doctors/${item.id}`}
+				>
 					<svg
 						width='13'
 						height='14'

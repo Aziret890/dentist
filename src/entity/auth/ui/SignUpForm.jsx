@@ -4,6 +4,7 @@ import { FcAddImage } from 'react-icons/fc'
 import { handleImageUpload } from '../../../features/Base64File'
 import { handleSignUp } from '../api/fetch'
 import { useAuth } from '../store'
+import { toast } from 'react-toastify'
 
 export default function SignInForm({ styles }) {
 	const [base64String, setBase64String] = useState('')
@@ -17,10 +18,10 @@ export default function SignInForm({ styles }) {
 			onSubmit={async e => {
 				const result = await handleSignUp(e)
 				if (result === 'success') {
-					alert('Регистрация прошла успешно')
+					toast.success('Регистрация прошла успешно')
 					setTimeout(() => {
 						setIsAuth(null)
-					}, 1000)
+					}, 300)
 				}
 			}}
 		>

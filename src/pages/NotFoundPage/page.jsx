@@ -226,7 +226,13 @@ export default function NotFoundPage() {
 					
 					`}
 					</p>
-					<Link to='/' className={'link'}>
+					<Link
+						onClick={() => {
+							window.scrollTo(0, 0)
+						}}
+						to='/'
+						className={'link'}
+					>
 						Back to Homepage
 					</Link>
 				</div>

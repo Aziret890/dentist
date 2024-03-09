@@ -13,10 +13,10 @@ import { IoClose } from 'react-icons/io5'
 import { useWindowSize } from '../../../../entity/hooks/useWindowSize'
 import { useMoreDetail } from '../../../../entity/more_detail/store'
 import DropDown from '../../../../features/DropDown'
+import { CreateReview } from '../../../../pages/DetailDoctors/components/HonestReviewsDoc'
 import Medal from '../../../../shared/assets/images/medal.svg'
 import Message from '../../../../shared/assets/images/message.icons.svg'
 import Pencil from '../../../../shared/assets/images/pencil.svg'
-import { CreateReview } from '../../../../pages/DetailDoctors/components/HonestReviewsDoc'
 
 // eslint-disable-next-line react/prop-types
 export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
@@ -51,7 +51,9 @@ export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 		<div className={styles['center-slice']}>
 			<div className={`${styles.container}`}>
 				<Link
-					onClick={() => toggleIsMenu(false)}
+					onClick={() => {
+						window.scrollTo(0, 0)
+					}}
 					to={'/'}
 					className={styles.logo}
 				>

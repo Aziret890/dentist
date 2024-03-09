@@ -1,38 +1,40 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
-import { useMoreDetail } from "../../../entity/more_detail/store";
-import styles from "../page.module.scss";
-import { useAuth } from "../../../entity/auth/store";
-import Cookies from "js-cookie";
-import axios from "axios";
+import { useState } from 'react'
+import { useMoreDetail } from '../../../entity/more_detail/store'
+import styles from '../page.module.scss'
+import { useAuth } from '../../../entity/auth/store'
+import Cookies from 'js-cookie'
+import axios from 'axios'
+import { toast } from 'react-toastify'
 
-export default function HonestReviewsDoc({ doc, id }) {
-  const { setModalContent } = useMoreDetail();
-  const { setIsAuth } = useAuth();
+export default function HonestReviewsDoc({ doc, id, refetch }) {
+	const { setModalContent } = useMoreDetail()
+	const { setIsAuth } = useAuth()
 
-  async function postReviewForDoctors(title) {
-    try {
-      const jwtToken = Cookies.get("jwt");
-      if (!jwtToken) {
-        alert("Нету токена");
-        return;
-      }
-      const { data } = await axios.post(
-        `https://akmatovt.pythonanywhere.com/addReviewToDoctor/${id}`,
-        { title },
-        {
-          headers: {
-            Authorization: `JWT ${jwtToken}`,
-          },
-        }
-      );
-      if (data.title) {
-        alert("Feedback successfully sent");
-      }
-    } catch (error) {
-      console.log("err", error);
-    }
-  }
+	async function postReviewForDoctors(title) {
+		try {
+			const jwtToken = Cookies.get('jwt')
+			if (!jwtToken) {
+				alert('Нету токена')
+				return
+			}
+			const { data } = await axios.post(
+				`https://akmatovt.pythonanywhere.com/addReviewToDoctor/${id}`,
+				{ title },
+				{
+					headers: {
+						Authorization: `JWT ${jwtToken}`
+					}
+				}
+			)
+			if (data.title) {
+				toast.success('Отзывы успешно отправлены')
+			}
+			refetch()
+		} catch (error) {
+			console.log('err', error)
+		}
+	}
 
   async function postReviewToDoctors() {
     const cookies = Cookies.get("jwt");
