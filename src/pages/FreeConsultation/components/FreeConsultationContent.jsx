@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from '../page.module.scss'
-import Men from './men.svg'
-import Magnifier from '../../../features/Magnifier'
+import Men from './images/men.svg'
 
 export default function FreeConsultationContent() {
 	return (

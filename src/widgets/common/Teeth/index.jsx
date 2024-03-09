@@ -141,7 +141,7 @@ const Teeth = () => {
 					>
 						<button onClick={handlePrevSlide}>
 							<div className='btn-container bg-gray-400 rounded-full'>
-								<a href='#' className='btn-content'>
+								<span href='' className='btn-content'>
 									<span className='icon-arrow'>
 										<svg
 											xmlnsXlink='http://www.w3.org/1999/xlink'
@@ -176,13 +176,13 @@ const Teeth = () => {
 											</g>
 										</svg>
 									</span>
-								</a>
+								</span>
 							</div>
 						</button>
 
 						<button onClick={handleNextSlide}>
 							<div className='btn-conteiner'>
-								<a href='#' className='btn-content content2'>
+								<button className='btn-content content2'>
 									<span className='icon-arrow'>
 										<svg
 											xmlnsXlink='http://www.w3.org/1999/xlink'
@@ -217,7 +217,7 @@ const Teeth = () => {
 											</g>
 										</svg>
 									</span>
-								</a>
+								</button>
 							</div>
 						</button>
 					</div>

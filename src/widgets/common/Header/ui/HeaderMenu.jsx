@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from '../index.module.scss'
 
@@ -21,19 +21,8 @@ export default function HeaderMenu({ isMenu, toggleIsMenu }) {
 	const [isMenus, setIsMenus] = useState(null)
 
 	const toggleIsMenus = d => {
-		setIsMenus(() => d)
+		setIsMenus(d)
 	}
-
-	useEffect(() => {
-		if (!isMenu) {
-			setIsMenus(null)
-		}
-		if (isMenus !== null) {
-			document.querySelector('#menu').style.overflowX = 'hidden'
-		} else {
-			document.querySelector('#menu').style.overflow = 'auto'
-		}
-	}, [isMenu, isMenus])
 
 	const findMenu = menuList2.find(
 		item => item.title.toLowerCase() === String(isMenus)
@@ -62,8 +51,13 @@ export default function HeaderMenu({ isMenu, toggleIsMenu }) {
 									}}
 									viewport={{ amount: 0 }}
 									key={item.title}
+									className={clsx('overflow-hidden')}
 								>
-									<h3>{item.title}</h3>
+									<button>
+										<span>{item.title}</span>
+										<IoIosArrowForward className='rotate-90' />
+									</button>
+
 									<ol>
 										{item.links.map((link, idx) => (
 											<motion.li
@@ -93,16 +87,6 @@ export default function HeaderMenu({ isMenu, toggleIsMenu }) {
 							))}
 						</ul>
 
-						<ul className={styles['menu-buttons']}>
-							<button>
-								<img src={Pencil} alt='' />
-								Записаться на приём
-							</button>
-							<button>
-								<img src={Message} alt='' />
-								Оставить отзыв <br /> или написать директору
-							</button>
-						</ul>
 						<ul className={styles.menus2}>
 							{menuList2.map((item, idx) => (
 								<motion.li
@@ -178,6 +162,47 @@ export default function HeaderMenu({ isMenu, toggleIsMenu }) {
 							))}
 						</ol>
 					</div>
+				)}
+				{isMenus === null && (
+					<ul className={styles['menu-buttons']}>
+						<button>
+							<img src={Pencil} alt='' />
+							Записаться на приём
+						</button>
+						<button>
+							<img src={Message} alt='' />
+							Оставить отзыв <br /> или написать директору
+						</button>
+						<span>
+							<svg
+								width='12'
+								height='12'
+								viewBox='0 0 12 12'
+								fill='none'
+								xmlns='http://www.w3.org/2000/svg'
+							>
+								<path
+									d='M1 7V3M1 7C1 8.10455 1.89543 9 3 9C4.10457 9 5 8.10455 5 7C5 5.89545 4.10457 5 3 5C1.89543 5 1 5.89545 1 7Z'
+									stroke='#253F41'
+									strokeLinecap='round'
+									strokeLinejoin='round'
+								/>
+								<path
+									d='M11 7V3M11 7C11 8.10455 10.1046 9 9 9C7.89545 9 7 8.10455 7 7C7 5.89545 7.89545 5 9 5C10.1046 5 11 5.89545 11 7Z'
+									stroke='#253F41'
+									strokeLinecap='round'
+									strokeLinejoin='round'
+								/>
+								<path
+									d='M7 7H5'
+									stroke='#253F41'
+									strokeLinecap='round'
+									strokeLinejoin='round'
+								/>
+							</svg>
+							Версия для слабовидящих
+						</span>
+					</ul>
 				)}
 			</div>
 		</div>
