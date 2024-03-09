@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Signup = () => {
 	return (
@@ -35,9 +36,15 @@ const Signup = () => {
 						Здесь очень много критериев, поэтому мы написали <br /> отдельную
 						статью с ответами на этот вопрос
 					</p>
-					<button className='w-[256px] h-[50px] text-white font-bold bg-[#2CB2BB] rounded-sm'>
+					<Link
+						onClick={() => {
+							window.scrollTo(0, 0)
+						}}
+						to='/news'
+						className='w-[256px] h-[50px] flex items-center justify-center text-white font-bold bg-[#2CB2BB] rounded-sm'
+					>
 						Читать статью
-					</button>
+					</Link>
 				</div>
 				<div
 					data-aos='fade-down-left'

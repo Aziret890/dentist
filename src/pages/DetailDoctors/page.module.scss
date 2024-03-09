@@ -589,6 +589,11 @@
 		padding-left: 14px;
 		border-radius: 4px;
 		font-weight: 600;
+		max-height: 450px;
+		min-height: 200px;
+		width: 100%;
+		font-size: 15px;
+		font-weight: 500;
 		&::placeholder {
 			color: black;
 		}
@@ -600,14 +605,18 @@
 }
 .create_review {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.171);
-	width: 480px;
-	min-height: 180px;
 	padding: 8px 0;
 	border-radius: 8px;
 	padding: 30px;
 	overflow: auto;
 	resize: both;
-	max-height: 600;
+	max-height: 600px;
+	min-height: 400px;
+	max-width: 800px;
+	min-width: 500px;
+	&::-webkit-scrollbar {
+		width: 5px;
+	}
 	button {
 		font-size: 16px;
 		font-weight: 650;

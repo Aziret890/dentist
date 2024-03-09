@@ -15,7 +15,7 @@ export default function ServicesTabContent({ tab }) {
 				)}
 			>
 				{servicesTabContent.map((item, idx) => (
-					<li key={idx}>
+					<li key={item.title}>
 						<h4 data-aos={'fade-up'} data-aos-duration={idx + 1 * 300}>
 							{item.title}
 						</h4>
@@ -24,7 +24,7 @@ export default function ServicesTabContent({ tab }) {
 								<li
 									data-aos={'fade-up'}
 									data-aos-duration={index + 1 * 500}
-									key={idx}
+									key={el.text}
 								>
 									<svg
 										width='20'

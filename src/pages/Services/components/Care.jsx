@@ -1,14 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Care = () => {
+	const [tabIndex, setTabIndex] = useState(0)
 	return (
 		<div className='container'>
 			<h3 className='text-3xl font-bold text-[#253F41] my-11'>
 				Уход после установки
 			</h3>
-			<div data-aos="fade-up" className='flex items-start justify-between'>
+			<div data-aos='fade-up' className='flex items-start justify-between'>
 				<div className='flex flex-col gap-3'>
-					<div   className='w-[386px] h-[80px] bg-[#2CB2BB] flex items-center px-11 gap-5 text-white font-bold text-sm  rounded-lg cursor-pointer'>
+					<button
+						onClick={() => setTabIndex(0)}
+						className={`${
+							tabIndex === 0
+								? 'bg-[#2CB2BB] text-white'
+								: 'text-[#2CB2BB] bg-[#F2FAFB]'
+						} w-[386px] h-[80px]  flex items-center px-11 gap-5 font-bold text-sm  rounded-lg cursor-pointer`}
+					>
 						<svg
 							width='48'
 							height='48'
@@ -25,13 +33,20 @@ const Care = () => {
 								d='M24 11C24 6 22 4 18 4'
 								stroke='white'
 								stroke-width='1.5'
-								stroke-linecap='round'
-								stroke-linejoin='round'
+								strokeLinecap='round'
+								strokeLinejoin='round'
 							/>
 						</svg>
 						<h2>Приём пищи</h2>
-					</div>
-					<div className='w-[386px] h-[80px] bg-[#F2FAFB] text-[#2CB2BB] text-sm font-bold flex items-center px-11 gap-5 rounded-lg cursor-pointer'>
+					</button>
+					<button
+						onClick={() => setTabIndex(1)}
+						className={`${
+							tabIndex === 1
+								? 'bg-[#2CB2BB] text-white'
+								: 'text-[#2CB2BB] bg-[#F2FAFB]'
+						} w-[386px] h-[80px] text-sm font-bold flex items-center px-11 gap-5 rounded-lg cursor-pointer`}
+					>
 						<svg
 							width='48'
 							height='48'
@@ -54,8 +69,15 @@ const Care = () => {
 							</defs>
 						</svg>
 						<h3>Уход за полостью рта</h3>
-					</div>
-					<div className='w-[386px] h-[80px] bg-[#F2FAFB] text-[#2CB2BB] text-sm font-bold flex items-center px-11 gap-5 rounded-lg cursor-pointer'>
+					</button>
+					<button
+						onClick={() => setTabIndex(2)}
+						className={`${
+							tabIndex === 2
+								? 'bg-[#2CB2BB] text-white'
+								: 'text-[#2CB2BB] bg-[#F2FAFB]'
+						} w-[386px] h-[80px] text-sm font-bold flex items-center px-11 gap-5 rounded-lg cursor-pointer`}
+					>
 						<svg
 							width='48'
 							height='48'
@@ -100,7 +122,7 @@ const Care = () => {
 							</defs>
 						</svg>
 						<h3>Образ жизни</h3>
-					</div>
+					</button>
 				</div>
 				<div className='w-[794px] bg-[#F2FAFB] h-[460px] rounded-sm'>
 					<div className='flex flex-col gap-4 px-11 my-11'>
@@ -119,8 +141,8 @@ const Care = () => {
 									d='M9 1L3.5 6.5L1 4'
 									stroke='#2CB2BB'
 									stroke-width='1.5'
-									stroke-linecap='round'
-									stroke-linejoin='round'
+									strokeLinecap='round'
+									strokeLinejoin='round'
 								/>
 							</svg>
 							<h2>Нельзя жевать имплантом</h2>
@@ -137,8 +159,8 @@ const Care = () => {
 									d='M9 1L3.5 6.5L1 4'
 									stroke='#2CB2BB'
 									stroke-width='1.5'
-									stroke-linecap='round'
-									stroke-linejoin='round'
+									strokeLinecap='round'
+									strokeLinejoin='round'
 								/>
 							</svg>
 							<h2>Пища должна быть жидкой</h2>
@@ -155,8 +177,8 @@ const Care = () => {
 									d='M9 1L3.5 6.5L1 4'
 									stroke='#2CB2BB'
 									stroke-width='1.5'
-									stroke-linecap='round'
-									stroke-linejoin='round'
+									strokeLinecap='round'
+									strokeLinejoin='round'
 								/>
 							</svg>
 							<h2>Продукты следует измельчать до состояния пюре</h2>
@@ -173,8 +195,8 @@ const Care = () => {
 									d='M9 1L3.5 6.5L1 4'
 									stroke='#2CB2BB'
 									stroke-width='1.5'
-									stroke-linecap='round'
-									stroke-linejoin='round'
+									strokeLinecap='round'
+									strokeLinejoin='round'
 								/>
 							</svg>
 							<h2>
@@ -196,8 +218,8 @@ const Care = () => {
 									d='M9 1L3.5 6.5L1 4'
 									stroke='#2CB2BB'
 									stroke-width='1.5'
-									stroke-linecap='round'
-									stroke-linejoin='round'
+									strokeLinecap='round'
+									strokeLinejoin='round'
 								/>
 							</svg>
 							<h2>Не употреблять твердые продукты (орехи, семечки и тп.)</h2>
@@ -214,8 +236,8 @@ const Care = () => {
 									d='M9 1L3.5 6.5L1 4'
 									stroke='#2CB2BB'
 									stroke-width='1.5'
-									stroke-linecap='round'
-									stroke-linejoin='round'
+									strokeLinecap='round'
+									strokeLinejoin='round'
 								/>
 							</svg>
 							<h2>
@@ -234,8 +256,8 @@ const Care = () => {
 									d='M9 1L3.5 6.5L1 4'
 									stroke='#2CB2BB'
 									stroke-width='1.5'
-									stroke-linecap='round'
-									stroke-linejoin='round'
+									strokeLinecap='round'
+									strokeLinejoin='round'
 								/>
 							</svg>
 							<h2>Желательно употреблять только мягкую пищу</h2>

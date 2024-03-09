@@ -25,6 +25,55 @@
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: flex-start;
+		position: relative;
+		.show__content {
+			position: absolute;
+			top: 100%;
+			height: auto;
+			z-index: 99;
+			border-top: 1px solid #2cb2bb;
+			box-shadow: 0px 8px 12px 0px #164a8714;
+			background: #ffffff;
+			padding: 20px;
+
+			min-height: 0;
+			opacity: 0;
+			visibility: hidden;
+			pointer-events: none;
+
+			transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+			&.active {
+				min-height: auto;
+				opacity: 1;
+				visibility: visible;
+				pointer-events: all;
+			}
+
+			h4 {
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 105%;
+				color: #253f41;
+				margin-bottom: 8px;
+			}
+			h3 {
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 105%;
+				color: #253f41;
+				margin-bottom: 8px;
+				margin-top: 18px;
+			}
+			p {
+				font-family: 'Montserrat', sans-serif;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 143%;
+				color: #253f41;
+			}
+		}
 		div.images {
 			width: 284px;
 			height: 248px;

@@ -248,7 +248,7 @@
 	display: none;
 	width: 100vw;
 	position: fixed;
-	top: 110px;
+	top: 109px;
 	background-color: white;
 	transform: translateY(30%);
 	opacity: 0;
@@ -261,6 +261,7 @@
 	transition: all 0.55s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s,
 		z-index 0.3s;
 	padding-bottom: 30px;
+	border-top: 2px solid #2cb2bb;
 
 	&.active {
 		transform: translateY(0);
@@ -282,16 +283,13 @@
 		line-height: 16px;
 		margin-bottom: 14px;
 	}
-	ol {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 10px;
+
 		* {
 			font-weight: 500;
 			font-size: 14px;
+			margin: 8px 0;
 		}
-	}
+	
 	.back {
 		font-size: 16px;
 		display: flex;
@@ -310,7 +308,7 @@
 	align-items: flex-start;
 	justify-content: flex-start;
 	margin-bottom: 20px;
-	padding: 30px 25px 20px 25px;
+	padding: 20px 25px 20px 15px;
 	gap: 10px;
 	li {
 		display: flex;
@@ -320,9 +318,11 @@
 	}
 
 	h3 {
-		font-weight: 600;
-		color: #2cb2bb;
-		font-size: 15px;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		color: #253f41;
 		margin-bottom: 5px;
 	}
 	button {
@@ -338,15 +338,24 @@
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-start;
-	margin-bottom: 20px;
 	background-color: #f2fafb;
 	padding: 30px 15px 20px 15px;
+	gap: 10px;
 
-	h3 {
-		font-weight: 600;
+	button {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
 		color: #2cb2bb;
-		font-size: 14px;
 		margin-bottom: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 280px;
+		svg {
+			fill: #2cb2bb;
+		}
 	}
 	ol {
 		display: flex;
@@ -368,8 +377,27 @@
 	align-items: center;
 	justify-content: flex-start;
 	padding: 20px 15px 20px 15px;
-
 	gap: 2rem;
+	@media (max-width: 320px) {
+		gap: 1rem;
+		button {
+			width: 100% !important;
+		}
+	}
+
+	span {
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 114%;
+		text-align: right;
+		color: #253f41;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		width: 100%;
+		margin-top: 20px;
+	}
 	button {
 		background-color: #f2fafb;
 		border-radius: 8px;
