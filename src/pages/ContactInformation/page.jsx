@@ -1,5 +1,5 @@
 import ContactsOfStateOrganization from '../../widgets/ContactsOfStateOrganization'
-import Maps from '../../widgets/Maps/Maps'
+import { Maps } from '../../widgets/Maps'
 
 export default function ContactInformation() {
 	return (
