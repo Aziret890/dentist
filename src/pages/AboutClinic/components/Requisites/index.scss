@@ -1,99 +1,120 @@
 .requits {
-	margin-top: 78px;
-	&__block__btns {
-		button {
-			border-radius: 8px;
-			background: rgb(242, 250, 251);
-			width: 230px;
-			height: 64px;
-			font-size: 12px;
-			font-weight: 600;
-			transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-			a {
-				color: rgb(44, 178, 187);
-			}
-		}
-		button:hover {
-			transform: translateY(-5px);
-		}
-	}
-	&__title {
-		text-align: center;
-		margin-bottom: 54px;
-		color: rgb(37, 63, 65);
-		font-size: 40px;
-		font-weight: 900;
-	}
+  margin-top: 78px;
+  &__block__btns {
+    button {
+      border-radius: 8px;
+      background: rgb(242, 250, 251);
+      width: 230px;
+      height: 64px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      a {
+        color: rgb(44, 178, 187);
+      }
+    }
+    button:hover {
+      transform: translateY(-5px);
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 54px;
+    color: rgb(37, 63, 65);
+    font-size: 40px;
+    font-weight: 900;
+  }
 }
 @media screen and (max-width: 1137px) {
-	.requits__copy__block-child {
-		width: 95%;
-	}
+  .requits__copy__block-child {
+    width: 95%;
+  }
 }
-@media screen and (max-width: 475px) {
-	.requits__copy__block-child-info {
-		p {
-			font-size: 14px;
-			margin: 0;
-			letter-spacing: normal;
-			text-align: start;
-			position: absolute;
-			top: -55px;
-			left: -90%;
-			width: 100%;
-		}
-	}
-	.requits__copy__block-child-name {
-		width: 100%;
-		font-size: 13px;
-	}
-	.requits__copy__block-child {
-		padding-left: 20px;
-		display: flex;
-		flex-direction: column;
-		align-items: start;
-		justify-content: center;
-		grid-gap: 45px;
-	}
-	.requits__copy__block-child-copy {
-		margin-top: 4.5pc;
-	}
-}
+
 @media screen and (max-width: 900px) {
-	.requits__block__btns {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		grid-gap: 20px;
-	}
+  .requits__block__btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 20px;
+  }
 }
 @media screen and (max-width: 1120px) {
-	.block__wrapper__categories__child {
-		width: 130%;
-	}
+  .block__wrapper__categories__child {
+    width: 130%;
+  }
 }
 @media screen and (max-width: 940px) {
-	.vakancies__block__wrapper {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 30px;
-	}
-	.block__wrapper__categories__child {
-		width: 100%;
-	}
+  .vakancies__block__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  .block__wrapper__categories__child {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 460px) {
-	.block__wrapper__inputs {
-		width: 90%;
-	}
-	.wrapper__categories_block {
-		p {
-			font-size: 10px;
-		}
-		h3 {
-			font-size: 14px;
-		}
-	}
+  .block__wrapper__inputs {
+    width: 90%;
+  }
+  .wrapper__categories_block {
+    p {
+      font-size: 10px;
+    }
+    h3 {
+      font-size: 14px;
+    }
+  }
 }
+@media screen and (max-width: 478px) {
+  .requits__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .requits__copy__block-child {
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 340px) {
+  .requits__copy__block-child {
+    p {
+      display: none;
+    }
+  }
+}
+// @media screen and (max-width: 475px) {
+// 	.requits__copy__block-child-info {
+// 	  p {
+// 		font-size: 14px;
+// 		margin: 0;
+// 		letter-spacing: normal;
+// 		text-align: start;
+// 		position: absolute;
+// 		top: -55px;
+// 		left: -90%;
+// 		width: 100%;
+// 	  }
+// 	}
+// 	.requits__copy__block-child-name {
+// 	  width: 100%;
+// 	  font-size: 13px;
+// 	}
+// 	.requits__copy__block-child {
+// 	  padding-left: 20px;
+// 	  display: flex;
+// 	  flex-direction: column;
+// 	  align-items: start;
+// 	  justify-content: center;
+// 	  grid-gap: 45px;
+// 	}
+// 	.requits__copy__block-child-copy {
+// 	  margin-top: 4.5pc;
+// 	}
+//   }
