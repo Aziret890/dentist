@@ -104,8 +104,6 @@ function Maps() {
 			)
 		}
 	]
-	console.log(data.find(el => (el.number == countMapsInx ? el.iframe : '')))
-	console.log(countMapsInx)
 	return (
 		<section className='maps mt-[98px]'>
 			<div className='container'>
@@ -156,4 +154,4 @@ function Maps() {
 	)
 }
 
-export default Maps
+export { Maps }
