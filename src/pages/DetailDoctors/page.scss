@@ -1,3 +1,35 @@
 .licenses-content {
 	min-height: 550px;
 }
+
+.licenses-content {
+	.swiper-button-next,
+	.swiper-button-prev {
+		width: 40px;
+		height: 40px;
+		background-color: white;
+		overflow: hidden;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.swiper-button-prev {
+		top: 43%;
+		left: 23%;
+		&::after {
+			font-size: 20px !important;
+			margin-right: 3px;
+			margin-top: 2px;
+		}
+	}
+	.swiper-button-next {
+		top: 43%;
+		right: 17%;
+		&::after {
+			font-size: 20px !important;
+			margin-left: 3px;
+			margin-top: 2px;
+		}
+	}
+}

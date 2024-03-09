@@ -4,9 +4,19 @@ import SignInForm from '../../entity/auth/ui/SignInForm'
 import SignUpForm from '../../entity/auth/ui/SignUpForm'
 import clsx from 'clsx'
 import { useKeyDown } from '../../entity/hooks/useKeyDown'
+import { useCurrentUser } from '../../entity/user/store'
+import { useQuery } from '@tanstack/react-query'
 
 export default function AuthModal() {
 	const { isAuth, setIsAuth } = useAuth()
+	const { getCurrentUser } = useCurrentUser()
+
+	useQuery({
+		queryKey: ['user'],
+		queryFn: getCurrentUser,
+		retry: 10000,
+		refetchInterval: 10000
+	})
 
 	useKeyDown('Escape', () => setIsAuth(null))
 	return (

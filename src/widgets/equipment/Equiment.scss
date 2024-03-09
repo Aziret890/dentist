@@ -1,114 +1,210 @@
 .equiment__title {
-  color: rgb(37, 63, 65);
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 47px;
+	color: rgb(37, 63, 65);
+	font-size: 32px;
+	font-weight: 700;
+	margin-bottom: 47px;
 }
 .equiment__info {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 .equiment {
-  margin-top: 113px;
-  &__btn {
-    width: 165px;
-    height: 44px;
-    border-radius: 5px;
-    box-shadow: 0px 10px 12px 0px rgba(44, 178, 187, 0.16);
-    background: rgb(44, 178, 187);
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s ease-in-out;
-  }
-  &__btn:hover {
-    color: rgb(44, 178, 187);
-    background: rgb(248, 245, 245);
-    transition: 0.3s ease-in-out;
-  }
-  &__info__info-block {
-    padding: 12px 20px;
-    border-radius: 8px;
-    width: 284px;
-    height: 92px;
-    background: rgb(242, 250, 251);
-    transition: 0.3s ease-in-out;
-    margin-bottom: 2pc;
-  }
-  &__info__info-block:hover {
-    background: rgb(44, 178, 187);
-    transition: 0.3s ease-in-out;
-    h2 {
-      color: rgb(255, 255, 255);
-      font-size: 16px;
-      font-weight: 700;
-    }
-    p {
-      color: rgb(255, 255, 255);
-      font-size: 14px;
-      font-weight: 400;
-    }
-  }
+	margin-top: 113px;
+	&__btn {
+		width: 165px;
+		height: 44px;
+		border-radius: 5px;
+		box-shadow: 0px 10px 12px 0px rgba(44, 178, 187, 0.16);
+		background: rgb(44, 178, 187);
+		color: rgb(255, 255, 255);
+		font-size: 16px;
+		font-weight: 600;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: 0.3s ease-in-out;
+	}
+	&__btn:hover {
+		color: rgb(44, 178, 187);
+		background: rgb(248, 245, 245);
+		transition: 0.3s ease-in-out;
+	}
+	&__info__info-block {
+		padding: 12px 20px;
+		border-radius: 8px;
+		width: 284px;
+		height: 92px;
+		background: rgb(242, 250, 251);
+		transition: 0.3s ease-in-out;
+		margin-bottom: 2pc;
+	}
+	&__info__info-block:hover {
+		background: rgb(44, 178, 187);
+		transition: 0.3s ease-in-out;
+		h2 {
+			color: rgb(255, 255, 255);
+			font-size: 16px;
+			font-weight: 700;
+		}
+		p {
+			color: rgb(255, 255, 255);
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
 }
 .equiment__info__img {
-  border-radius: 8px;
-  background: rgb(242, 250, 251);
+	border-radius: 8px;
+	background: rgb(242, 250, 251);
+	position: relative;
+}
+.more__equipment {
+	position: absolute;
+	width: 600px;
+	height: 1px;
+	background: rgba(37, 57, 65, 0.842);
+	bottom: -20px;
+	left: 18%;
+	border-radius: 8px;
+	opacity: 0;
+	z-index: -99;
+	pointer-events: none;
+	visibility: hidden;
+	transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+	&.active {
+		height: 460px;
+		opacity: 1;
+		z-index: 99;
+		pointer-events: all;
+		visibility: visible;
+		transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+
+	&--body {
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		height: 100%;
+		button {
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			border-radius: 4px;
+			top: 10px;
+			right: 10px;
+			background: #253f41;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			svg {
+				fill: white;
+				font-size: 22px;
+			}
+		}
+	}
+	&--content {
+		height: 90%;
+		overflow-y: scroll;
+		color: white;
+		padding: 20px 30px 30px 30px;
+		p {
+			font-family: Montserrat;
+			font-size: 14px;
+			font-weight: 400;
+			line-height: 20px;
+			letter-spacing: 0em;
+			text-align: left;
+		}
+		h1 {
+			font-family: Montserrat;
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 20px;
+			letter-spacing: 0em;
+			text-align: left;
+			margin-top: 20px;
+			margin-bottom: 15px;
+		}
+		ul {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 8px;
+			li {
+				font-family: Montserrat;
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 20px;
+				letter-spacing: 0em;
+				text-align: left;
+			}
+		}
+		&::-webkit-scrollbar {
+			width: 10px;
+			background-color: transparent;
+			border-radius: 10px;
+		}
+		&::-webkit-scrollbar-thumb {
+			width: 10px;
+			background-color: #2cb2bb;
+			border-radius: 10px;
+		}
+	}
 }
 .equiment__btn {
-  margin-top: 2.5pc;
-  position: absolute;
-  left: 37%;
+	margin-top: 2.5pc;
+	position: absolute;
+	left: 37%;
 }
 @media screen and (max-width: 1152px) {
-  .equiment {
-    &__title {
-      margin-left: 15%;
-    }
-    &__info {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      &__img {
-        max-width: 85%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      &__info {
-        height: 120%;
-        max-width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        gap: 20%;
-      }
-    }
-  }
+	.equiment {
+		&__title {
+			margin-left: 15%;
+		}
+		&__info {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			&__img {
+				max-width: 85%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			&__info {
+				height: 120%;
+				max-width: 100%;
+				display: flex;
+				justify-content: space-evenly;
+				gap: 20%;
+			}
+		}
+	}
 }
 @media screen and (max-width: 662px) {
-  .equiment {
-    &__title {
-      font-size: 25px;
-      margin-left: 10%;
-    }
-    &__info {
-      &__info {
-        gap: 10%;
-      }
-    }
-  }
+	.equiment {
+		&__title {
+			font-size: 25px;
+			margin-left: 10%;
+		}
+		&__info {
+			&__info {
+				gap: 10%;
+			}
+		}
+	}
 }
 @media screen and (max-width: 570px) {
-  .equiment__title {
-    font-size: 23px;
-  }
-  .equiment__info__info {
-    margin-top: 1.5pc;
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
-  }
+	.equiment__title {
+		font-size: 23px;
+	}
+	.equiment__info__info {
+		margin-top: 1.5pc;
+		gap: 20px;
+		display: flex;
+		flex-direction: column;
+	}
 }

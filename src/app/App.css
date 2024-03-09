@@ -21,7 +21,8 @@ hr {
 }
 
 input,
-select {
+select,
+textarea {
 	border: 0;
 	outline: 0;
 	background: 0;
@@ -88,7 +89,7 @@ html {
 	z-index: -999;
 	pointer-events: none;
 
-	transition: all 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+	transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	&.active {
 		opacity: 1;
 		visibility: visible;

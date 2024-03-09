@@ -1,7 +1,6 @@
 .dropdownContainer {
 	position: relative;
 	display: inline-block;
-	z-index: 999;
 }
 
 .dropdownButton {
@@ -14,6 +13,8 @@
 	gap: 10px;
 	font-size: 14px;
 	line-height: 18px;
+	position: relative;
+
 	& svg {
 		font-size: 12px;
 	}
@@ -21,17 +22,16 @@
 
 .dropdownContent {
 	position: absolute;
-	background-color: #f9f9f9;
-	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-	z-index: 1;
+	background-color: white;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
 	min-width: 280px;
 
-	transition: all 0.15s;
+	transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 	opacity: 0;
-	z-index: -10;
 	pointer-events: none;
 	visibility: none;
+	z-index: -90;
 
 	border-radius: 4px;
 	width: 100%;
@@ -48,6 +48,15 @@
 	text-align: left;
 	font-weight: 500;
 }
+.dropdownContent {
+	color: black;
+	text-decoration: none;
+	display: block;
+	font-size: 14px;
+	width: 100% !important;
+	text-align: left;
+	font-weight: 500;
+}
 
 .dropdownContent a:hover,
 .dropdownContent button:hover {
@@ -56,9 +65,10 @@
 
 .show {
 	opacity: 1;
-	z-index: 100;
 	pointer-events: all;
 	visibility: visible;
+	z-index: 999;
+	transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @media (min-width: 940px) and (max-width: 1100px) {

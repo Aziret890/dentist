@@ -26,16 +26,18 @@ export const useDropDown = ({ initialSelectedItem, items, isState }) => {
 				closeDropDown()
 			}
 		},
-		[closeDropDown]
+		[closeDropDown, dropDownRef]
 	)
 
 	useEffect(() => {
 		document.addEventListener('click', handleDocumentClick)
+		document.addEventListener('mouseout', handleDocumentClick)
 
 		return () => {
 			document.removeEventListener('click', handleDocumentClick)
+			document.addEventListener('mouseout', handleDocumentClick)
 		}
-	}, [handleDocumentClick])
+	}, [handleDocumentClick, dropDownRef])
 
 	return {
 		selectedItem,

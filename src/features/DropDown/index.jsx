@@ -17,6 +17,7 @@ const DropDown = ({
 	initialSelectedItem,
 	items,
 	links,
+	functions,
 	minWidth,
 	maxWidth,
 	width2
@@ -32,7 +33,11 @@ const DropDown = ({
 		<div className={styles.dropdownContainer}>
 			<button
 				onMouseOver={() => toggleDropDown(true)}
-				onMouseOut={() => toggleDropDown(false)}
+				onMouseOut={() => {
+					if (isOpen) {
+						toggleDropDown(false)
+					}
+				}}
 				onClick={() => {
 					toggleDropDown(true)
 				}}
@@ -84,7 +89,18 @@ const DropDown = ({
 										{link}
 									</Link>
 								)}
-								{!links && (
+								{functions && (
+									<button
+										onClick={() => {
+											toggleDropDown(false)
+											functions[idx].func()
+										}}
+									>
+										{link}
+									</button>
+								)}
+
+								{!links && !functions && (
 									<button
 										onClick={() => {
 											toggleDropDown(false)

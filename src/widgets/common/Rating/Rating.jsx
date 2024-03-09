@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import "./Rating.css";
-import axios from "axios";
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+import './Rating.css'
 
 function Rating() {
   const [data, setData] = useState([]);

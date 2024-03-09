@@ -6,7 +6,7 @@ import HeaderWhiteLogo from '../../../../shared/assets/images/header-logo-white.
 import VK from '../../../../shared/assets/images/header-vk.svg'
 import Youtube from '../../../../shared/assets/images/header-you.svg'
 import HeaderLogo from '../../../../shared/assets/images/header1-logo.png'
-import styles from '../index.module.css'
+import styles from '../index.module.scss'
 //
 import { FiMenu } from 'react-icons/fi'
 import { IoClose } from 'react-icons/io5'
@@ -16,13 +16,27 @@ import DropDown from '../../../../features/DropDown'
 import Medal from '../../../../shared/assets/images/medal.svg'
 import Message from '../../../../shared/assets/images/message.icons.svg'
 import Pencil from '../../../../shared/assets/images/pencil.svg'
-import MoreDetail from '../../../MoreDetail'
+import { CreateReview } from '../../../../pages/DetailDoctors/components/HonestReviewsDoc'
 
 // eslint-disable-next-line react/prop-types
 export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 	const { width } = useWindowSize()
+
+	const { setModalContent } = useMoreDetail()
+
 	const dropDownConfig = {
 		items: ['Оставить отзыв', 'Написать директору'],
+		functions: [
+			{
+				func: () => {
+					setModalContent(() => (
+						<div>
+							<CreateReview />
+						</div>
+					))
+				}
+			}
+		],
 		initialSelectedItem: (
 			<>
 				<img src={Message} alt='' />
@@ -32,8 +46,6 @@ export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 			</>
 		)
 	}
-
-	const { setModalContent } = useMoreDetail()
 
 	return (
 		<div className={styles['center-slice']}>
@@ -64,11 +76,7 @@ export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 							className={styles.dropDown}
 							{...dropDownConfig}
 						/>
-						<button
-							onClick={() =>
-								setModalContent(() => <div className='text-black'>Content</div>)
-							}
-						>
+						<button>
 							<img src={Pencil} alt='' />
 							Записаться на приём
 						</button>
@@ -78,20 +86,6 @@ export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 					</div>
 				</div>
 			</div>
-			<MoreDetail>
-				Mujer uno dolor, más de poder mismo si. Molde síndrome león oficio mirar
-				namibia sed paño enigma paloma alma cara permacultura vietnamita inmune
-				montaña necesariamente, magma obcecado. Marejada paloma nascimiento
-				quindío chicharra renuncia analfabeto sintió oficinista yugo suntuoso
-				resiliencia mínima, laboral números verdades impedimento torre
-				repugnante asunción animal corchea voluble fantasía? Alias verdades
-				dolor autoinmune odio ventana, expedición materialidad magma dignísimo
-				molestias dolores patrón columna voluble placenta séquito resiliencia
-				asunción modo adiposidad ataque justo cábala décima represión oficio pan
-				mosca. Manantial asunción suntuoso ataque trote síndrome oficinista
-				excepción alma abogada desierto, león, cábala odio, planeador
-				perspicacia incidente lejos voluble deletéreo.
-			</MoreDetail>
 		</div>
 	)
 }

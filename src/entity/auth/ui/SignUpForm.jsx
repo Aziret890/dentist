@@ -3,16 +3,26 @@ import { useState } from 'react'
 import { FcAddImage } from 'react-icons/fc'
 import { handleImageUpload } from '../../../features/Base64File'
 import { handleSignUp } from '../api/fetch'
+import { useAuth } from '../store'
 
 export default function SignInForm({ styles }) {
 	const [base64String, setBase64String] = useState('')
+	const { setIsAuth } = useAuth()
 
 	return (
 		<form
 			className={`${styles.form} ${
 				base64String.trim() !== '' ? styles.form_up : ''
 			}`}
-			onSubmit={handleSignUp}
+			onSubmit={async e => {
+				const result = await handleSignUp(e)
+				if (result === 'success') {
+					alert('Регистрация прошла успешно')
+					setTimeout(() => {
+						setIsAuth(null)
+					}, 1000)
+				}
+			}}
 		>
 			{base64String.trim() !== '' && (
 				<div className={styles.user_avatar}>
@@ -31,11 +41,20 @@ export default function SignInForm({ styles }) {
 			<div className={styles.input_box}>
 				<input
 					required
-					placeholder='Имя пользователя'
+					placeholder='Имя'
 					type='text'
-					name='text'
+					name='firstName'
 					id='text'
-					minLength={6}
+					minLength={3}
+				/>
+			</div>
+			<div className={styles.input_box}>
+				<input
+					placeholder='Фамилия (необязательно)'
+					type='text'
+					name='lastName'
+					id='text'
+					minLength={3}
 				/>
 			</div>
 			<div className={styles.input_box}>
@@ -45,7 +64,7 @@ export default function SignInForm({ styles }) {
 					type='email'
 					name='email'
 					id='email'
-					minLength={10}
+					minLength={5}
 				/>
 			</div>
 			<div className={styles.input_box}>
@@ -55,13 +74,14 @@ export default function SignInForm({ styles }) {
 					type='password'
 					name='password'
 					id='password'
-					minLength={6}
+					minLength={5}
 				/>
 			</div>
 			<div className={styles.input_boxes}>
 				<label htmlFor='file_image'>
 					<FcAddImage />
-					{base64String.trim() === '' ? 'Добавить' : 'Изменить'} фотографию{' '}
+					{base64String.trim() === '' ? 'Добавить' : 'Изменить'} фотографию
+					(необязательно)
 				</label>
 				<input
 					onChange={e => handleImageUpload(e, setBase64String)}
