@@ -1,0 +1,30 @@
+.example {
+  &__content {
+    h1 {
+      color: rgb(37, 63, 65);
+      font-size: 40px;
+      font-weight: 900;
+      text-align: center;
+    }
+    &__block__child {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      width: 284px;
+      height: 244px;
+      border-radius: 8px;
+      background: rgb(242, 250, 251);
+      .child-blue {
+        width: 64px;
+        height: 64px;
+        background: rgb(44, 178, 187);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

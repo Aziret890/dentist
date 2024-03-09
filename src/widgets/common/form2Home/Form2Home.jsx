@@ -84,5 +84,5 @@ function Form2Home() {
     </section>
   );
 }
-
+//Полезная информация
 export default Form2Home;
