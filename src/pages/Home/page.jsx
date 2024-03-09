@@ -25,6 +25,7 @@ export default function Home() {
 			<Social />
 			<Form1Home />
 			<Clinic />
+
 			<Partners />
 			<News />
 			<Doctor />

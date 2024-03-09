@@ -7,16 +7,14 @@ import { useAuth } from '../store'
 import { toast } from 'react-toastify'
 
 export default function SignInForm({ styles }) {
-	const [base64String, setBase64String] = useState('')
+	const [base64String, setBase64String] = useState(null)
 	const { setIsAuth } = useAuth()
 
 	return (
 		<form
-			className={`${styles.form} ${
-				base64String.trim() !== '' ? styles.form_up : ''
-			}`}
+			className={`${styles.form} `}
 			onSubmit={async e => {
-				const result = await handleSignUp(e)
+				const result = await handleSignUp(e, base64String)
 				if (result === 'success') {
 					toast.success('Регистрация прошла успешно')
 					setTimeout(() => {
@@ -25,20 +23,6 @@ export default function SignInForm({ styles }) {
 				}
 			}}
 		>
-			{base64String.trim() !== '' && (
-				<div className={styles.user_avatar}>
-					<img
-						title='Удалить'
-						onClick={() => {
-							setTimeout(() => {
-								setBase64String('')
-							}, 300)
-						}}
-						src={'data:image/web;base64,' + base64String}
-						alt='user'
-					/>
-				</div>
-			)}
 			<div className={styles.input_box}>
 				<input
 					required
@@ -81,11 +65,11 @@ export default function SignInForm({ styles }) {
 			<div className={styles.input_boxes}>
 				<label htmlFor='file_image'>
 					<FcAddImage />
-					{base64String.trim() === '' ? 'Добавить' : 'Изменить'} фотографию
+					{base64String !== null ? 'Добавить' : 'Изменить'} фотографию
 					(необязательно)
 				</label>
 				<input
-					onChange={e => handleImageUpload(e, setBase64String)}
+					onChange={e => setBase64String(e.target.files[0])}
 					hidden
 					type='file'
 					name='file'

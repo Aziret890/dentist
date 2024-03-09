@@ -3,6 +3,10 @@ export const handleImageUpload = (e, setBase64String) => {
 
 	if (file) {
 		const reader = new FileReader()
+		reader.onloadend = () => {
+			console.log('Выбран файл:', selectedFile)
+			console.log('Данные изображения:', reader.result)
+		}
 
 		reader.onload = function (e) {
 			const base64String = e.target.result.split(',')[1]
