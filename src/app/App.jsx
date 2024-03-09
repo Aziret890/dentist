@@ -9,11 +9,8 @@ import './App.css'
 import AuthModal from '../widgets/AuthModal'
 import MoreDetail from '../widgets/MoreDetail'
 import { ToastContainer } from 'react-toastify'
-import { Cloudinary } from '@cloudinary/url-gen'
 
-export const cld = new Cloudinary({ cloud: { cloudName: 'dchbq6gch' } })
 function App() {
-
 	return (
 		<>
 			<Header />

@@ -1,0 +1,59 @@
+.consultation-content {
+	width: 1202px;
+	height: 488px;
+	background: #2cb2bb;
+	border-radius: 16px;
+	padding: 0 50px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	position: relative;
+}
+.right {
+	margin-right: 80px;
+}
+.left {
+	color: #ffffff;
+	width: 600px;
+	height: 100%;
+	padding-top: 80px;
+
+	h2 {
+		font-family: Montserrat;
+		font-size: 40px;
+		font-weight: 900;
+		line-height: 48px;
+		letter-spacing: 0em;
+		text-align: left;
+	}
+
+	h4 {
+		font-family: Montserrat;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 28px;
+		letter-spacing: 0em;
+		text-align: left;
+		margin-top: 15px;
+	}
+}
+.consultation-content svg {
+	position: absolute;
+	right: 30px;
+}
+
+
+
+.etape {
+	
+}
+
+.first {
+
+}
+.second {
+
+}
+.third {
+
+}
