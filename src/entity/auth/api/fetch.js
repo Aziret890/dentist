@@ -22,12 +22,19 @@ export async function handleSignIn(e) {
 
 	try {
 		const res = await axios.post(
-			`https://akmatovt.pythonanywhere.com/login/`,
+			`https://akmatovt.pythonanywhere.com/login`,
 			user
 		)
 
 		const data = await res.data
-		console.log(data, 'data')
+
+		if (data) {
+			const { jwt, id } = data
+
+			Cookies.set('jwt', jwt)
+			Cookies.set('userId', id)
+			return jwt ? 'success' : 'error'
+		}
 	} catch (error) {
 		console.log({ error }, 'error')
 	}
@@ -37,7 +44,7 @@ export async function handleSignIn(e) {
  *
  * @param {import('react').FormEvent<HTMLFormElement>} e
  */
-export async function handleSignUp(e) {
+export async function handleSignUp(e, image) {
 	e.preventDefault()
 
 	let email = e.target.email.value
@@ -50,20 +57,26 @@ export async function handleSignUp(e) {
 		url_profile: '',
 		firstName: firstName,
 		lastName: lastName,
-		image: '',
+		image: image || '',
 		password: password
 	}
 
 	try {
 		const res = await axios.post(
 			`https://akmatovt.pythonanywhere.com/registration`,
-			newUser
+			newUser,
+			{
+				headers: {
+					'content-type':
+						'multipart/form-data; boundary=----WebKitFormBoundaryCrYA5rvWpASr6rAj'
+				}
+			}
 		)
 
 		const data = await res.data
-		console.log(data)
 		if (data) {
 			const { jwt, id } = data
+
 			Cookies.set('jwt', jwt)
 			Cookies.set('userId', id)
 			return jwt ? 'success' : 'error'
