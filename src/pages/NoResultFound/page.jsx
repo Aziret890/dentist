@@ -83,7 +83,13 @@ export default function NoResultFound({ link }) {
 				<div className='mt-10 w-full flex flex-col items-center'>
 					<h1 className='text-4xl mb-3 fold-black'>No Result Found!</h1>
 					{typeof link === 'string' && link.trim() !== '' && (
-						<Link to={link} className={'link'}>
+						<Link
+							onClick={() => {
+								window.scrollTo(0, 0)
+							}}
+							to={link}
+							className={'link'}
+						>
 							Back to Homepage
 						</Link>
 					)}

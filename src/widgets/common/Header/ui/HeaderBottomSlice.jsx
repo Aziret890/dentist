@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
+import clsx from 'clsx'
 import { IoIosArrowDown } from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import DropDown from '../../../../features/DropDown'
 import styles from '../index.module.scss'
-import clsx from 'clsx'
 
 const HeaderBottomSlice = ({ setIsServiceModal, isServiceModal }) => {
 	const patientsConfig = {
@@ -118,6 +119,9 @@ const HeaderBottomSlice = ({ setIsServiceModal, isServiceModal }) => {
 		<div className={styles['bottom-slice']}>
 			<div className={`container ${styles.container}`}>
 				<Link
+					onClick={() => {
+						window.scrollTo(0, 0)
+					}}
 					onMouseOver={() => setIsServiceModal(true)}
 					onMouseOut={() => setIsServiceModal(false)}
 					to={'/services'}
@@ -142,7 +146,13 @@ const HeaderBottomSlice = ({ setIsServiceModal, isServiceModal }) => {
 					Услуги
 				</Link>
 				<DropDown {...workExampleConfig} />
-				<Link className={styles.a} to={'/doctors'}>
+				<Link
+					onClick={() => {
+						window.scrollTo(0, 0)
+					}}
+					className={styles.a}
+					to={'/doctors'}
+				>
 					Врач
 				</Link>
 				<DropDown {...priceConfig} />
@@ -150,7 +160,13 @@ const HeaderBottomSlice = ({ setIsServiceModal, isServiceModal }) => {
 				<DropDown {...patientsConfig} />
 				<DropDown {...commuterConfig} />
 				<DropDown {...aboutClientConfig} />
-				<Link className={styles.a} to={'/contact/information'}>
+				<Link
+					onClick={() => {
+						window.scrollTo(0, 0)
+					}}
+					className={styles.a}
+					to={'/contact/information'}
+				>
 					Контакты
 				</Link>
 			</div>
@@ -158,4 +174,4 @@ const HeaderBottomSlice = ({ setIsServiceModal, isServiceModal }) => {
 	)
 }
 
-export default HeaderBottomSlice;
+export default HeaderBottomSlice

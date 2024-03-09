@@ -8,10 +8,18 @@ import Cookies from 'js-cookie'
 import { useMoreDetail } from '../../../entity/more_detail/store'
 import axios from 'axios'
 import { useQuery } from '@tanstack/react-query'
+import { toast } from 'react-toastify'
 
 const Reviews = ({ children }) => {
 	const { setIsAuth } = useAuth()
 	const { setModalContent } = useMoreDetail()
+
+	const { data, refetch } = useQuery({
+		queryKey: ['more_reviews'],
+		queryFn: async () => {
+			return (await axios(`https://akmatovt.pythonanywhere.com/review/`)).data
+		}
+	})
 
 	async function postReviewForDoctors(title) {
 		try {
@@ -30,8 +38,9 @@ const Reviews = ({ children }) => {
 				}
 			)
 			if (data.title) {
-				alert('Feedback successfully sent')
+				toast.success('Отзывы успешно отправлены')
 			}
+			refetch()
 		} catch (error) {
 			console.log('err', error)
 		}
@@ -50,13 +59,6 @@ const Reviews = ({ children }) => {
 		))
 	}
 
-	const { data } = useQuery({
-		queryKey: ['more_reviews'],
-		queryFn: async () => {
-			return (await axios(`https://akmatovt.pythonanywhere.com/review/`)).data
-		}
-	})
-
 	function moreClinicReviews() {
 		setModalContent(() => (
 			<div className='flex flex-col gap-8 more__reviews items-center justify-start'>
@@ -67,7 +69,7 @@ const Reviews = ({ children }) => {
 								'Искренне благодарим вас за отзыв и такие приятные слова в адрес нашей клиники. Здоровья вам и всего наилучшего!'
 							)
 					)
-					.map((item, idx) => (
+					.map(item => (
 						<div key={item?.id} className='review-card more'>
 							<div className='user-info'>
 								<div className='user-pic-name'>
@@ -172,7 +174,7 @@ const Reviews = ({ children }) => {
 
 						<div className='review-list'>
 							{data
-								?.map((item, idx) => (
+								?.map(item => (
 									<div
 										key={item?.id}
 										className='review-card'

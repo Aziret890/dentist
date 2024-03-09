@@ -4,6 +4,7 @@ import styles from '../page.module.scss'
 import DocCard from './ui/DocCard'
 import { useQuery } from '@tanstack/react-query'
 import Loader from '../../../shared/ui/Loader'
+import NoResultFound from '../../NoResultFound/page'
 
 export default function DoctorResult() {
 	const { filteredDoc, getDoctors, queryDoc, tabSpec } = useDoc()
@@ -26,10 +27,10 @@ export default function DoctorResult() {
 			) : (
 				<div
 					className={clsx(
-						`${styles['not-result']} flex items-center py-3 justify-center`
+						`${styles['not-result']} flex items-center w-full py-3 justify-center`
 					)}
 				>
-					<h3>No result</h3>
+					<NoResultFound />
 				</div>
 			)}
 		</div>

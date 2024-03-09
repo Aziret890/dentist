@@ -78,7 +78,14 @@ export default function HeaderMenu({ isMenu, toggleIsMenu }) {
 												viewport={{ amount: 0 }}
 												key={idx}
 											>
-												<Link to={link.path}>{link.text}</Link>
+												<Link
+													onClick={() => {
+														window.scrollTo(0, 0)
+													}}
+													to={link.path}
+												>
+													{link.text}
+												</Link>
 											</motion.li>
 										))}
 									</ol>
@@ -123,7 +130,10 @@ export default function HeaderMenu({ isMenu, toggleIsMenu }) {
 										</button>
 									) : (
 										<Link
-											onClick={() => toggleIsMenu(false)}
+											onClick={() => {
+												window.scrollTo(0, 0)
+												toggleIsMenu(false)
+											}}
 											to={item.links[0].path}
 										>
 											{item.title}
@@ -155,7 +165,15 @@ export default function HeaderMenu({ isMenu, toggleIsMenu }) {
 									key={idx}
 									onClick={() => toggleIsMenu(false)}
 								>
-									<Link to={item.path ? item.path : ''}> {item.text}</Link>
+									<Link
+										onClick={() => {
+											window.scrollTo(0, 0)
+										}}
+										to={item.path ? item.path : ''}
+									>
+										{' '}
+										{item.text}
+									</Link>
 								</motion.li>
 							))}
 						</ol>
@@ -271,18 +289,16 @@ const menuList2 = [
 	{
 		title: 'Примеры работ',
 		links: [
-			{
-				path: '',
-				text: 'Рекомендации перед приёмом'
-			},
-			{
-				path: '/news',
-				text: 'Новости'
-			},
-			{
-				path: '',
-				text: 'Гарантии'
-			}
+			{ path: '', text: 'Протезирование All-on-4 и All-on-6' },
+			{ path: '', text: 'Имплантация зубов' },
+			{ path: '', text: 'Протезирование зубов' },
+			{ path: '', text: 'Виниры' },
+			{ path: '', text: 'Лечение зубов' },
+			{ path: '', text: 'Художественная реставрация' },
+			{ path: '', text: 'Отбеливание' },
+			{ path: '', text: 'Брекеты' },
+			{ path: '', text: 'Профессиональная чистка зубов' },
+			{ path: '', text: 'Лечение дёсен' }
 		]
 	},
 	{
@@ -322,18 +338,10 @@ const menuList2 = [
 	{
 		title: 'Отзывы',
 		links: [
-			{
-				path: '',
-				text: 'Рекомендации перед приёмом'
-			},
-			{
-				path: '',
-				text: 'Рекомендации после лечения'
-			},
-			{
-				path: '',
-				text: 'Гарантии'
-			}
+			{ path: '/reviews', text: 'Отзывы' },
+			{ path: '/reviews?tabIndex=2', text: 'Интервью с пациентами' },
+			{ path: '/reviews?tabIndex=3', text: 'Отзывы в социальных сетях' },
+			{ path: '/reviews?tabIndex=4', text: 'Отзывы пациентов' }
 		]
 	},
 	{

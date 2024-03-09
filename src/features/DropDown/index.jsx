@@ -84,6 +84,7 @@ const DropDown = ({
 										onClick={() => {
 											onSelectItem(links[idx])
 											toggleDropDown(false)
+											window.scrollTo(0, 0)
 										}}
 									>
 										{link}
