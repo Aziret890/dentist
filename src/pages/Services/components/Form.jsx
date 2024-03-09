@@ -81,8 +81,8 @@ function Form() {
 									</button>
 								) : (
 									<button
-										data-aos='fade-up'
-										data-aos-duration={3 * 500}
+										// data-aos='fade-up'
+										// data-aos-duration={3 * 500}
 										onClick={() => sendMessageBot()}
 										className='relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500  group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white hover:scale-110 duration-200 my-7'
 									>
