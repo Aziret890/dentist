@@ -47,8 +47,8 @@ function ButtonRoutes({ id }) {
 									stroke='rgb(44, 178, 187)'
 									stroke-opacity='1.000000'
 									stroke-width='2.000000'
-									stroke-linejoin='round'
-									stroke-linecap='round'
+									strokeLinejoin='round'
+									strokeLinecap='round'
 								/>
 								<path
 									id='Vector'
@@ -56,8 +56,8 @@ function ButtonRoutes({ id }) {
 									stroke='rgb(44, 178, 187)'
 									stroke-opacity='1.000000'
 									stroke-width='2.000000'
-									stroke-linejoin='round'
-									stroke-linecap='round'
+									strokeLinejoin='round'
+									strokeLinecap='round'
 								/>
 								<path
 									id='Vector'
@@ -65,7 +65,7 @@ function ButtonRoutes({ id }) {
 									stroke='rgb(44, 178, 187)'
 									stroke-opacity='1.000000'
 									stroke-width='2.000000'
-									stroke-linejoin='round'
+									strokeLinejoin='round'
 								/>
 							</g>
 						</svg>
@@ -139,8 +139,8 @@ function ButtonRoutes({ id }) {
 									stroke='#2CB2BB'
 									stroke-opacity='1.000000'
 									stroke-width='2.000000'
-									stroke-linejoin='round'
-									stroke-linecap='round'
+									strokeLinejoin='round'
+									strokeLinecap='round'
 								/>
 								<path
 									id='Vector'
@@ -148,8 +148,8 @@ function ButtonRoutes({ id }) {
 									stroke='#2CB2BB'
 									stroke-opacity='1.000000'
 									stroke-width='2.000000'
-									stroke-linejoin='round'
-									stroke-linecap='round'
+									strokeLinejoin='round'
+									strokeLinecap='round'
 								/>
 								<path
 									id='Vector'
@@ -157,8 +157,8 @@ function ButtonRoutes({ id }) {
 									stroke='#2CB2BB'
 									stroke-opacity='1.000000'
 									stroke-width='2.000000'
-									stroke-linejoin='round'
-									stroke-linecap='round'
+									strokeLinejoin='round'
+									strokeLinecap='round'
 								/>
 								<path
 									id='Vector'
@@ -166,8 +166,8 @@ function ButtonRoutes({ id }) {
 									stroke='#2CB2BB'
 									stroke-opacity='1.000000'
 									stroke-width='2.000000'
-									stroke-linejoin='round'
-									stroke-linecap='round'
+									strokeLinejoin='round'
+									strokeLinecap='round'
 								/>
 								<path
 									id='Vector'
@@ -175,8 +175,8 @@ function ButtonRoutes({ id }) {
 									stroke='#2CB2BB'
 									stroke-opacity='1.000000'
 									stroke-width='2.000000'
-									stroke-linejoin='round'
-									stroke-linecap='round'
+									strokeLinejoin='round'
+									strokeLinecap='round'
 								/>
 								<path
 									id='Vector'
@@ -184,7 +184,7 @@ function ButtonRoutes({ id }) {
 									stroke='#2CB2BB'
 									stroke-opacity='1.000000'
 									stroke-width='2.000000'
-									stroke-linejoin='round'
+									strokeLinejoin='round'
 								/>
 							</g>
 						</svg>
@@ -231,7 +231,7 @@ function ButtonRoutes({ id }) {
 									stroke='#2CB2BB'
 									stroke-opacity='1.000000'
 									stroke-width='2.000000'
-									stroke-linejoin='round'
+									strokeLinejoin='round'
 								/>
 								<path
 									id='Vector'
@@ -239,8 +239,8 @@ function ButtonRoutes({ id }) {
 									stroke='#2CB2BB'
 									stroke-opacity='1.000000'
 									stroke-width='2.000000'
-									stroke-linejoin='round'
-									stroke-linecap='round'
+									strokeLinejoin='round'
+									strokeLinecap='round'
 								/>
 								<path
 									id='Vector'
@@ -248,8 +248,8 @@ function ButtonRoutes({ id }) {
 									stroke='#2CB2BB'
 									stroke-opacity='1.000000'
 									stroke-width='2.000000'
-									stroke-linejoin='round'
-									stroke-linecap='round'
+									strokeLinejoin='round'
+									strokeLinecap='round'
 								/>
 								<path
 									id='Vector'
@@ -257,8 +257,8 @@ function ButtonRoutes({ id }) {
 									stroke='#2CB2BB'
 									stroke-opacity='1.000000'
 									stroke-width='2.000000'
-									stroke-linejoin='round'
-									stroke-linecap='round'
+									strokeLinejoin='round'
+									strokeLinecap='round'
 								/>
 							</g>
 						</svg>
@@ -287,7 +287,7 @@ function ButtonRoutes({ id }) {
 								stroke='#2CB2BB'
 								stroke-opacity='1.000000'
 								stroke-width='1.500000'
-								stroke-linejoin='round'
+								strokeLinejoin='round'
 							/>
 						</svg>
 						ДМС

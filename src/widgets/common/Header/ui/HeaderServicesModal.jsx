@@ -29,7 +29,7 @@ export default function HeaderServicesModal({
 								onClick={() => setActiveTab(item.id)}
 								key={item.id}
 							>
-								Восстановить зуб
+								{item.title}
 								<IoIosArrowForward />
 							</button>
 						))}
@@ -84,7 +84,6 @@ export default function HeaderServicesModal({
 					</ul>
 				</div>
 				<div className={styles.images}></div>
-				
 			</div>
 		</div>
 	)
@@ -97,7 +96,7 @@ const activeTabButtons = [
 	},
 	{
 		id: 1,
-		title: '	Восстановить все зубы'
+		title: 'Восстановить все зубы'
 	},
 	{
 		id: 2,
