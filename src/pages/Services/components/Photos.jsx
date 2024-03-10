@@ -5,14 +5,17 @@ import { Keyboard, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import useOutsideClick from '../../../entity/hooks/useOutsideClick'
 import styles from './photos.module.scss'
+import { useKeyDown } from '../../../entity/hooks/useKeyDown'
 
 export default function Photos({ photos }) {
 	const [viewImage, setViewImage] = useState(null)
-	const ref = useRef(null)
+	const outSideRef = useRef(null)
 
 	useOutsideClick(() => {
 		setViewImage(null)
-	}, ref)
+	}, outSideRef)
+	useKeyDown('Escape', () => setViewImage(null))
+
 	return (
 		<section id='section5' className='container mb-20'>
 			<h1
@@ -84,7 +87,7 @@ export default function Photos({ photos }) {
 				className={clsx(styles.view_image, {
 					[styles.active]: viewImage !== null
 				})}
-				ref={ref}
+				ref={outSideRef}
 			>
 				{viewImage !== null && <img src={viewImage} alt='image' />}
 			</div>

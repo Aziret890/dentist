@@ -131,7 +131,7 @@ export default function Education({ doc }) {
 
 export function MoreContent({ doc }) {
 	return (
-		<div className={styles['education-content']}>
+		<div className={`${styles['education-content']} py-10`}>
 			{doc?.education &&
 				doc?.education?.map((item, idx) => (
 					<li key={idx} className={styles.list}>

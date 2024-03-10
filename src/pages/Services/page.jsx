@@ -21,38 +21,6 @@ import Year from './components/Year'
 import Photos from './components/Photos'
 // import Exsemples from './components/Exsemples'
 
-const docs = {
-	examples_work: [
-		{
-			technology: 'Протезы и импланты',
-			doctor: 'Смирнова Анна',
-			treatment_period: '10 дней',
-			image:
-				'https://s3-alpha-sig.figma.com/img/601e/06fc/db56f0a13908b7a62c71587f79852257?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fVWbeAVGD1EL-IFmllagenPBpcaeE7eSi9i0fZ1MlELNtsjS5CeT-kzX69ZJsHwC3XzVPLC8q5PvQholeIi2LJbzH7Ojz9v78KrxqVWQQXPc2HQeAA9d2M1eQOaT4ZOEkbQ1GaN4t9dDz1t7BFVgbdksqDA4bm4cWVo5Bi4xIV99gw7Bc6EibQ0UHHEcxJRcl8NhvsIyHgT6bt0JPTPxcxCWRSzNafVMnQfzKZ9~KyCChBibDlLc3KNa6Rj6S4N7KlFRcLn5nw2~aUYAKtlVbJPkivX~1nH9R4lFbJ4RGcHhfVBmTGfisp58NFhd3OXXIIdYKZuGl8WXCQ~jj6DLdg__'
-		},
-		{
-			technology: 'Протезы и импланты',
-			doctor: 'Смирнова Анна',
-			treatment_period: '10 дней',
-			image:
-				'https://s3-alpha-sig.figma.com/img/601e/06fc/db56f0a13908b7a62c71587f79852257?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fVWbeAVGD1EL-IFmllagenPBpcaeE7eSi9i0fZ1MlELNtsjS5CeT-kzX69ZJsHwC3XzVPLC8q5PvQholeIi2LJbzH7Ojz9v78KrxqVWQQXPc2HQeAA9d2M1eQOaT4ZOEkbQ1GaN4t9dDz1t7BFVgbdksqDA4bm4cWVo5Bi4xIV99gw7Bc6EibQ0UHHEcxJRcl8NhvsIyHgT6bt0JPTPxcxCWRSzNafVMnQfzKZ9~KyCChBibDlLc3KNa6Rj6S4N7KlFRcLn5nw2~aUYAKtlVbJPkivX~1nH9R4lFbJ4RGcHhfVBmTGfisp58NFhd3OXXIIdYKZuGl8WXCQ~jj6DLdg__'
-		},
-		{
-			technology: 'Протезы и импланты',
-			doctor: 'Смирнова Анна',
-			treatment_period: '10 дней',
-			image:
-				'https://s3-alpha-sig.figma.com/img/601e/06fc/db56f0a13908b7a62c71587f79852257?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fVWbeAVGD1EL-IFmllagenPBpcaeE7eSi9i0fZ1MlELNtsjS5CeT-kzX69ZJsHwC3XzVPLC8q5PvQholeIi2LJbzH7Ojz9v78KrxqVWQQXPc2HQeAA9d2M1eQOaT4ZOEkbQ1GaN4t9dDz1t7BFVgbdksqDA4bm4cWVo5Bi4xIV99gw7Bc6EibQ0UHHEcxJRcl8NhvsIyHgT6bt0JPTPxcxCWRSzNafVMnQfzKZ9~KyCChBibDlLc3KNa6Rj6S4N7KlFRcLn5nw2~aUYAKtlVbJPkivX~1nH9R4lFbJ4RGcHhfVBmTGfisp58NFhd3OXXIIdYKZuGl8WXCQ~jj6DLdg__'
-		},
-		{
-			technology: 'Протезы и импланты',
-			doctor: 'Смирнова Анна',
-			treatment_period: '10 дней',
-			image:
-				'https://s3-alpha-sig.figma.com/img/601e/06fc/db56f0a13908b7a62c71587f79852257?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fVWbeAVGD1EL-IFmllagenPBpcaeE7eSi9i0fZ1MlELNtsjS5CeT-kzX69ZJsHwC3XzVPLC8q5PvQholeIi2LJbzH7Ojz9v78KrxqVWQQXPc2HQeAA9d2M1eQOaT4ZOEkbQ1GaN4t9dDz1t7BFVgbdksqDA4bm4cWVo5Bi4xIV99gw7Bc6EibQ0UHHEcxJRcl8NhvsIyHgT6bt0JPTPxcxCWRSzNafVMnQfzKZ9~KyCChBibDlLc3KNa6Rj6S4N7KlFRcLn5nw2~aUYAKtlVbJPkivX~1nH9R4lFbJ4RGcHhfVBmTGfisp58NFhd3OXXIIdYKZuGl8WXCQ~jj6DLdg__'
-		}
-	]
-}
 
 const photos = [
 	'https://s3-alpha-sig.figma.com/img/ff95/aa40/39487e91d12dd9260410c988b9848a55?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Hi6a1GZJsiN9rm96wAKD3RJieZV-7o5-DZ5GnbdTc-eOvcBGrDfs-Uu1olcDRtGj~UA120BmLprpPwYnNPG9MTZRD0Dqk6dME2yuUVZHsGSud39DuwJOZ-59057h8nQlkb-Di2kb6Hmvu7kPfZY5A8qBWAUF7gA6EyuZl8f7c96aunbJqxBG2fueJx7mcEMoPsJlAHEdgsHPkoYDWdFCGil5BWMNTV12zTEKQgZ5oPGBF0vTLmf1xqFgzsKXmrLtcYnnnb4sdNpBuNcGoRLZlvd4jA1EX0wer-rmcav0ndnL~VlNr9SGFsRHm6SjtBdpTGyoWbEdNDCWxcKO~vYFgg__',
@@ -86,7 +54,7 @@ const ServicesPage = () => {
 				<Useful />
 				<Form />
 				<Blocks />
-				<Workexamples doc={docs} />
+				<Workexamples />
 				<Reviews />
 				<OurDoctors />
 				<Often />

@@ -74,7 +74,7 @@ const Reviews = ({ children }) => {
 							<div className='user-info'>
 								<div className='user-pic-name'>
 									{item.user.image !== null ? (
-										<img src={item.user.image} alt=':/' />
+										<img src={item.user.image} alt={item?.user?.firstName} />
 									) : (
 										<div className='image__poster'>
 											{item.user.firstName.slice(0, 1)}

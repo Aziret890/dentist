@@ -6,15 +6,17 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import clsx from 'clsx'
 import useOutsideClick from '../../../entity/hooks/useOutsideClick'
 import { useRef } from 'react'
+import { useKeyDown } from '../../../entity/hooks/useKeyDown'
 
 export default function Photos({ doc }) {
 	const [viewImage, setViewImage] = useState(null)
 	const { photos } = doc
-	const ref = useRef(null)
+	const outSideRef = useRef(null)
 
 	useOutsideClick(() => {
 		setViewImage(null)
-	}, ref)
+	}, outSideRef)
+	useKeyDown('Escape', ()=>setViewImage(null))
 	return (
 		<section id='section5' className='mb-20'>
 			<h1 data-aos='fade-up'>Врач в работе</h1>
@@ -80,7 +82,7 @@ export default function Photos({ doc }) {
 				className={clsx(styles.view_image, {
 					[styles.active]: viewImage !== null
 				})}
-				ref={ref}
+				ref={outSideRef}
 			>
 				{viewImage !== null && <img src={viewImage} alt='image' />}
 			</div>

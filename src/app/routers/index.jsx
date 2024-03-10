@@ -10,6 +10,7 @@ import ServicesPage from "../../pages/Services/page";
 import NotFoundPage from "../../pages/NotFoundPage/page";
 import ReviewsPage from "../../pages/ReviewsPage/page";
 import Page from "../../pages/NewsDetals/page";
+import FreeConsultation from '../../pages/FreeConsultation/page'
 
 export default function Routers() {
   return (
@@ -24,7 +25,7 @@ export default function Routers() {
         <Route path="/price" element={<PricePage />} />
         <Route path="/news" element={<News />} />
         <Route path="/news/:id" element={<Page />} />
-
+				<Route path='/consultancy' element={<FreeConsultation />} />
         <Route path="/reviews" element={<ReviewsPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

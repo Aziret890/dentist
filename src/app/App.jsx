@@ -24,7 +24,6 @@ function App() {
       <AuthModal />
       {/* AUTH */}
       <ToastContainer />
-
       <MoreDetail />
     </>
   );

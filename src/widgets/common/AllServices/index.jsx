@@ -30,7 +30,7 @@ export default function AllServices() {
 										servicesTab.toLowerCase() === item.toLowerCase()
 								})}
 								onClick={() => setServicesTab(item.toLowerCase())}
-								key={idx}
+								key={item}
 							>
 								<h4>{item}</h4>
 								<span>15</span>

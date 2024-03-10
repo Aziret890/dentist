@@ -1,8 +1,30 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import './example_work.scss'
+import { useQuery } from '@tanstack/react-query'
+import axios from 'axios'
+import { motion } from 'framer-motion'
+import clsx from 'clsx'
+import useOutsideClick from '../../../entity/hooks/useOutsideClick'
 
-const Workexamples = ({ doc }) => {
-	const { examples_work } = doc
+const variants = {
+	hidden: {
+		opacity: 0
+	},
+	visible: { opacity: 1 }
+}
+const Workexamples = ({}) => {
+	const [show, setShow] = useState(0)
+
+	const outSideRef = useRef()
+	const { data } = useQuery({
+		queryKey: ['services_doc_examples_of_work'],
+		queryFn: async () => {
+			return (await axios(`https://akmatovt.pythonanywhere.com/example/`)).data
+		}
+	})
+	useOutsideClick(() => {
+		setShow(0)
+	}, outSideRef)
 	return (
 		<div className='container pt-28'>
 			<section id='section4' className='mb-20'>
@@ -35,29 +57,54 @@ const Workexamples = ({ doc }) => {
 					</button>
 				</div>
 				<ul className={'examples-content'}>
-					{examples_work &&
-						examples_work.map((item, idx) => (
-							<li data-aos='fade-up' data-aos-duration={idx * 500} key={idx}>
+					{data &&
+						data.map((item, idx) => (
+							<motion.li
+								key={idx}
+								variants={variants}
+								initial='hidden'
+								animate='visible'
+								transition={{
+									delay: idx * 0.2,
+									ease: 'easeInOut',
+									duration: 0.25
+								}}
+								viewport={{ amount: 0 }}
+							>
 								<div className={'images'}>
-									<img data-aos='fade-up' src={item.image} alt='' />
+									<img
+										data-aos='fade-up'
+										src={
+											'https://akmatovt.pythonanywhere.com/media/' +
+											item?.sub_example?.images
+										}
+										alt={item.sub_example.doctor.firstName}
+									/>
 								</div>
 								<div className={'content'}>
 									<div data-aos='fade-up' data-aos-duration={500}>
 										<h4>Технология</h4>
-										<h6>{item.technology}</h6>
+										<h6>{item?.sub_example?.technology}</h6>
 									</div>
-									<div data-aos='fade-up' data-aos-duration={1500}>
+									<div data-aos='fade-up' data-aos-duration={500}>
 										<h4>Врач</h4>
-										<h6>{item.doctor}</h6>
+										<h6>
+											{item?.sub_example?.doctor?.firstName}{' '}
+											{item?.sub_example?.doctor?.lastName}
+										</h6>
 									</div>
-									<div data-aos='fade-up' data-aos-duration={2000}>
+									<div data-aos='fade-up' data-aos-duration={500}>
 										<h4>Срок лечения</h4>
-										<h6>{item.treatment_period}</h6>
+										<h6>{item?.sub_example?.duration} дней</h6>
 									</div>
 								</div>
 								<button
-									data-aos='fade-up'
-									className='flex items-center justify-center w-full my-3'
+									className={`flex items-center justify-center w-full my-3 ${
+										show === idx + 1 ? 'rotate-180' : ''
+									}`}
+									onClick={() =>
+										setShow(prev => (prev === idx + 1 ? 0 : idx + 1))
+									}
 								>
 									<svg
 										width='20'
@@ -89,7 +136,18 @@ const Workexamples = ({ doc }) => {
 										</defs>
 									</svg>
 								</button>
-							</li>
+								<div
+									className={clsx('show__content', {
+										active: show === idx + 1
+									})}
+									ref={outSideRef}
+								>
+									<h4>История обращения клиента</h4>
+									<p>{item.sub_example.history}</p>
+									<h3>Отзыв пациента</h3>
+									<p>{item.sub_example.review.title}</p>
+								</div>
+							</motion.li>
 						))}
 				</ul>
 			</section>

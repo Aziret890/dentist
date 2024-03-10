@@ -83,7 +83,7 @@ export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
 							Записаться на приём
 						</button>
 						<button onClick={() => toggleIsMenu()}>
-							{isMenu ? <IoClose /> : <FiMenu />}
+							{isMenu ? <IoClose style={{ color: '#2cb2bb' }} /> : <FiMenu />}
 						</button>
 					</div>
 				</div>
