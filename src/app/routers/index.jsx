@@ -9,6 +9,7 @@ import PricePage from '../../pages/Price/page'
 import ServicesPage from '../../pages/Services/page'
 import NotFoundPage from '../../pages/NotFoundPage/page'
 import ReviewsPage from '../../pages/ReviewsPage/page'
+import Page from '../../pages/NewsDetals/page'
 import FreeConsultation from '../../pages/FreeConsultation/page'
 import Example from '../../pages/Example/page'
 
@@ -23,8 +24,9 @@ export default function Routers() {
         <Route path="/doctors/:docId" element={<DetailDoctors />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/price" element={<PricePage />} />
-        <Route path="/consultancy" element={<FreeConsultation />} />
         <Route path="/news" element={<News />} />
+        <Route path="/news/:id" element={<Page />} />
+        <Route path="/consultancy" element={<FreeConsultation />} />
         <Route path="/reviews" element={<ReviewsPage />} />
         <Route path="/example" element={<Example />} />
         <Route path="*" element={<NotFoundPage />} />
