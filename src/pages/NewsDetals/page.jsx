@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from "react";
-import "./components/NewsDetals.scss";
-import { useNavigate, useParams } from "react-router-dom";
-import axios from "axios";
-function Page() {
-  const [data, setData] = useState({});
-  const nav = useNavigate();
-  const { id } = useParams();
+import { useEffect, useState } from 'react'
+import './components/NewsDetals.scss'
+import { useNavigate, useParams } from 'react-router-dom'
+import axios from 'axios'
+function NewsDetail() {
+  const [data, setData] = useState({})
+  const nav = useNavigate()
+  const { id } = useParams()
   useEffect(() => {
-    axios(`https://akmatovt.pythonanywhere.com/news/${id}/`).then((res) =>
-      setData(res.data)
-    );
-  }, []);
-  console.log(data.images);
+    axios(`https://akmatovt.pythonanywhere.com/news/${id}/`).then((res) => setData(res.data))
+  }, [])
+  console.log(data.images)
   return (
     <section className="new-detal">
       <div className="new-detal__up">
@@ -71,13 +69,8 @@ function Page() {
               />
               <div className="new-detal__content__right-up-green">
                 <h2>Запись на консультацию</h2>
-                <p>
-                  Не откладывайте, запишитесь на консультацию прямо сейчас,
-                  перезвоним через 15 минут
-                </p>
-                <button onClick={() => nav("/consultancy")}>
-                  Бесплатная консультация
-                </button>
+                <p>Не откладывайте, запишитесь на консультацию прямо сейчас, перезвоним через 15 минут</p>
+                <button onClick={() => nav('/consultancy')}>Бесплатная консультация</button>
               </div>
             </div>
             <div className="new-detal__content__right-buttom"></div>
@@ -85,10 +78,10 @@ function Page() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Page;
+export default NewsDetail
 //aziret
 //aziret
 //aziret

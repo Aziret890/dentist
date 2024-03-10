@@ -1,0 +1,137 @@
+.year {
+  @media (max-width: 850px) {
+    .right {
+      img {
+        margin-top: 50px;
+      }
+    }
+  }
+  @media (max-width: 750px) {
+    .content {
+      // flex-direction: column-reverse;
+      padding: 10px 30px;
+      justify-content: center;
+      align-items: center;
+      .right {
+        img {
+          width: 320px;
+          margin: 20px 0 0 0;
+        }
+        margin: 0;
+      }
+      div:nth-child(1) {
+        height: auto;
+        margin: 0;
+        h1 {
+          font-size: 1.3rem;
+          line-height: 25px;
+        }
+        .parent-content-card {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+          ul {
+            gap: 20px;
+            display: flex;
+            margin: 0;
+            li {
+              margin: 0;
+            }
+          }
+        }
+        .content-card {
+        }
+      }
+    }
+    .parent-content {
+      height: auto;
+    }
+  }
+  @media (max-width: 700px) {
+    .code__h1 {
+      font-size: 24px;
+    }
+  }
+  @media (max-width: 650px) {
+    .content {
+      padding: 30px;
+      .right {
+        img {
+          width: 250px;
+        }
+      }
+    }
+  }
+  @media (max-width: 550px) {
+    .content {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      div.first-child {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        flex-wrap: wrap;
+        h1 {
+          font-size: 18px;
+          line-height: 20px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .content {
+      li {
+        gap: 8px;
+      }
+      .parent-content-card {
+        margin-top: 20px;
+      }
+      .first-child {
+        width: 100%;
+
+        h4 {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  @media (max-width: 400px) {
+    .content {
+      .right {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 150px;
+        }
+      }
+      li {
+        gap: 8px;
+      }
+      .parent-content-card {
+        margin-top: 20px;
+      }
+      .first-child {
+        width: 100%;
+
+        h4 {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.margins {
+  margin: 64px 0;
+}
+@media (max-width: 550px) {
+  .margins {
+    margin: 20px 0 !important;
+  }
+}

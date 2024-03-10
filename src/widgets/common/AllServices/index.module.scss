@@ -7,7 +7,7 @@
       margin-top: 30px;
     }
   }
-  @media (max-width: 440px) {
+  @media (max-width: 500px) {
     .none {
       display: none;
     }
@@ -183,8 +183,11 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
   }
-  @media (max-width: 740px) {
+  @media (min-width: 440px) and (max-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
   }
+
   li {
     min-width: 284px;
     max-width: 284px;
@@ -208,6 +211,7 @@
       min-width: 224px;
       max-width: 224px;
     }
+
     h4 {
       font-family: Montserrat;
       font-size: 16px;

@@ -41,7 +41,7 @@ const ServicesPage = () => {
           </h1>
         </div>
       </div>
-      <div className="my-16">
+      <div className="margins">
         <Year />
         <Our />
         <Description />
