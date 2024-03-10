@@ -17,7 +17,7 @@ export default function AllServices() {
             data-aos-duration={1000}
             className={`${width <= 540 ? 'flex-wrap' : 'flex-nowrap'} flex items-center justify-end gap-3`}
           >
-            {allServicesArr.map((item, idx) => (
+            {allServicesArr.map((item) => (
               <li
                 className={clsx({
                   [styles.active]: servicesTab.toLowerCase() === item.toLowerCase(),
