@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./components/NewsDetals.scss";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 function Page() {
   const [data, setData] = useState({});
+  const nav = useNavigate();
   const { id } = useParams();
   useEffect(() => {
     axios(`https://akmatovt.pythonanywhere.com/news/${id}/`).then((res) =>
@@ -74,7 +75,9 @@ function Page() {
                   Не откладывайте, запишитесь на консультацию прямо сейчас,
                   перезвоним через 15 минут
                 </p>
-                <button>Бесплатная консультация</button>
+                <button onClick={() => nav("/consultancy")}>
+                  Бесплатная консультация
+                </button>
               </div>
             </div>
             <div className="new-detal__content__right-buttom"></div>
@@ -86,3 +89,6 @@ function Page() {
 }
 
 export default Page;
+//aziret
+//aziret
+//aziret
