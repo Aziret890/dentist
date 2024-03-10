@@ -1,42 +1,30 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
-import "./index.scss";
+import { useState } from 'react'
+import './index.scss'
 function RequisitesDetail({ el }) {
-  const [thisTrue, setThisTrue] = useState(false);
+  const [thisTrue, setThisTrue] = useState(false)
   function copyToInfo(info) {
-    setThisTrue(!thisTrue);
-    navigator.clipboard.writeText(info);
+    setThisTrue(!thisTrue)
+    navigator.clipboard.writeText(info)
   }
   function popUp() {
-    setTimeout(() => setThisTrue(!thisTrue), 700);
+    setTimeout(() => setThisTrue(!thisTrue), 700)
   }
   return (
     <>
       <hr />
-      <div
-        className={`requits__copy__block-child mt-[30px] mb-[25px] flex items-center justify-between relative `}
-      >
-        <div className="requits__copy__block-child-name w-[30%]">
-          {el.title}
-        </div>
+      <div className={`requits__copy__block-child mt-[30px] mb-[25px] flex items-center justify-between relative `}>
+        <div className="requits__copy__block-child-name w-[30%]">{el.title}</div>
         <div className="requits__copy__block-child-info absolute w-[40%] left-[40%]">
-          <p className={thisTrue == true ? `text-cyan-500 text-xl` : ""}>
-            {el.description}
-          </p>
+          <p className={thisTrue == true ? `text-cyan-500 text-xl` : ''}>{el.description}</p>
         </div>
-        <div
+        <button
           onClick={() => copyToInfo(el.description)}
           onMouseLeave={() => popUp()}
           className="requits__copy__block-child-copy"
         >
           {thisTrue == false ? (
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M14.4 0H6.4C5.5176 0 4.8 0.7176 4.8 1.6V4.8H1.6C0.7176 4.8 0 5.5176 0 6.4V14.4C0 15.2824 0.7176 16 1.6 16H9.6C10.4824 16 11.2 15.2824 11.2 14.4V11.2H14.4C15.2824 11.2 16 10.4824 16 9.6V1.6C16 0.7176 15.2824 0 14.4 0ZM1.6 14.4V6.4H9.6L9.6016 14.4H1.6ZM14.4 9.6H11.2V6.4C11.2 5.5176 10.4824 4.8 9.6 4.8H6.4V1.6H14.4V9.6Z"
                 fill="#2CB2BB"
@@ -62,11 +50,11 @@ function RequisitesDetail({ el }) {
               />
             </svg>
           )}
-        </div>
+        </button>
       </div>
       <hr />
     </>
-  );
+  )
 }
 
-export default RequisitesDetail;
+export default RequisitesDetail

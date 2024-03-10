@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from './page.module.scss'
 import clsx from 'clsx'
 import FreeConsultationContent from './components/FreeConsultationContent'

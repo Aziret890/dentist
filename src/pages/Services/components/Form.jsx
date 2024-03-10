@@ -112,7 +112,7 @@ function Form() {
 								<path
 									d='M49 35C49 36.2377 48.5083 37.4247 47.6332 38.2998C46.758 39.175 45.571 39.6667 44.3333 39.6667H16.3333L7 49V11.6667C7 10.429 7.49167 9.242 8.36683 8.36683C9.242 7.49167 10.429 7 11.6667 7H44.3333C45.571 7 46.758 7.49167 47.6332 8.36683C48.5083 9.242 49 10.429 49 11.6667V35Z'
 									stroke='#2CB2BB'
-									stroke-width='2'
+									strokeWidth='2'
 									strokeLinecap='round'
 									strokeLinejoin='round'
 								/>
@@ -135,35 +135,35 @@ function Form() {
 								<path
 									d='M44.3333 51.3335H11.6667C9.1 51.3335 7 49.2335 7 46.6668V14.0002C7 11.4335 9.1 9.3335 11.6667 9.3335H44.3333C46.9 9.3335 49 11.4335 49 14.0002V46.6668C49 49.2335 46.9 51.3335 44.3333 51.3335Z'
 									stroke='#2CB2BB'
-									stroke-width='2'
+									strokeWidth='2'
 									strokeLinecap='round'
 									strokeLinejoin='round'
 								/>
 								<path
 									d='M37.333 4.6665V9.33317'
 									stroke='#2CB2BB'
-									stroke-width='2'
+									strokeWidth='2'
 									strokeLinecap='round'
 									strokeLinejoin='round'
 								/>
 								<path
 									d='M18.667 4.6665V9.33317'
 									stroke='#2CB2BB'
-									stroke-width='2'
+									strokeWidth='2'
 									strokeLinecap='round'
 									strokeLinejoin='round'
 								/>
 								<path
 									d='M28 32.6665C31.866 32.6665 35 29.5325 35 25.6665C35 21.8005 31.866 18.6665 28 18.6665C24.134 18.6665 21 21.8005 21 25.6665C21 29.5325 24.134 32.6665 28 32.6665Z'
 									stroke='#2CB2BB'
-									stroke-width='2'
+									strokeWidth='2'
 									strokeLinecap='round'
 									strokeLinejoin='round'
 								/>
 								<path
 									d='M39.6663 43.1665C36.3997 40.8332 32.433 39.6665 27.9997 39.6665C23.5663 39.6665 19.5997 41.0665 16.333 43.1665'
 									stroke='#2CB2BB'
-									stroke-width='2'
+									strokeWidth='2'
 									strokeLinecap='round'
 									strokeLinejoin='round'
 								/>
@@ -187,14 +187,14 @@ function Form() {
 								<path
 									d='M2.33301 28.0002C2.33301 28.0002 11.6663 9.3335 27.9997 9.3335C44.333 9.3335 53.6663 28.0002 53.6663 28.0002C53.6663 28.0002 44.333 46.6668 27.9997 46.6668C11.6663 46.6668 2.33301 28.0002 2.33301 28.0002Z'
 									stroke='#2CB2BB'
-									stroke-width='2'
+									strokeWidth='2'
 									strokeLinecap='round'
 									strokeLinejoin='round'
 								/>
 								<path
 									d='M28 35C31.866 35 35 31.866 35 28C35 24.134 31.866 21 28 21C24.134 21 21 24.134 21 28C21 31.866 24.134 35 28 35Z'
 									stroke='#2CB2BB'
-									stroke-width='2'
+									strokeWidth='2'
 									strokeLinecap='round'
 									strokeLinejoin='round'
 								/>

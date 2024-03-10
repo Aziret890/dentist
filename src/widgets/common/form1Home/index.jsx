@@ -1,38 +1,38 @@
-import { useState } from "react";
-import "./Form.css";
-import form1photo from "../../../shared/assets/images/from1photo.svg";
-import axios from "axios";
-import { useWindowSize } from "../../../entity/hooks/useWindowSize";
+import { useState } from 'react'
+import './Form.css'
+import form1photo from '../../../shared/assets/images/from1photo.svg'
+import axios from 'axios'
+import { useWindowSize } from '../../../entity/hooks/useWindowSize'
 function Form1Home() {
-  const [objDataNum, setObjDataNum] = useState("");
-  const [objDataName, setObjDataName] = useState("");
-  const [time, setTime] = useState(15);
-  const TELEGRAM_CHAT_ID = "@messageAziret";
-  const TELEGRAM_BOT_TOKEN = "7078287615:AAFDWtz-p3HpL28ItVtLyo-1_2l2MAQQPf8";
-  const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+  const [objDataNum, setObjDataNum] = useState('')
+  const [objDataName, setObjDataName] = useState('')
+  const [time, setTime] = useState(15)
+  const TELEGRAM_CHAT_ID = '@messageAziret'
+  const TELEGRAM_BOT_TOKEN = '7078287615:AAFDWtz-p3HpL28ItVtLyo-1_2l2MAQQPf8'
+  const API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`
   async function sendMessageBot() {
     let res = {
       name: objDataName,
       number: objDataNum,
-    };
-    let resMessage = `привет мененджер \n имя : '${res.name} \n нрмер: "${res.number}" \n напиши ему 🤗🤗🤗`;
+    }
+    let resMessage = `привет мененджер \n имя : '${res.name} \n нрмер: "${res.number}" \n напиши ему 🤗🤗🤗`
     axios.post(API, {
       chat_id: TELEGRAM_CHAT_ID,
-      parse_mode: "html",
+      parse_mode: 'html',
       text: resMessage,
-    });
-    var secs = 10;
-    var timer = setInterval(tick, 1000);
+    })
+    var secs = 10
+    var timer = setInterval(tick, 1000)
     function tick() {
       if (secs > 0) {
-        setTime(--secs);
+        setTime(--secs)
       }
     }
-    setObjDataName("");
-    setObjDataNum("");
+    setObjDataName('')
+    setObjDataNum('')
   }
 
-  const { width } = useWindowSize();
+  const { width } = useWindowSize()
 
   return (
     <section className="from1__home">
@@ -40,19 +40,14 @@ function Form1Home() {
         <div className="from1__content">
           <div className="from1__images">
             <div className="image-poster">
-              <img
-                data-aos="fade-up"
-                data-aos-duration={300}
-                src={form1photo}
-                alt=""
-              />
+              <img data-aos="fade-up" data-aos-duration={300} src={form1photo} alt="" />
             </div>
             {width <= 741 ? (
               <h2 data-aos="fade-up" data-aos-duration={500}>
                 Остались вопросы? Мы ответим!
               </h2>
             ) : (
-              ""
+              ''
             )}
           </div>
           <div className="from1__from">
@@ -62,7 +57,7 @@ function Form1Home() {
                   Остались вопросы? Мы ответим!
                 </h2>
               ) : (
-                ""
+                ''
               )}
               <div className="from__input">
                 <input
@@ -90,11 +85,7 @@ function Form1Home() {
                 </p>
               )}
               <div
-                className={`from__btn from__btn-${
-                  objDataName.length > 1 && objDataNum.length > 11
-                    ? "active"
-                    : ""
-                } `}
+                className={`from__btn from__btn-${objDataName.length > 1 && objDataNum.length > 11 ? 'active' : ''} `}
               >
                 {!objDataNum.length > 0 ? (
                   <button>Отправить</button>
@@ -115,7 +106,7 @@ function Form1Home() {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default Form1Home;
+export default Form1Home

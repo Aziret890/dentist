@@ -8,7 +8,6 @@ import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 import { useWindowSize } from '../../../entity/hooks/useWindowSize'
 
-
 const OurDoctors = () => {
 	const [currentSlide, setCurrentSlide] = useState(0)
 	const sliderRef = useRef(null)
@@ -90,7 +89,7 @@ const OurDoctors = () => {
 												<path
 													d='M31.786 25.4085L37.9997 11.3335L31.786 25.4085ZM23.5265 25.7207L16.333 11.3335L23.5265 25.7207ZM29.2688 24.7467L22.7247 11.3335L29.2688 24.7467ZM31.933 11.3335L30.1997 15.5002L31.933 11.3335ZM17.9997 34.6668C17.9997 40.1897 22.4768 44.6668 27.9997 44.6668C33.5225 44.6668 37.9997 40.1897 37.9997 34.6668C37.9997 29.144 33.5225 24.6668 27.9997 24.6668C22.4768 24.6668 17.9997 29.144 17.9997 34.6668Z'
 													stroke='white'
-													stroke-width='1.5'
+													strokeWidth='1.5'
 													strokeLinecap='round'
 													strokeLinejoin='round'
 												/>

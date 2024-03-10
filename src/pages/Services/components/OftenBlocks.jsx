@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-import { useDoc } from '../../../app/context/DoctorsContext'
 
 const OftenBlocks = ({ el }) => {
-	// const {block , setBlock } = useDoc()
 	const [blo, setBloc] = useState(false)
 	return (
 		<div>
@@ -12,7 +10,7 @@ const OftenBlocks = ({ el }) => {
 					className='w-[672px] rounded-lg h-[72px] bg-[#F2FAFB] flex items-center justify-between px-11 text-sm font-bold text-[#253F41]'
 				>
 					<p>{el.question}</p>
-					<div onClick={() => setBloc(!blo)} className=''>
+					<button onClick={() => setBloc(!blo)} className=''>
 						{blo ? (
 							<svg
 								width='24'
@@ -48,7 +46,7 @@ const OftenBlocks = ({ el }) => {
 								/>
 							</svg>
 						)}
-					</div>
+					</button>
 				</div>
 				<p style={{ display: blo ? 'block' : 'none' }} className='m-4'>
 					{el.answer}

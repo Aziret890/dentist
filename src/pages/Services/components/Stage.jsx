@@ -11,7 +11,6 @@ const Stage = () => {
 	})
 
 	const total = data?.reduce((acc, el) => el.price + acc, 0)
-	
 
 	return (
 		<div className='container pt-20'>
@@ -31,7 +30,7 @@ const Stage = () => {
 				<div className='flex justify-between px-20 ml-10'>
 					<div className=''>
 						{data?.map(item => (
-							<div className='flex items-center gap-2 my-3'>
+							<div key={item.id} className='flex items-center gap-2 my-3'>
 								<div className='w-[20px] h-[20px] rounded-full bg-[#2CB2BB] flex items-center justify-center text-white '>
 									<h6 className='font-bold text-sm'>{item.id}</h6>
 								</div>
@@ -58,14 +57,14 @@ const Stage = () => {
 										<path
 											d='M9.99967 18.3334C9.99967 18.3334 16.6663 15.0001 16.6663 10.0001V4.16675L9.99967 1.66675L3.33301 4.16675V10.0001C3.33301 15.0001 9.99967 18.3334 9.99967 18.3334Z'
 											stroke='white'
-											stroke-width='2'
+											strokeWidth='2'
 											strokeLinecap='round'
 											strokeLinejoin='round'
 										/>
 										<path
 											d='M7.5 9.99992L9.16667 11.6666L12.5 8.33325'
 											stroke='white'
-											stroke-width='2'
+											strokeWidth='2'
 											strokeLinecap='round'
 											strokeLinejoin='round'
 										/>

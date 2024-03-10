@@ -36,7 +36,7 @@ const Often = () => {
 			<div className='my-20'>
 				<div className='flex items-center justify-between'>
 					<div className='relative'>
-						<img data-aos="fade-up" className='' src={womanDoctor} alt='img' />
+						<img data-aos='fade-up' className='' src={womanDoctor} alt='img' />
 						<button
 							data-aos='zoom-in'
 							data-aos-duration={1200}
@@ -53,7 +53,7 @@ const Often = () => {
 						</h1>
 						<div className='flex flex-col gap-4 w-[692px]'>
 							{data.map(el => (
-								<OftenBlocks el={el} />
+								<OftenBlocks key={el.id} el={el} />
 							))}
 						</div>
 					</div>

@@ -8,53 +8,53 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 
 export default function HonestReviewsDoc({ doc, id, refetch }) {
-	const { setModalContent } = useMoreDetail()
-	const { setIsAuth } = useAuth()
+  const { setModalContent } = useMoreDetail()
+  const { setIsAuth } = useAuth()
 
-	async function postReviewForDoctors(title) {
-		try {
-			const jwtToken = Cookies.get('jwt')
-			if (!jwtToken) {
-				alert('Нету токена')
-				return
-			}
-			const { data } = await axios.post(
-				`https://akmatovt.pythonanywhere.com/addReviewToDoctor/${id}`,
-				{ title },
-				{
-					headers: {
-						Authorization: `JWT ${jwtToken}`
-					}
-				}
-			)
-			if (data.title) {
-				toast.success('Отзывы успешно отправлены')
-			}
-			refetch()
-		} catch (error) {
-			console.log('err', error)
-		}
-	}
+  async function postReviewForDoctors(title) {
+    try {
+      const jwtToken = Cookies.get('jwt')
+      if (!jwtToken) {
+        alert('Нету токена')
+        return
+      }
+      const { data } = await axios.post(
+        `https://akmatovt.pythonanywhere.com/addReviewToDoctor/${id}`,
+        { title },
+        {
+          headers: {
+            Authorization: `JWT ${jwtToken}`,
+          },
+        }
+      )
+      if (data.title) {
+        toast.success('Отзывы успешно отправлены')
+      }
+      refetch()
+    } catch (error) {
+      console.log('err', error)
+    }
+  }
 
   async function postReviewToDoctors() {
-    const cookies = Cookies.get("jwt");
+    const cookies = Cookies.get('jwt')
     if (!cookies) {
-      setIsAuth("in");
-      return;
+      setIsAuth('in')
+      return
     }
 
     setModalContent(() => (
       <div className="flex items-start pt-20 justify-center w-full h-full">
         <CreateReview post={postReviewForDoctors} />
       </div>
-    ));
+    ))
   }
 
   return (
     <section className="mb-20">
       <h1 data-aos="fade-up">Только честные отзывы о враче</h1>
-      <div className={styles["reviews-content"]}>
-        <div className={styles["review-left"]}>
+      <div className={styles['reviews-content']}>
+        <div className={styles['review-left']}>
           <div>
             <svg
               data-aos="fade-up"
@@ -74,14 +74,8 @@ export default function HonestReviewsDoc({ doc, id, refetch }) {
             </svg>
             <h3 data-aos="fade-up">Мы за честность!</h3>
             <p className="flex gap-2 flex-col">
-              <span data-aos="fade-up">
-                Убедиться в наших отзывах легко — просто напишите пациентам,
-                оставившим
-              </span>
-              <span data-aos="fade-up">
-                отзывы, и поинтересуйтесь о качестве услуг и сервиса нашей
-                стоматологии
-              </span>
+              <span data-aos="fade-up">Убедиться в наших отзывах легко — просто напишите пациентам, оставившим</span>
+              <span data-aos="fade-up">отзывы, и поинтересуйтесь о качестве услуг и сервиса нашей стоматологии</span>
             </p>
           </div>
 
@@ -125,37 +119,24 @@ export default function HonestReviewsDoc({ doc, id, refetch }) {
             <p className="flex gap-2 flex-col">
               <span data-aos="fade-up">
                 Оставьте свой отзыв. <br /> Это очень ценно для нас!
-              </span>{" "}
+              </span>{' '}
               <span data-aos="fade-up">
-                Всего несколько слов <br /> о качестве, сервисе <br /> и
-                результате.
+                Всего несколько слов <br /> о качестве, сервисе <br /> и результате.
               </span>
             </p>
-            <button onClick={postReviewToDoctors}>
-              Написать отзыв о враче
-            </button>
+            <button onClick={postReviewToDoctors}>Написать отзыв о враче</button>
           </div>
         </div>
-        <ul className={styles["review-right"]}>
+        <ul className={styles['review-right']}>
           {doc?.review?.map((item, idx) => (
-            <li
-              data-aos="fade-up"
-              data-aos-duration={idx * 500}
-              className={styles.review}
-              key={item?.id}
-            >
-              <div
-                data-aos="fade-up"
-                className="flex items-center justify-between w-full gap-5"
-              >
+            <li data-aos="fade-up" data-aos-duration={idx * 500} className={styles.review} key={item?.id}>
+              <div data-aos="fade-up" className="flex items-center justify-between w-full gap-5">
                 <div className="flex items-center gap-3">
-                  <div className={styles["user_photo_url"]}>
+                  <div className={styles['user_photo_url']}>
                     {item?.user.image !== null ? (
                       <img src={item?.user?.image} alt="" />
                     ) : (
-                      <div className="bg-[#2CB2BB]">
-                        {item?.user.firstName.slice(0, 1)}
-                      </div>
+                      <div className="bg-[#2CB2BB]">{item?.user.firstName.slice(0, 1)}</div>
                     )}
                   </div>
                   <div className="flex flex-col items-start">
@@ -164,15 +145,9 @@ export default function HonestReviewsDoc({ doc, id, refetch }) {
                   </div>
                 </div>
                 {item?.url_profile && (
-                  <div className={styles["profile_link"]}>
+                  <div className={styles['profile_link']}>
                     <span>ссылка на профиль в</span>
-                    <svg
-                      width="28"
-                      height="28"
-                      viewBox="0 0 28 28"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M3.5 18.6667V9.33333C3.5 6.11168 6.11168 3.5 9.33333 3.5H18.6667C21.8883 3.5 24.5 6.11168 24.5 9.33333V18.6667C24.5 21.8883 21.8883 24.5 18.6667 24.5H9.33333C6.11168 24.5 3.5 21.8883 3.5 18.6667Z"
                         stroke="#2CB2BB"
@@ -198,31 +173,23 @@ export default function HonestReviewsDoc({ doc, id, refetch }) {
             </li>
           ))}
 
-          {doc?.review?.length > 3 && (
-            <button className={styles.more_review}>Показать ещё отзыв</button>
-          )}
+          {doc?.review?.length > 3 && <button className={styles.more_review}>Показать ещё отзыв</button>}
         </ul>
       </div>
     </section>
-  );
+  )
 }
 
 export function CreateReview({ post }) {
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState('')
 
   return (
     <div className={`${styles.create_review}`}>
       <div className={styles.review_input_box}>
         <label htmlFor="title">Title</label>
-        <textarea
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          type="text"
-          name="title"
-          id="title"
-        />
+        <textarea value={title} onChange={(e) => setTitle(e.target.value)} type="text" name="title" id="title" />
       </div>
       <button onClick={() => post(title)}>Отправить</button>
     </div>
-  );
+  )
 }

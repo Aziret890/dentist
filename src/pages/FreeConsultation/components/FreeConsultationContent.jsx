@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from '../page.module.scss'
 import Men from './images/men.svg'
 
