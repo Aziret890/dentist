@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Class from '../../../../shared/assets/images/header-class.svg'
 import Facebook from '../../../../shared/assets/images/header-fasebook.svg'
 import Instagram from '../../../../shared/assets/images/header-insta.svg'
@@ -18,6 +18,14 @@ import Pencil from '../../../../shared/assets/images/pencil.svg'
 
 // eslint-disable-next-line react/prop-types
 export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
+  const nav = useNavigate()
+  function scroll1() {
+    window.scrollTo({
+      top: 3400,
+      left: 0,
+      behavior: 'smooth',
+    })
+  }
   const { width } = useWindowSize()
 
   const dropDownConfig = {
@@ -51,12 +59,12 @@ export const HeaderCenterSlice = ({ isMenu, toggleIsMenu }) => {
             <img src={Youtube} alt="" />
           </div>
           <div className={styles.buttons}>
-            <button>
+            <button onClick={() => nav('/about/clinic?tabId=2')}>
               <img src={Medal} alt="" />
               Награды и сертификаты
             </button>
             <DropDown width={230} width2={230} className={styles.dropDown} {...dropDownConfig} />
-            <button>
+            <button onClick={() => scroll1()}>
               <img src={Pencil} alt="" />
               Записаться на приём
             </button>
