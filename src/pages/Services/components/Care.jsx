@@ -41,11 +41,7 @@ const Care = () => {
 					</button>
 					<button
 						onClick={() => setTabIndex(1)}
-						className={`${
-							tabIndex === 1
-								? 'bg-[#2CB2BB] text-white'
-								: 'text-[#2CB2BB] bg-[#F2FAFB]'
-						} w-[386px] h-[80px] text-sm font-bold flex items-center px-11 gap-5 rounded-lg cursor-pointer`}
+						className={`${tabIndex === 1 ? 'bg-[#2CB2BB] text-white': 'text-[#2CB2BB] bg-[#F2FAFB]'} w-[386px] h-[80px] text-sm font-bold flex items-center px-11 gap-5 rounded-lg cursor-pointer`}
 					>
 						<svg
 							width='48'
