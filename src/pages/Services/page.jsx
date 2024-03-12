@@ -18,6 +18,7 @@ import Useful from './components/Useful'
 import Workexamples from './components/Workexamples'
 import Year from './components/Year'
 import Photos from './components/Photos'
+import { useWindowSize } from '../../entity/hooks/useWindowSize'
 
 const photos = [
   'https://s3-alpha-sig.figma.com/img/ff95/aa40/39487e91d12dd9260410c988b9848a55?Expires=1710720000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Hi6a1GZJsiN9rm96wAKD3RJieZV-7o5-DZ5GnbdTc-eOvcBGrDfs-Uu1olcDRtGj~UA120BmLprpPwYnNPG9MTZRD0Dqk6dME2yuUVZHsGSud39DuwJOZ-59057h8nQlkb-Di2kb6Hmvu7kPfZY5A8qBWAUF7gA6EyuZl8f7c96aunbJqxBG2fueJx7mcEMoPsJlAHEdgsHPkoYDWdFCGil5BWMNTV12zTEKQgZ5oPGBF0vTLmf1xqFgzsKXmrLtcYnnnb4sdNpBuNcGoRLZlvd4jA1EX0wer-rmcav0ndnL~VlNr9SGFsRHm6SjtBdpTGyoWbEdNDCWxcKO~vYFgg__',
@@ -31,6 +32,7 @@ const photos = [
 ]
 
 const ServicesPage = () => {
+  const { width } = useWindowSize()
   return (
     <div className="">
       <div className="bg-[#F2FAFB] py-3">
@@ -43,13 +45,13 @@ const ServicesPage = () => {
       </div>
       <div className="margins">
         <Year />
-        <Our />
+        {width > 640 && <Our />}
         <Description />
         <Implants />
         <Stage />
-        <Card />
-        <Useful />
-        <Form />
+        {/* <Card />
+        <Useful /> */}
+        {/* <Form />
         <Blocks />
         <Workexamples />
         <Reviews />
@@ -58,9 +60,9 @@ const ServicesPage = () => {
         <Care />
         <Toothbrush />
         <Additional />
-        <Signup />
+        <Signup /> */}
         {/* <Exsemples /> */}
-        <Photos photos={photos} />
+        {/* <Photos photos={photos} /> */}
       </div>
     </div>
   )
