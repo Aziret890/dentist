@@ -11,34 +11,39 @@ import Social from '../../widgets/common/Social'
 import Teeth from '../../widgets/common/Teeth'
 import Form1Home from '../../widgets/common/form1Home'
 import { FaArrowRight } from 'react-icons/fa'
+import { useMoreDetail } from '../../entity/more_detail/store'
 
 export default function Home() {
-	useEffect(() => {
-		document.title = 'Newyork dentist'
-	}, [])
-	return (
-		<>
-			<Teeth />
-			<AllServices />
-			<Rating />
-			<Our />
-			<Social />
-			<Form1Home />
-			<Clinic />
+  const { setModalContent } = useMoreDetail()
+  useEffect(() => {
+    document.title = 'Newyork dentist'
+  }, [])
 
-			<Partners />
-			<News />
-			<Doctor />
-			<Reviews>
-				<div className='reviews-title'>
-					<h1 data-aos='fade-up' data-aos-duration={1 * 300}>
-						Только честные отзывы
-					</h1>
-					<p className='none' data-aos='fade-up' data-aos-duration={2 * 300}>
-						Все отзывы <FaArrowRight />
-					</p>
-				</div>
-			</Reviews>
-		</>
-	)
+  return (
+    <>
+      <Teeth />
+      <AllServices />
+      <Rating />
+      <Our />
+      <Social />
+      <Form1Home />
+      <Clinic />
+
+      <Partners />
+      <News />
+      <Doctor />
+      <Reviews>
+        <div className="reviews-title">
+          <h1 data-aos="fade-up" data-aos-duration={1 * 300}>
+            Только честные отзывы
+          </h1>
+          <p className="none" data-aos="fade-up" data-aos-duration={2 * 300}>
+            <button className="flex gap-3 items-center">
+              Все отзывы <FaArrowRight />
+            </button>
+          </p>
+        </div>
+      </Reviews>
+    </>
+  )
 }

@@ -1,20 +1,18 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useMoreDetail } from "../../entity/more_detail/store";
-import styles from "./page.module.scss";
-import { useNavigate } from "react-router-dom";
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+import { useMoreDetail } from '../../entity/more_detail/store'
+import styles from './page.module.scss'
+import { useNavigate } from 'react-router-dom'
 
 export default function News() {
-  const [data, setData] = useState([]);
-  const nav = useNavigate();
+  const [data, setData] = useState([])
+  const nav = useNavigate()
   useEffect(() => {
-    axios("https://akmatovt.pythonanywhere.com/news/").then((res) =>
-      setData(res.data)
-    );
+    axios('https://akmatovt.pythonanywhere.com/news/').then((res) => setData(res.data))
     // axios(`https://akmatovt.pythonanywhere.com/news/${indexPage}/`).then(
     //   (res) => setObjData(res.data)
     // );
-  }, []);
+  }, [])
 
   return (
     <main>
@@ -25,11 +23,11 @@ export default function News() {
             <li key={idx}>
               <div
                 onClick={() => {
-                  nav("/news/" + item.id);
+                  nav('/news/' + item.id)
                 }}
                 data-aos="fade-up"
                 data-aos-duration={idx * 100}
-                className={styles["newCard"]}
+                className={styles['newCard']}
               >
                 <div>
                   <h3>{item.title1}</h3>
@@ -44,7 +42,7 @@ export default function News() {
         </div>
       </section>
     </main>
-  );
+  )
 }
 
 // const cardData = [
