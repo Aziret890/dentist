@@ -20,3 +20,4 @@ function ClinicHomo() {
   )
 }
 export default ClinicHomo
+//finish
