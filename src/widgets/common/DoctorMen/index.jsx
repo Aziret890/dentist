@@ -4,7 +4,7 @@ import Slider from 'react-slick'
 import men from '../../../shared/assets/images/men.png'
 import './doctor.css'
 import { useWindowSize } from '../../../entity/hooks/useWindowSize'
-
+import doctorHome from '../../../shared/assets/images/doctorHome.png'
 const Doctor = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const sliderRef = useRef(null)
@@ -180,7 +180,7 @@ const Doctor = () => {
                     data-aos="fade-up"
                     data-aos-duration={idx * 300}
                     className=" object-cover w-[386px] h-[612px] mb-[-100px]"
-                    src="https://s3-alpha-sig.figma.com/img/c1a1/2765/8cca3b0bcec00a13f839629d8ce068fd?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=e0jMmxHv~Po1RY3k5hq2dNlit69rb~s7er7LSn7quEt1OKV3Day54M0MXVDcJ1LKwX7pUUA1qys~uzDvtSinqSuBUDlduBlz2LTS~XDOzG4lOCYcFyXk4jMOShqXEFu24d6Q4V6aHRJ3BTULDHDqTLGYg1VopwSgQt2ys7luGHKQtdXsCLqSpanD9eS-I6vymp~g5vBIdPtctSg-8hrGTCtlpIqj8dYXs6NDjt4GcndGOadAA-DyISrnePZFne3tN6340DQ9NmNEVsS3im5SUwHM4ADN0UGJ7JPojH5QMaNd261zfrf6hu7yOuKVU7fCOCrt5h0oiybJu-muzZebKQ__"
+                    src={doctorHome}
                     alt="img"
                   />
                 </div>

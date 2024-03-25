@@ -49,9 +49,9 @@ const ServicesPage = () => {
         <Description />
         <Implants />
         <Stage />
-        {/* <Card />
-        <Useful /> */}
-        {/* <Form />
+        <Card />
+        <Useful />
+        <Form />
         <Blocks />
         <Workexamples />
         <Reviews />
@@ -60,9 +60,9 @@ const ServicesPage = () => {
         <Care />
         <Toothbrush />
         <Additional />
-        <Signup /> */}
+        <Signup />
         {/* <Exsemples /> */}
-        {/* <Photos photos={photos} /> */}
+        <Photos photos={photos} />
       </div>
     </div>
   )

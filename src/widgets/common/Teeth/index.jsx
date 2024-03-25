@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css'
 import './teeth.css'
 import { useWindowSize } from '../../../entity/hooks/useWindowSize'
 import { useNavigate } from 'react-router-dom'
+import teethCHel from '../../../shared/assets/images/teethChel.png'
 const Teeth = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const sliderRef = useRef(null)
@@ -89,11 +90,7 @@ const Teeth = () => {
                       </span>
                     </button>
                   </div>
-                  <img
-                    className="pr-24"
-                    src="https://s3-alpha-sig.figma.com/img/14bf/cf0a/7fef31556f8b8063812802f6af78dc66?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mhpvmUpEQzTih3-myaO3yyq1qprhrHhLBx4tYGHo5ZULMNiOL6Lhx1LgVHPahzTsARxiTMV1p~Rp7nYIe5KzaCOcD-m-pnhTxGGNlNLsYCrhBklUd2F4OkM3ii6LahCFHCsiwtYfwX~MPKzrzCyLeBn5W~a4gSTasypiFG4gNhml7mm7F14bdoJGVaP9MHTvYJSFtIfjdCCIbNpRE6LYUp9GjQ7PNq1y2xPIe2KIgQmmaNmMb3mTmiBYz6W6CrQZlcAAHeRV3lMXh7zgKNdZG6v1EEl7oeL~UGd-A0h6akBwZnqproXKJbLUX9yr~5PwgjdZzsdWqrDCHau5Exo0GA__"
-                    alt="img"
-                  />
+                  <img className="pr-24" src={teethCHel} alt="img" />
                 </div>
               </div>
             ))}

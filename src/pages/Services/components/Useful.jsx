@@ -1,6 +1,9 @@
 import React from 'react'
 import './useful.css'
-
+import descriptionRight1 from '../../../shared/assets/images/descriptionRight1.png'
+import descriptionRight2 from '../../../shared/assets/images/descriptionRight2.png'
+import descriptionRight3 from '../../../shared/assets/images/descriptionRight3.png'
+import teethSvg from '../../../shared/assets/teetsIcon.svg'
 const Useful = () => {
   return (
     <div className="container">
@@ -8,7 +11,7 @@ const Useful = () => {
       <div data-aos="zoom-in-up" className="flex items-center justify-center gap-5">
         <div className="w-[590px] h-[590px] bg-[#2CB2BB] rounded-lg flex items-center justify-center">
           <div className="flex flex-col items-center justify-center gap-4">
-            <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="48" cy="48" r="44" fill="#F85D5D" />
               <circle cx="48" cy="48" r="46" stroke="white" strokeOpacity="0.8" strokeWidth="4" />
               <g clipPath="url(#clip0_104_2141)">
@@ -30,7 +33,8 @@ const Useful = () => {
                   <rect width="52" height="52" fill="white" transform="translate(22 22)" />
                 </clipPath>
               </defs>
-            </svg>
+            </svg> */}
+            <img src={teethSvg} alt="" />
             <h1 className="text-2xl text-white font-bold">
               Чем грозит потеря <br /> даже одного зуба?
             </h1>
@@ -42,33 +46,17 @@ const Useful = () => {
         </div>
         <div className="">
           <div className="flex flex-col gap-5">
-            <img
-              className="w-[284px] h-[284px] rounded-sm object-cover"
-              src="https://s3-alpha-sig.figma.com/img/b883/661f/c7613c18e8548b466c49627516831a25?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=idZMiIIykPMehEHD13Ql6rS~EE4HuN7HW3Gi4mnlqElI2c4CDkv9mot0Uldudnq-bF6vqp7uC5L4hEKJE-F2cCblv8Q-BWZzuhejf1hIzbRlWHVWhKiSSaUCMrFOcIHkvq1f8KOYbuY5aYpjBPgG8J8umMUGAIHd-Aqz9CKgAbSUhjfwZ6uwXkio-4XU4j3LV7JoamgXLUqsgJBW7tM8DXwwo4n4YCrIwQOhBCyCXaTO-M~-y5b-nMsJAEnuGIDsBrNA3qavwmyy3drnYApW1KYJWOFF~H-2oSPYlXJTPtWFaSYeM88Xdftvnp5WUBZZaaKCMT83VUoGo8cPlBsdXQ__"
-              alt="img"
-            />
-            <img
-              className="w-[284px] h-[284px] rounded-sm object-cover"
-              src="https://s3-alpha-sig.figma.com/img/c655/6fce/4ca1994268696b11334060e9eee44c0e?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DbHa-HIFKTaa8OJnfp9BU2i0q4dbBB2jA5dv3LM5MyLkxYO0i4ll3jrHa5CoigLNaaCsF2QDLWdSEW3cjj8lR7jXk1bQLz1huDs6DZKzjxW3nBQ5xk2sNSzDRLAcM-VQRFmRuHIr9hhYZEi4uNZY5AfJtcM7PAyCfu7ZQ3-ogConlkIde4ogKL~UtvG96aKIPkSD4DlDD751ZH4gNjfMXfqFg-ji-kVHQVZoQpbJ7Rlqu2MLW6xxiae8kambGeOernF066z7z3C5dvL~bZsOaXW6T6zMwo3nTpv7Rs8TOwFKRCBaz26a1n4xzax5tzRFl14RHZ0drdoKkhh-hY7TRw__"
-              alt="img"
-            />
+            <img className="w-[284px] h-[284px] rounded-sm object-cover" src={descriptionRight1} alt="img" />
+            <img className="w-[284px] h-[284px] rounded-sm object-cover" src={descriptionRight2} alt="img" />
           </div>
         </div>
         <div>
-          <img
-            className="w-[284px] h-[592px] object-cover"
-            src="https://s3-alpha-sig.figma.com/img/7e21/f176/d70719a577d3f628b1ca3214ec4c2449?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=CbalxCVhRJbcgtEe4AwbpiVvjcG2RRkczUehHO6uWgeMcNInF4MhtnZIGf5xsZAFAtMUi5o2hCzIf4ys0fXT2XctZ2FATzR4wdkaWlTBda4nyXUeqLqqPZ143gEuw-65T9E9pGjq2RoapNCCyyuJcAUEsf5aDrrKuQXk9YgA3AjBlUYh6ZgzUgoYhsxcg8yjrIvfmekHnnfHIxqE1mhKQttSH~u~D6VzgyCxwQMcYExROiKY4EgDtG~CAuZKWvT4w7WJLDTKY9VKnXh3UlO-tZwgF6R4ND-6LHbTpMexFCEVTEUKpOTXbZnXKS4fQxSfHEmSrUwTQJi3tfX8-h5TbQ__"
-            alt=""
-          />
+          <img className="w-[284px] h-[592px] object-cover" src={descriptionRight3} alt="" />
         </div>
       </div>
       <div data-aos="zoom-in-up" className="w-full h-[120px] bg-[#F85D5D] flex items-center justify-center my-16">
         <div className="flex items-center justify-center gap-5">
-          <img
-            className="w-[63px] h-[63px] rounded-full"
-            src="https://s3-alpha-sig.figma.com/img/f9bb/7500/97188dbdc7e64ceda4382b11223424aa?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ZbeSW9VnsOBqK2dLh9WycxpZrSnFLse4Vpllhvg~mlqoE03mjoobg4DSu7rBEf64D8GIYJ8Q29ocASC6q83R1Z0r1cv80g5J1ZSi0aemLoQRnwr4YYDWKVdjr1ideNLnHjKQNtghzUJ~6kE1nFwQQDqNORSClunjZdFEcuYuorq4neJahKUZmP5Ua5Pyeu-wmjoUdqtWFtvN0zvjA0n9LgJZipL09550PiCS5tukJNRZnK0JdtYfpsCap7OnKh9S~EuPpIBRHaM5tSrybznsAMBEFIdfsJn6Oew4SyPZKGtJyM8mJoN6WVwE560Knv3VT4dMbrz0v89r3qYAIztyAg__"
-            alt="img"
-          />
+          <img className="w-[63px] h-[63px] rounded-full" src={teethSvg} alt="img" />
           <div className="">
             <h1 className="text-3xl font-bold text-white">
               Если у вас отсутствует зуб, каждый день костная ткань убывает
