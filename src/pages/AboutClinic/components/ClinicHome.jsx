@@ -3,8 +3,8 @@ import Rating from '../../../widgets/common/Rating'
 import Social from '../../../widgets/common/Social'
 import Teeth from '../../../widgets/common/Teeth'
 import Equiment from '../../../widgets/Equipment'
-import WeUse from '../../../widgets/WeUse/index'
-import WeUse1 from '../../../widgets/WeUse/WeUse1'
+import WeUse from '../../../widgets/WeUse/index.first'
+import WeUse1 from '../../../widgets/WeUse/index.second'
 
 function ClinicHomo() {
   return (
