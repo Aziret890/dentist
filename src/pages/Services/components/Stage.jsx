@@ -24,7 +24,7 @@ const Stage = () => {
         <hr className="w-[full] h-[1px] bg-gray-200  mx-auto mb-7" />
         <div className="flex justify-between px-20 ml-10">
           <div className="">
-            {data?.map((item) => (
+            {data.slice(0, 5)?.map((item) => (
               <div key={item.id} className="flex items-center gap-2 my-3">
                 <div className="w-[20px] h-[20px] rounded-full bg-[#2CB2BB] flex items-center justify-center text-white ">
                   <h6 className="font-bold text-sm">{item.id}</h6>
